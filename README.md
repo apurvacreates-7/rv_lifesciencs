@@ -7,5 +7,16 @@ Two WhatsApp sampling journeys in the FreeStand demo UI:
 
 `index.html` is a self-contained bundle served as-is by GitHub Pages. SKU pack images are placeholders until real pack shots are supplied.
 
+## Celin Gold click-through demo
+
+Live: https://apurvacreates-7.github.io/rv_lifesciencs/celin-gold/
+
+Two 11-step demos in one Freestand app shell, switched with the toggle at the top:
+
+1. **Celin Gold · Delhi pollution season** (D2C WhatsApp sampling): Instagram Reel, click-to-WhatsApp consent, three questions, PIN/address/OTP, fulfilment, day 7 and day 15 check-ins, AQI and marathon re-engagement, analytics
+2. **Doctor network activation** (offline experience, WhatsApp-run): doctor list import, Magicflow journey, WhatsApp invite or AI voice call, 8,000-kit fulfilment, kit handover in the OPD, patient QR activation, monthly doctor re-engagement, analytics
+
+Move with Next/Back or the ← → keys; buttons inside the phone are clickable; ⌘K / Ctrl+K jumps to any step; `#d2c-4` or `#doc-9` in the URL opens a step directly. `celin-gold/index.html` is fully self-contained (inline CSS/JS, embedded images; only Google Fonts load externally). All people, numbers and records in it are fictional.
+
 ## Archive
 - `archive/rv_hub_spray_gummies_web.html` — previous hub with all three tabs (pain relief spray, gummies, website sampling). The live `index.html` shows only the website sampling demo; the spray and gummies demos are also kept inside it under `window.HUB_DEMOS_HIDDEN`.
