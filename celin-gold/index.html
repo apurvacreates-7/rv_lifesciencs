@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Freestand · RV Life Sciences</title>
-<meta name="description" content="Freestand platform walkthrough for RV Life Sciences: Celin Gold D2C WhatsApp sampling and doctor network activation.">
+<meta name="description" content="Freestand platform walkthrough for RV Life Sciences: Celin Gold D2C WhatsApp sampling, doctor network activation and website sampling.">
 <meta name="robots" content="noindex, nofollow">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Freestand × RV Life Sciences · Celin Gold">
-<meta property="og:description" content="Click-through demo: Celin Gold D2C WhatsApp sampling and doctor network activation, run on Freestand.">
+<meta property="og:description" content="Click-through demo: Celin Gold D2C WhatsApp sampling, doctor network activation and website sampling, run on Freestand.">
 <meta property="og:url" content="https://apurvacreates-7.github.io/rv_lifesciencs/celin-gold/">
 <meta property="og:image" content="https://apurvacreates-7.github.io/rv_lifesciencs/celin-gold/preview.png">
 <meta property="og:image:width" content="1200">
@@ -188,7 +188,7 @@ kbd{font:600 10.5px/1 var(--font);padding:4px 6px;border-radius:5px;background:r
 
 /* ---------------- Scene (Tide illustration language) ---------------- */
 .scene{flex:1;display:flex;flex-direction:column;border-radius:var(--r-lg);overflow:hidden;background:#e8eef6;border:1px solid #d6dfeb;box-shadow:var(--sh-1);min-height:0;min-width:0;position:relative}
-.loc-bar{flex:none;height:42px;display:flex;align-items:center;justify-content:center;background:var(--scene-navy);color:#fff;font:700 12.5px/1 var(--pf);letter-spacing:.34em;text-transform:uppercase;white-space:nowrap;overflow:hidden;padding:0 12px}
+.loc-bar{position:relative;z-index:2;flex:none;height:42px;display:flex;align-items:center;justify-content:center;background:var(--scene-navy);color:#fff;font:700 12.5px/1 var(--pf);letter-spacing:.34em;text-transform:uppercase;white-space:nowrap;overflow:hidden;padding:0 12px}
 .loc-bar .dotsep{margin:0 .7em;opacity:.8}
 .scene-svg{flex:1;width:100%;height:100%;min-height:0;display:block;overflow:visible}
 .scene-svg text{font-family:var(--pf)}
@@ -785,6 +785,271 @@ table.tbl{width:100%;border-collapse:collapse;font-size:12px}
 .cmdk-it.on{background:var(--primary-soft);color:var(--primary)}
 .cmdk-it.on .ic{color:var(--primary)}
 
+/* ---------------- Reveal helpers ---------------- */
+.pop{animation:pop .42s cubic-bezier(.2,.8,.2,1.1) both}
+.card.anim{animation:fadeUp .4s ease both}
+.idr.flash,.elg.flash,.tbl tr.flash td{animation:trFlash 1.8s ease}
+
+/* ---------------- Web: Chrome on Android ---------------- */
+.ph-app.sw{animation:appIn .34s cubic-bezier(.2,.8,.2,1) both}
+@keyframes appIn{from{opacity:.2;transform:scale(.94)}to{opacity:1;transform:none}}
+.cr{flex:1;display:flex;flex-direction:column;min-height:0;background:#fff;position:relative;font-family:var(--pf);color:#1f1f1f}
+.cr-bar{flex:none;height:54px;display:flex;align-items:center;gap:2px;padding:0 2px 0 4px;background:#fff;position:relative;z-index:4}
+.cr-ic{width:38px;height:38px;display:grid;place-items:center;color:#444746;flex:none}
+.cr-ic svg{width:22px;height:22px}
+.cr-omni{flex:1;min-width:0;height:40px;border-radius:20px;background:#edf1f8;display:flex;align-items:center;gap:9px;padding:0 12px 0 11px}
+.cr-omni svg{width:18px;height:18px;color:#444746;flex:none}
+.cr-url{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:15px;color:#1f1f1f;letter-spacing:.005em}
+.cr-url i{font-style:normal;color:#747775}
+.cr-tabs{width:21px;height:21px;border:2px solid #444746;border-radius:5px;display:grid;place-items:center;font-size:10.5px;font-weight:700;color:#444746;flex:none;margin:0 8px 0 9px}
+.cr-load{position:absolute;left:0;right:0;top:54px;height:3px;z-index:5;overflow:hidden;pointer-events:none}
+.cr-load i{display:block;height:100%;background:#1a73e8;animation:crLoad .9s ease-out both}
+@keyframes crLoad{0%{width:0;opacity:1}75%{width:100%;opacity:1}100%{width:100%;opacity:0}}
+.cr-page{flex:1;min-height:0;overflow-y:auto;scrollbar-width:none;position:relative;background:#fff}
+.cr-page::-webkit-scrollbar{display:none}
+
+/* search results */
+.serp{padding:4px 0 14px;font-family:Arial,var(--pf);color:#202124}
+.serp-box{margin:4px 12px 0;height:46px;border-radius:23px;box-shadow:0 1px 6px rgba(32,33,36,.26);display:flex;align-items:center;padding:0 4px 0 18px;gap:2px;background:#fff}
+.serp-box .sq{flex:1;min-width:0;font-size:15.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.serp-box .si{width:34px;height:34px;display:grid;place-items:center;color:#70757a;flex:none}
+.serp-box .si svg{width:21px;height:21px}
+.serp-box .sdiv{width:1px;height:24px;background:#dadce0;margin:0 2px;flex:none}
+.serp-tabs{display:flex;gap:18px;padding:12px 16px 0;border-bottom:1px solid #ebebeb;font-size:14px;color:#5f6368;white-space:nowrap;overflow:hidden}
+.serp-tabs span{padding-bottom:10px;flex:none}
+.serp-tabs .on{color:#202124;font-weight:700;border-bottom:3px solid #202124;padding-bottom:7px}
+.sres{padding:13px 16px 8px;border-bottom:8px solid #f1f3f4}
+.sres.org{border-bottom:0}
+.sp-lbl{font-size:14px;font-weight:700;margin-bottom:10px}
+.sr-src{display:flex;align-items:center;gap:10px}
+.sr-src .fav{width:28px;height:28px;border-radius:50%;border:1px solid #ecedef;display:grid;place-items:center;background:#fff;flex:none}
+.sr-site{flex:1;min-width:0;line-height:1.3}
+.sr-site b{display:block;font-size:14px;font-weight:400;color:#202124}
+.sr-site span{display:block;font-size:12px;color:#4d5156;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sr-src .k3{color:#70757a;width:22px;display:grid;place-items:center;flex:none}
+.sr-src .k3 svg{width:18px;height:18px}
+.sr-h{margin-top:9px;font-size:19px;line-height:25px;color:#1a0dab;cursor:pointer;border-radius:6px;position:relative}
+.sr-h.hint{animation:linkHint 1.6s ease-out infinite}
+@keyframes linkHint{0%{box-shadow:0 0 0 0 rgba(26,13,171,.28)}100%{box-shadow:0 0 0 8px rgba(26,13,171,0)}}
+.sr-body{display:flex;gap:12px;align-items:flex-start}
+.sr-d{margin-top:5px;font-size:14px;line-height:21px;color:#4d5156}
+.sr-img{width:84px;height:84px;border-radius:10px;background:linear-gradient(135deg,#fff5e6,#ffd9a8);display:grid;place-items:center;flex:none;margin-top:12px}
+.sr-img img{width:74px}
+.sr-sl{margin:8px -16px 0}
+.sr-sl div{display:flex;align-items:center;justify-content:space-between;height:44px;padding:0 16px;border-top:1px solid #ecedef;font-size:15.5px;color:#1a0dab;cursor:pointer;position:relative;overflow:hidden}
+.sr-sl svg{width:20px;height:20px;color:#70757a}
+
+/* RV landing page */
+.lp{min-height:100%;display:flex;flex-direction:column;background:#f5f6fa;font-family:var(--pf)}
+.lp-head{height:50px;flex:none;display:flex;align-items:center;gap:0;padding:0 6px 0 14px;background:#fff;border-bottom:1px solid #eceff4}
+.lp-head .lp-logo{flex:1;display:flex;align-items:center;gap:8px;min-width:0}
+.lp-head .lp-ic{width:36px;height:36px;display:grid;place-items:center;color:#0B2E6E}
+.lp-head .lp-ic svg{width:22px;height:22px}
+.lp-hero{position:relative;padding:13px 16px 32px;background:linear-gradient(135deg,#fff6e8 0%,#ffe0b2 100%);overflow:hidden;flex:none}
+.lp-hero .k{font-size:10.5px;font-weight:700;letter-spacing:.14em;color:#b45309}
+.lp-hero h2{margin:5px 0 4px;font-size:22px;line-height:1.08;font-weight:800;color:#0B2E6E;letter-spacing:-.01em;max-width:180px}
+.lp-hero p{margin:0;font-size:12px;line-height:1.38;color:#5b4630;max-width:176px}
+.lp-hero img{position:absolute;right:-6px;bottom:20px;width:136px;filter:drop-shadow(0 10px 12px rgba(120,60,0,.28));transform:rotate(-4deg)}
+.lp-hero .pill{display:inline-flex;margin-top:9px;height:22px;align-items:center;padding:0 9px;border-radius:11px;background:#fff;color:#0B2E6E;font-size:11px;font-weight:600;box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.lp-mini{display:flex;align-items:center;gap:10px;padding:10px 14px 30px;background:linear-gradient(135deg,#fff6e8 0%,#ffe0b2 100%);flex:none}
+.lp-mini img{width:54px;transform:rotate(-4deg);filter:drop-shadow(0 4px 6px rgba(120,60,0,.25))}
+.lp-mini b{display:block;font-size:15px;color:#0B2E6E;font-weight:800}
+.lp-mini span{display:block;font-size:11.5px;color:#6b5236}
+.lp-mini em{display:block;font-style:normal;font-size:9.8px;color:#8a6f52;margin-top:1px}
+.lp-foot{margin-top:auto;padding:14px 16px 16px;font-size:10.5px;color:#6b7280;line-height:1.5;text-align:center}
+.lp-foot b{font-weight:600;color:#4b5563}
+.lp-foot .pw{display:inline-flex;align-items:center;gap:5px;margin-top:5px;color:#9ca3af}
+.lp-foot .pw-logo{height:9px;width:auto;color:#9ca3af}
+
+/* embedded Freestand form */
+.fsf{margin:-22px 12px 0;position:relative;z-index:1;background:#fff;border-radius:16px;box-shadow:0 8px 24px rgba(11,46,110,.12),0 1px 3px rgba(11,46,110,.08);padding:13px 14px 14px;color:#111827}
+.fsf-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:9px}
+.fsf-step{font-size:10.5px;font-weight:700;letter-spacing:.07em;color:#6b7280;text-transform:uppercase}
+.fsf-dots{display:flex;gap:4px}
+.fsf-dots i{width:16px;height:4px;border-radius:2px;background:#e5e7eb}
+.fsf-dots i.d{background:#0B2E6E}
+.fsf-dots i.c{background:#c8102e}
+.fsf h3{margin:0 0 3px;font-size:17.5px;font-weight:700;color:#0B2E6E;letter-spacing:-.005em}
+.fsf .lead{margin:0 0 13px;font-size:12.8px;color:#4b5563;line-height:1.42}
+.fsf .lnk{color:#0B2E6E;font-weight:600;text-decoration:underline}
+.wf{position:relative;border:1.5px solid #cfd6e0;border-radius:10px;padding:0 12px;height:48px;display:flex;align-items:center;margin-bottom:12px;background:#fff}
+.wf label{position:absolute;left:9px;top:-8px;padding:0 4px;background:#fff;font-size:11.5px;color:#6b7280;line-height:14px}
+.wf .wf-in{flex:1;min-width:0;display:flex;align-items:center;font-size:15px;color:#111827;white-space:nowrap;overflow:hidden}
+.wf .fp{color:#9ca3af}
+.wf .wf-pre{padding-right:9px;margin-right:9px;border-right:1px solid #e5e7eb;color:#374151;font-weight:500}
+.wf.focus{border-color:#0B2E6E;box-shadow:0 0 0 3px rgba(11,46,110,.1)}
+.wf.lock{background:#f7f8fa;color:#4b5563}
+.wf.lock::after{content:"";width:14px;height:14px;margin-left:8px;background:var(--lock-ic) center/contain no-repeat;opacity:.55;flex:none}
+.wf.lock label{background:linear-gradient(#fff 50%,#f7f8fa 50%)}
+.wf-wa{margin-left:8px;width:22px;height:22px;border-radius:50%;background:#25d366;display:grid;place-items:center;flex:none}
+.wf-wa svg{width:13px;height:13px;color:#fff}
+.typein{display:inline-block;animation:typeIn .75s steps(14,end) both}
+@keyframes typeIn{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+.wchk{display:flex;gap:9px;align-items:flex-start;font-size:11.6px;line-height:1.45;color:#4b5563;margin:0 0 13px}
+.wchk .bx{width:18px;height:18px;border-radius:4px;border:1.8px solid #9ca3af;flex:none;margin-top:1px;position:relative}
+.wchk .bx .on{position:absolute;inset:-1.8px;border-radius:4px;background:#0B2E6E;display:grid;place-items:center;color:#fff}
+.wchk .bx .on svg{width:14px;height:14px}
+.wchk a{color:#0B2E6E;font-weight:600;text-decoration:underline}
+.wcta{height:46px;border-radius:12px;background:#c8102e;color:#fff;display:flex;align-items:center;justify-content:center;gap:8px;font-size:15px;font-weight:600;position:relative;overflow:hidden;cursor:default;letter-spacing:.005em}
+.wcta svg{width:19px;height:19px;flex:none}
+.wcta.off{background:#e5e7eb;color:#9ca3af}
+.wcta.live{cursor:pointer}
+.wcta.live.hint{animation:ctaRed 1.6s ease-out infinite}
+@keyframes ctaRed{0%{box-shadow:0 0 0 0 rgba(200,16,46,.45)}100%{box-shadow:0 0 0 10px rgba(200,16,46,0)}}
+.wcta.wgreen{background:#1faa53}
+.wcta.wgreen.live.hint{animation:sendHint 1.6s ease-out infinite}
+.wcta.ghost{background:#fff;color:#0B2E6E;border:1.5px solid #cfd6e0}
+.wcta+.wcta{margin-top:8px}
+/* OTP */
+.otp{display:grid;grid-template-columns:repeat(6,1fr);gap:7px;margin:0 0 11px}
+.otp span{height:50px;border:1.5px solid #cfd6e0;border-radius:10px;display:grid;place-items:center;font-size:22px;font-weight:600;color:#111827;position:relative;background:#fff}
+.otp span.cur{border-color:#0B2E6E;box-shadow:0 0 0 3px rgba(11,46,110,.1)}
+.otp span.cur::after{content:"";width:2px;height:22px;background:#0B2E6E;animation:caret 1s steps(1) infinite}
+.otp.ok span{border-color:#16a34a;color:#166534;background:#f0fdf4}
+.otp-row{display:flex;justify-content:space-between;font-size:12px;color:#6b7280;margin-bottom:11px}
+.otp-row a{color:#0B2E6E;font-weight:600}
+.wa-tip{display:flex;gap:9px;align-items:center;padding:9px 10px;border-radius:10px;background:#effaf3;color:#14532d;font-size:12px;line-height:1.38;margin-bottom:12px}
+.wa-tip .g{width:26px;height:26px;border-radius:50%;background:#25d366;display:grid;place-items:center;flex:none}
+.wa-tip .g svg{width:15px;height:15px;color:#fff}
+.v-ok{display:flex;align-items:center;gap:7px;justify-content:center;color:#15803d;font-weight:600;font-size:14px;margin:0 0 12px}
+.v-ok svg{width:20px;height:20px}
+/* Gboard */
+.gb{position:absolute;left:0;right:0;bottom:0;background:#e8eaf0;padding:4px 6px 8px;z-index:6;animation:sheetUp .28s cubic-bezier(.2,.8,.2,1)}
+.gb-sug{height:44px;display:flex;align-items:center;gap:10px;padding:0 4px 4px}
+.gb-clip{display:inline-flex;align-items:center;gap:7px;height:34px;padding:0 14px;border-radius:17px;background:#fff;color:#1f1f1f;font-size:15px;font-weight:500;letter-spacing:.08em;position:relative;overflow:hidden;box-shadow:0 1px 1px rgba(0,0,0,.08);cursor:pointer}
+.gb-clip svg{width:17px;height:17px;color:#444746}
+.gb-clip.hint{animation:hunHint 1.6s ease-out infinite}
+.gb-lbl{font-size:11.5px;color:#5f6368}
+.gb-keys{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.gb-keys span{height:46px;border-radius:8px;background:#fff;display:grid;place-items:center;font-size:21px;color:#1f1f1f;box-shadow:0 1px 1px rgba(0,0,0,.1);position:relative;overflow:hidden;cursor:pointer}
+.gb-keys span.fn{background:#d5d9e2;font-size:17px}
+.gb-keys span.go{background:#c2d6f7;color:#0b3d91}
+.gb-keys svg{width:22px;height:22px}
+/* WhatsApp heads-up over Chrome */
+.hun.wa-n{cursor:pointer;padding-bottom:9px}
+.hun.wa-n.hint{animation:hunIn .45s cubic-bezier(.2,.8,.2,1) both,waHunHint 1.6s ease-out .5s infinite}
+@keyframes waHunHint{0%{box-shadow:0 10px 30px rgba(0,0,0,.28),0 0 0 0 rgba(37,211,102,.55)}100%{box-shadow:0 10px 30px rgba(0,0,0,.28),0 0 0 10px rgba(37,211,102,0)}}
+.hun-top .appic.wap{background:#25d366}
+.hun-top .appic.wap svg{width:12px;height:12px}
+.hun-row{display:flex;gap:10px;align-items:flex-start}
+.hun-main{flex:1;min-width:0}
+.hun-lg{width:40px;height:40px;border-radius:50%;background:#fff;box-shadow:0 0 0 1px #e3e6ea;display:grid;place-items:center;margin-top:6px;flex:none}
+/* web questions */
+.qbar{height:5px;border-radius:3px;background:#eef1f6;overflow:hidden;margin:0 0 11px}
+.qbar i{display:block;height:100%;background:#0B2E6E;border-radius:3px}
+.q-k{font-size:11px;font-weight:700;letter-spacing:.06em;color:#b45309;text-transform:uppercase}
+.fsf h3.q-t{margin:3px 0 12px;font-size:18px;line-height:1.3}
+.qopt{display:flex;align-items:center;gap:12px;min-height:52px;padding:8px 14px;border:1.5px solid #d8dee8;border-radius:12px;margin-bottom:9px;font-size:15px;color:#111827;position:relative;overflow:hidden;cursor:pointer;background:#fff;line-height:1.3}
+.qopt:hover{border-color:#aab6c8}
+.qopt .radio{border-color:#9ca3af}
+.qopt .radio.on{border-color:#c8102e}
+.qopt .radio.on::after{background:#c8102e}
+.qopt.hint{animation:qHint 1.6s ease-out infinite}
+@keyframes qHint{0%{box-shadow:0 0 0 0 rgba(11,46,110,.3)}100%{box-shadow:0 0 0 8px rgba(11,46,110,0)}}
+.qopt small{display:block;font-size:11.8px;color:#6b7280;margin-top:1px}
+.q-n{font-size:11.5px;color:#6b7280;line-height:1.45;margin-top:4px}
+.q-done{text-align:center;padding:10px 4px 14px}
+.q-done .big,.ws-ok .big{width:58px;height:58px;border-radius:50%;background:#16a34a;color:#fff;display:grid;place-items:center;margin:0 auto 12px;box-shadow:0 0 0 7px #dcfce7}
+.q-done .big svg,.ws-ok .big svg{width:32px;height:32px}
+.q-done h3{margin:0 0 4px}
+.q-done p{margin:0;font-size:13px;color:#4b5563;line-height:1.45}
+/* address */
+.pin-ok{display:flex;gap:10px;align-items:center;padding:9px 11px;border-radius:10px;background:#f0fdf4;border:1px solid #bbf7d0;color:#14532d;margin-bottom:14px}
+.pin-ok>svg{width:20px;height:20px;color:#16a34a;flex:none}
+.pin-ok b{display:block;font-size:13.5px}
+.pin-ok span{display:block;font-size:11.8px;color:#3f6b4f}
+.wdim{position:absolute;inset:54px 0 0;background:rgba(15,23,42,.45);z-index:7;animation:fadeIn .2s}
+.wmodal{position:absolute;left:16px;right:16px;top:190px;z-index:8;background:#fff;border-radius:18px;padding:18px 16px 16px;box-shadow:0 20px 50px rgba(0,0,0,.3);animation:pop .35s cubic-bezier(.2,.8,.2,1.1) both;color:#111827}
+.wmodal h4{margin:0 0 2px;font-size:17px;color:#0B2E6E}
+.wmodal .lead{font-size:12.8px;color:#6b7280}
+.chk-row{display:flex;align-items:center;gap:10px;padding:10px 0;font-size:13.5px;color:#374151;border-bottom:1px solid #f1f3f6}
+.chk-row .sp{width:20px;height:20px;border-radius:50%;border:2.5px solid #dbe3ee;border-top-color:#0B2E6E;animation:spin .9s linear infinite;flex:none}
+.chk-row .ok{width:20px;height:20px;border-radius:50%;background:#16a34a;color:#fff;display:grid;place-items:center;flex:none}
+.chk-row .ok svg{width:14px;height:14px}
+/* success */
+.ws-ok{padding:22px 18px 6px;text-align:center}
+.ws-ok h2{margin:0;font-size:23px;color:#0B2E6E;font-weight:800;letter-spacing:-.01em}
+.ws-ok p{margin:5px 0 0;font-size:14px;color:#4b5563}
+.ws-ord{margin:14px 14px 0;border:1px solid #e5e7eb;border-radius:14px;padding:12px;display:flex;gap:12px;align-items:center;background:#fff}
+.ws-ord img{width:66px;flex:none}
+.ws-ord .t{font-size:14px;font-weight:700;color:#111827}
+.ws-ord .s{font-size:12px;color:#6b7280;line-height:1.5;margin-top:2px}
+.ws-ord .s b{color:#111827}
+.ws-wa{margin:12px 14px 0;border-radius:14px;background:#effaf3;padding:12px;display:flex;flex-direction:column;gap:10px}
+.ws-wa .r{display:flex;gap:9px;align-items:flex-start;font-size:12.4px;color:#14532d;line-height:1.45}
+.ws-wa .r>svg{width:20px;height:20px;color:#1faa53;flex:none;margin-top:1px}
+.ws-wa .wcta+.wcta{margin-top:0}
+/* club */
+.club{min-height:100%;display:flex;flex-direction:column;background:#f5f6fa;font-family:var(--pf);color:#111827}
+.club-t{font-size:14.5px;color:#0B2E6E;font-weight:800;letter-spacing:-.005em}
+.club-card{margin:12px 14px 2px;border-radius:18px;padding:14px 16px 13px;background:linear-gradient(135deg,#0B2E6E 0%,#1b4fa0 100%);color:#fff;position:relative;overflow:hidden;box-shadow:0 10px 24px rgba(11,46,110,.3)}
+.club-card::after{content:"";position:absolute;right:-44px;top:-44px;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle,rgba(255,194,14,.38),rgba(255,194,14,0) 70%)}
+.club-card .k{font-size:10.5px;font-weight:700;letter-spacing:.2em;color:#FFC20E}
+.club-card .n{font-size:20px;font-weight:700;margin-top:8px}
+.club-card .m{font-size:11.5px;color:#c7d6f2;margin-top:2px}
+.club-pts{margin-top:10px;font-size:12.5px;color:#e2e9f7}
+.club-pts b{color:#FFC20E;font-size:15px}
+.club-sec{margin:11px 16px 8px;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#6b7280}
+.stamps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:0 24px 19px}
+.stamp{aspect-ratio:1;border-radius:50%;border:2px dashed #c3cfe2;display:grid;place-items:center;font-size:14px;color:#94a3b8;font-weight:700;background:#fff;position:relative}
+.stamp svg{width:26px;height:26px}
+.stamp.on{border:0;background:#c8102e;color:#fff;box-shadow:0 4px 10px rgba(200,16,46,.3)}
+.stamp.gift{border:2px solid #FFC20E;color:#b45309;background:#fffbeb}
+.stamp small{position:absolute;top:calc(100% + 4px);left:-10px;right:-10px;text-align:center;font-size:9.5px;color:#6b7280;font-weight:600;white-space:nowrap}
+.club-next{margin:0 16px 10px;font-size:13px;font-weight:600;color:#0B2E6E;text-align:center}
+.club-how{margin:0 14px;background:#fff;border-radius:14px;border:1px solid #e5e7eb;padding:4px 12px}
+.club-how div{display:flex;gap:9px;align-items:center;padding:8px 0;font-size:12.3px;color:#374151;border-bottom:1px solid #f1f3f6}
+.club-how div:last-child{border-bottom:0}
+.club-how .ic{width:16px;height:16px;color:#c8102e}
+.club-btns{margin:10px 14px 0;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.club-btns .wcta{font-size:14px;gap:6px}
+.club-btns .wcta+.wcta{margin-top:0}
+/* chemist bill photo */
+.bill-ph{height:176px;background:radial-gradient(ellipse at 40% 40%,#8a6a4f,#5b4331);display:grid;place-items:center;overflow:hidden}
+.bill{width:152px;background:#fbfaf6;transform:rotate(-5deg);padding:9px 10px 11px;font:8.6px/1.4 'Courier New',ui-monospace,monospace;color:#2f2f2f;box-shadow:0 6px 14px rgba(0,0,0,.4);display:flex;flex-direction:column;text-align:center}
+.bill b{font-size:10px;letter-spacing:.04em}
+.bill .bl,.bill .bi,.bill .bt{display:flex;justify-content:space-between;gap:6px;text-align:left}
+.bill .bl{border-top:1px dashed #9ca3af;border-bottom:1px dashed #9ca3af;margin:4px 0;padding:2px 0}
+.bill .bt{border-top:1px dashed #9ca3af;margin-top:4px;padding-top:2px;font-weight:700}
+.bill .thx{margin-top:4px}
+
+/* ---------------- Platform cards (demo 3) ---------------- */
+.wa-g.sm{width:24px;height:24px;border-radius:50%;background:#25d366;display:grid;place-items:center;flex:none}
+.wa-g.sm svg{width:14px;height:14px;color:#fff}
+.otp-tls{display:grid;gap:2px}
+.otp-tl{display:grid;grid-template-columns:20px minmax(0,1fr) auto;gap:8px;align-items:center;font-size:12.5px;color:var(--muted);padding:3px 0}
+.otp-tl .d{width:18px;height:18px;border-radius:50%;border:2px solid #cfd8e5;display:grid;place-items:center}
+.otp-tl.ok{color:var(--fg);font-weight:500}
+.otp-tl.ok .d{background:var(--green);border-color:var(--green);color:#fff}
+.otp-tl .d svg{width:11px;height:11px;stroke-width:3}
+.otp-tl .ts{font:500 10.5px/1 var(--mono);color:var(--muted-2)}
+.idr{display:flex;gap:10px;align-items:center;padding:7px 9px;border:1px solid var(--line);border-radius:10px}
+.idr .ii{width:28px;height:28px;border-radius:8px;background:var(--violet-soft);color:var(--violet-ink);display:grid;place-items:center;flex:none}
+.idr .ii .ic{width:15px;height:15px}
+.idr b{display:block;font-size:12.8px;font-weight:600}
+.idr span{display:block;font-size:11px;color:var(--muted)}
+.id-merge{display:flex;gap:10px;align-items:center;padding:9px 10px;border-radius:10px;background:linear-gradient(135deg,#f2ecfe,#eaf0fa);border:1px solid #ddd0fb}
+.id-merge>.ic{width:18px;height:18px;color:var(--violet);transform:rotate(90deg);flex:none}
+.id-merge b{display:block;font-size:13px}
+.id-merge span{display:block;font-size:11px;color:var(--fg-2)}
+.elg{display:flex;gap:10px;align-items:flex-start;padding:6px 4px;border-radius:8px}
+.elg .d{width:18px;height:18px;border-radius:50%;border:2px solid #cfd8e5;display:grid;place-items:center;flex:none;margin-top:1px}
+.elg.ok .d{background:var(--green);border-color:var(--green);color:#fff}
+.elg .d svg{width:11px;height:11px;stroke-width:3}
+.elg b{display:block;font-size:12.6px;font-weight:600}
+.elg span{display:block;font-size:11.3px;color:var(--muted);line-height:1.35}
+.elg:not(.ok) b{color:var(--muted)}
+.avn{padding:4px 0}
+.av-r{display:grid;grid-template-columns:30px minmax(0,1fr) auto;gap:10px;align-items:center;padding:8px 14px;border-left:3px solid transparent}
+.av-r .ai{width:30px;height:30px;border-radius:8px;background:#f1f4f9;color:var(--fg-2);display:grid;place-items:center}
+.av-r .ai .ic{width:16px;height:16px}
+.av-t b{display:block;font-size:12.8px;font-weight:600}
+.av-t span{display:block;font-size:11.3px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.av-s{font-size:11.3px;color:var(--fg-2);font-weight:500;white-space:nowrap}
+.av-r.sel{background:var(--primary-soft);border-left-color:var(--primary)}
+.av-r.sel .ai{background:var(--primary);color:#fff}
+.wt.t-loyalty{background:#fdecf3;color:#be185d}
+
 /* ---------------- Responsive ---------------- */
 @media (max-width:1400px){
   .kbd-hint{display:none}
@@ -794,7 +1059,8 @@ table.tbl{width:100%;border-collapse:collapse;font-size:12px}
 }
 @media (max-width:1320px){
   .prog-toggle button .pt-sub{display:none}
-  .search{width:190px}
+  .search{width:auto}
+  .search span{display:none}
 }
 @media (max-width:1180px){
   :root{--sb-w:64px}
@@ -854,6 +1120,7 @@ table.tbl{width:100%;border-collapse:collapse;font-size:12px}
   .order .o-l{border-right:0;border-bottom:1px solid var(--line)}
   .tl-h .st span{display:none}
   .kpis{grid-template-columns:1fr 1fr}
+  .loc-bar{height:32px;font-size:9.5px;letter-spacing:.14em}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
@@ -946,6 +1213,13 @@ const ICONS = {
   refresh:'<path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/>',
   send:'<path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/>',
   share:'<circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/>',
+  globe:'<circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/>',
+  receipt:'<path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/>',
+  award:'<circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/>',
+  mail:'<rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>',
+  repeat:'<path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/>',
+  mouse:'<path d="m9 9 5 12 1.774-5.226L21 14 9 9z"/><path d="m16.071 16.071 4.243 4.243"/><path d="m7.188 2.239.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656-2.12 2.122"/>',
+  smartphone:'<rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/>',
   dot:'<circle cx="12" cy="12" r="4"/>'
 };
 function ic(name, cls='', extra=''){
@@ -1043,9 +1317,11 @@ const Sched = {
 /* ---------- state ---------- */
 const ST = {
   demo: 'd2c',
-  pos: { d2c: { s: 0, b: 0 }, doc: { s: 0, b: 0 } },
-  ch: { d2c: {}, doc: {} }
+  pos: { d2c: { s: 0, b: 0 }, doc: { s: 0, b: 0 }, web: { s: 0, b: 0 } },
+  ch: { d2c: {}, doc: {}, web: {} }
 };
+const DEMO_ORDER = ['d2c', 'doc', 'web'];
+const nextDemo = d => DEMO_ORDER[(DEMO_ORDER.indexOf(d) + 1) % DEMO_ORDER.length];
 const DEMOS = {};     // filled by demo files
 const SUBJECTS = {};  // CDP subjects
 
@@ -1075,8 +1351,8 @@ function next() {
   const nb = beatsOf(step, c);
   if (c.b < nb - 1) return go(c.s, c.b + 1, { anim: true, dir: 1 });
   if (c.s < DEMOS[ST.demo].steps.length - 1) return go(c.s + 1, 0, { anim: true, dir: 1 });
-  // end of this demo → hand over to the other programme
-  switchDemo(ST.demo === 'd2c' ? 'doc' : 'd2c', true);
+  // end of this demo → hand over to the next programme
+  switchDemo(nextDemo(ST.demo), true);
 }
 function back() {
   const c = ctx();
@@ -1182,7 +1458,7 @@ function renderHead(h, stepChange, navChanged) {
 }
 
 /* ---------- CDP panel ---------- */
-const TYPE_LABEL = { consent: 'CONSENT', trait: 'TRAIT', event: 'EVENT', identity: 'IDENTITY', address: 'ADDRESS', cohort: 'COHORT', signal: 'SIGNAL', metric: 'METRIC', pending: 'LISTENING' };
+const TYPE_LABEL = { consent: 'CONSENT', trait: 'TRAIT', event: 'EVENT', identity: 'IDENTITY', address: 'ADDRESS', cohort: 'COHORT', signal: 'SIGNAL', metric: 'METRIC', loyalty: 'LOYALTY', pending: 'LISTENING' };
 const SRC = {
   wa: ['WhatsApp', () => `<svg class="ic fill" viewBox="0 0 24 24" style="color:#1faa53">${G.wa}</svg>`],
   ctwa: ['Meta click-to-WhatsApp', () => ic('megaphone')],
@@ -1202,7 +1478,13 @@ const SRC = {
   store: ['Store webhook', () => ic('cart')],
   manifest: ['Kit manifest', () => ic('package')],
   analytics: ['Analytics', () => ic('chart')],
-  webinar: ['Webinar', () => ic('video')]
+  webinar: ['Webinar', () => ic('video')],
+  gads: ['Google Ads', () => ic('search')],
+  webtag: ['Web tag', () => ic('link')],
+  web: ['Web form', () => ic('globe')],
+  waotp: ['WhatsApp OTP', () => `<svg class="ic fill" viewBox="0 0 24 24" style="color:#1faa53">${G.wa}</svg>`],
+  receipt: ['Bill scan', () => ic('receipt')],
+  loyalty: ['RV Wellness Club', () => ic('award')]
 };
 const srcChip = k => { const s = SRC[k] || [k, () => '']; return `<span class="src-chip">${s[1]()}${s[0]}</span>`; };
 
@@ -1267,7 +1549,7 @@ function renderStepbar(c, step, stepChange) {
   $('#segs').innerHTML = D.steps.map((s, i) => `<button class="${i < c.s ? 'done' : i === c.s ? 'cur' : ''}" data-act="jump:${i}" title="Step ${i + 1} · ${esc(val(s.cap, ctx({ s: i, b: 0 })).t)}" aria-label="Go to step ${i + 1}"></button>`).join('');
   $('#btnBack').disabled = c.s === 0 && c.b === 0;
   const last = c.s === total - 1 && c.b === nb - 1;
-  $('#btnNext').innerHTML = last ? `${DEMOS[ST.demo === 'd2c' ? 'doc' : 'd2c'].nextLabel} ${ic('arrowR')}` : `Next ${ic('arrowR')}`;
+  $('#btnNext').innerHTML = last ? `${DEMOS[nextDemo(ST.demo)].nextLabel} ${ic('arrowR')}` : `Next ${ic('arrowR')}`;
   $('#btnNext').classList.toggle('nudge', !!val(step.nudge, c));
 }
 
@@ -1296,7 +1578,7 @@ function render(opts = {}) {
   try { history.replaceState(null, '', `#${ST.demo}-${c.s + 1}`); } catch (e) {}
 }
 function readHash() {
-  const m = /^#(d2c|doc)-(\d{1,2})$/.exec(location.hash || '');
+  const m = /^#(d2c|doc|web)-(\d{1,2})$/.exec(location.hash || '');
   if (!m) return;
   const s = Math.min(Math.max(+m[2] - 1, 0), DEMOS[m[1]].steps.length - 1);
   ST.demo = m[1];
@@ -1360,7 +1642,7 @@ let cmdkSel = 0, cmdkItems = [];
 function drawCmdk(q) {
   q = q.trim().toLowerCase();
   const items = [];
-  for (const d of ['d2c', 'doc']) {
+  for (const d of DEMO_ORDER) {
     DEMOS[d].steps.forEach((st, i) => {
       const cx = b => Object.assign(ctx({ s: i, b }), { demo: d, v: k => (ST.ch[d][k] ?? DEMOS[d].defaults[k]) });
       const cap = val(st.cap, cx(0));
@@ -1461,7 +1743,7 @@ function phoneFrame(inner, o = {}) {
   return `<div class="phone-col"><div class="phone-slot"><div class="phone"><div class="ph-cam"></div>
     <div class="ph-screen" style="background:${bg}">
       <div class="ph-status ${dark ? 'dark' : ''}" style="background:${o.statusBg || bg}"><span>${o.time || '8:42'}</span>${statusIcons(dark)}</div>
-      <div class="ph-app">${inner}</div>
+      <div class="ph-app${o.sw ? ' sw' : ''}">${inner}</div>
       <div class="ph-gest ${dark ? 'dark' : ''}" style="background:${o.gestBg || bg}"><i></i></div>
     </div></div></div></div>`;
 }
@@ -2055,6 +2337,56 @@ function sceneOPD(c, phase) {
   return sceneFrame('City Hospital · OPD Wing', s);
 }
 
+/* ---------- Scene: neighbourhood chemist (Demo 3 · step 9) ---------- */
+function sceneChemist(c, o = {}) {
+  const a = c.anim;
+  let s = bgPlane(470, '#e4ebf2', '#d7dee8');
+  // shelving unit behind the counter
+  s += `<rect x="40" y="66" width="604" height="270" rx="4" fill="#c9a27a"/><rect x="50" y="76" width="584" height="256" fill="#f4eee5"/>`;
+  const cols = ['#f59e0b', '#60a5fa', '#34d399', '#f472b6', '#a78bfa', '#fbbf24', '#94a3b8', '#fca5a5', '#5eead4', '#fdba74', '#93c5fd', '#86efac'];
+  let seed = 7;
+  const rnd = () => (seed = (seed * 9301 + 49297) % 233280) / 233280;
+  [[150, 76], [232, 159], [314, 241]].forEach(([bot, top], row) => {
+    s += `<rect x="50" y="${bot}" width="584" height="9" fill="#b98a5c"/>`;
+    let x = row === 1 ? 256 : 58;
+    while (x < 620) {
+      const w = 18 + Math.round(rnd() * 22), h = Math.min(bot - top - 8, 30 + Math.round(rnd() * 34));
+      if (x + w > 628) break;
+      const col = cols[Math.floor(rnd() * cols.length)];
+      s += `<rect x="${x}" y="${bot - h}" width="${w}" height="${h}" rx="2" fill="${col}"/><rect x="${x + 3}" y="${bot - h + 6}" width="${w - 6}" height="5" rx="1" fill="#fff" opacity=".7"/>`;
+      x += w + 3 + Math.round(rnd() * 3);
+    }
+  });
+  // Celin Gold facing on the middle shelf, with an RV shelf-talker
+  s += packImg(80, 176, 56, -2) + packImg(132, 174, 58) + packImg(186, 176, 56, 2);
+  s += `<rect x="92" y="234" width="146" height="20" rx="3" fill="#d71920"/><text x="165" y="248" text-anchor="middle" font-size="10.5" font-weight="800" fill="#fff" letter-spacing="1.2">CELIN GOLD · IN STOCK</text>`;
+  // pharmacy cross, clock and the Celin Gold poster
+  s += `<g transform="translate(902 282) scale(.82)"><rect x="-8" y="-8" width="76" height="76" rx="12" fill="#fff"/><path d="M22 4h16v18h18v16H38v18H22V38H4V22h18z" fill="#16a34a"/></g>`;
+  s += wallClock(708, 226, 6, 42, 24);
+  s += `<rect x="862" y="96" width="126" height="160" rx="6" fill="#fff" filter="url(#chsh)"/><image href="${IMG.ad}" x="868" y="102" width="114" height="148" preserveAspectRatio="xMidYMid slice"/>`;
+  // chemist behind the counter
+  s += person({ x: 400, skin: '#b98458', hair: '#1c1718', shirt: '#2f7f73', coat: '#f4f7fb', glasses: true, label: 'CHEMIST', labelInk: SC.navy, armL: 'down', armR: 'forward', itemR: (hx, hy) => packImg(hx - 12, hy - 44, 54, -6) });
+  // counter with glass front
+  s += `<rect x="96" y="336" width="610" height="15" rx="3" fill="#eef2f7"/><rect x="96" y="349" width="610" height="3" fill="#c3cfdd"/>
+    <rect x="104" y="352" width="594" height="118" fill="#d5dfea"/>
+    ${[0, 1, 2].map(i => `<rect x="${118 + i * 194}" y="364" width="176" height="84" rx="3" fill="#e9f1f8" stroke="#c3cfdd" stroke-width="2"/>
+      <rect x="${130 + i * 194}" y="${414 - (i % 2) * 6}" width="34" height="${30 + (i % 2) * 6}" rx="2" fill="${cols[(i * 3 + 1) % cols.length]}" opacity=".8"/><rect x="${170 + i * 194}" y="418" width="46" height="26" rx="2" fill="${cols[(i * 5 + 2) % cols.length]}" opacity=".8"/><rect x="${222 + i * 194}" y="410" width="28" height="34" rx="2" fill="${cols[(i * 7 + 4) % cols.length]}" opacity=".8"/>
+      <path d="M${128 + i * 194} 370l40 0-30 30z" fill="#fff" opacity=".45"/>`).join('')}`;
+  // billing printer with the printed bill, and an RV Wellness Club tent card
+  s += `<rect x="150" y="304" width="74" height="32" rx="5" fill="#475569"/><rect x="160" y="298" width="54" height="8" rx="2" fill="#334155"/><path d="M168 300h38v-26l-5 3-5-3-5 3-5-3-5 3-5-3-4 3z" fill="#fff"/><rect x="174" y="282" width="26" height="2" fill="#94a3b8"/><rect x="174" y="288" width="20" height="2" fill="#94a3b8"/>
+    <g class="${a ? 'sv-pop' : ''}" style="animation-delay:.3s"><path d="M552 336l14 -72h96l14 72z" fill="#0B2E6E"/><path d="M566 264h96l-4 10h-88z" fill="#FFC20E"/>
+      <g transform="translate(596 280)">${rvMark(36).replace('<svg', '<svg x="0" y="0"')}</g><rect x="592" y="279" width="44" height="30" rx="4" fill="#fff" opacity="0"/>
+      <text x="614" y="319" text-anchor="middle" font-size="8.6" font-weight="800" fill="#fff" letter-spacing=".8">SEND YOUR BILL</text><text x="614" y="330" text-anchor="middle" font-size="8.6" font-weight="800" fill="#FFC20E" letter-spacing=".8">4TH PACK FREE</text></g>`;
+  // the customer, bill in one hand and phone in the other
+  s += person({ x: 812, skin: '#c98b62', hair: '#1d1b1c', shirt: '#3d5a80', pants: '#2f3440', label: 'CUSTOMER', labelInk: '#1e3a5f', armL: 'forward', armR: 'forward', cls: a ? 'sv-walk' : '',
+    itemL: (hx, hy) => `<g transform="rotate(-10 ${hx} ${hy})"><rect x="${hx - 34}" y="${hy - 30}" width="30" height="40" rx="2" fill="#fbfaf6" stroke="#d6d3c9"/>${[0, 1, 2, 3, 4].map(i => `<rect x="${hx - 30}" y="${hy - 24 + i * 6}" width="${i === 4 ? 12 : 22}" height="2" fill="#9ca3af"/>`).join('')}</g>`,
+    itemR: (hx, hy) => `<rect x="${hx + 4}" y="${hy - 40}" width="24" height="44" rx="4" fill="#111827"/><rect x="${hx + 7}" y="${hy - 36}" width="18" height="34" rx="2" fill="#bfe3cf"/>` });
+  s += bubble(140, 20, ['Celin Gold, one pack.', '₹285. Here’s your bill.'], { tx: 400, cls: a ? 'sv-pop' : '', style: 'animation-delay:.6s' });
+  s += bubble(548, 34, ['Thanks! The bill goes to', 'RV on WhatsApp for my', 'free-pack stamp.'], { tx: 800, cls: a ? 'sv-pop' : '', style: 'animation-delay:1.5s' });
+  s += `<defs><filter id="chsh" x="-10%" y="-10%" width="120%" height="120%"><feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#0b2e6e" flood-opacity=".18"/></filter></defs>`;
+  return sceneFrame('Sanjeevani Medicos · Lajpat Nagar IV, New Delhi', s);
+}
+
 /* ---------- media art for WhatsApp headers ---------- */
 function artPack(bg = 'linear-gradient(135deg,#fff4e4,#ffd9ab)') {
   return `<div style="height:150px;background:${bg};display:flex;align-items:center;justify-content:center;position:relative">
@@ -2342,6 +2674,157 @@ function peopleDoctor(c) {
       <tbody>${pts.map(([n, age, at, pr, day, nw]) => `<tr class="${nw ? 'hl' : ''}"><td><b style="font-weight:600">${n}</b> <span class="muted">${age}</span></td><td>${at}</td><td>${pr}</td><td>${day} of 15</td><td><span class="pat-st"><i></i>${nw ? 'New' : 'Active'}</span></td></tr>`).join('')}
       <tr><td colspan="5" class="muted" style="font-size:11.5px">+ 8 more</td></tr></tbody></table></div>
   </div>`;
+}
+
+/* =================================================================
+   Web: Chrome on Android, search results, the RV landing page with the
+   embedded Freestand form, OTP entry, keyboard, club card
+   ================================================================= */
+const CRG = {
+  home: '<path d="M12 5.69l5 4.5V18h-2v-6H9v6H7v-7.81l5-4.5M12 3 2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>',
+  tune: '<path d="M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z"/>',
+  search: '<path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>',
+  close: '<path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>',
+  mic: '<path d="M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"/>',
+  lens: '<path d="M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM20 4h-3.17L15 2H9L7.17 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 14H4V6h4.05l1.83-2h4.24l1.83 2H20v12z"/>',
+  chev: '<path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>',
+  menu: '<path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>',
+  cart: '<path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>',
+  bksp: '<path d="M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H7.07L2.4 12l4.66-7H22v14zm-11.59-2L14 13.41 17.59 17 19 15.59 15.41 12 19 8.41 17.59 7 14 10.59 10.41 7 9 8.41 12.59 12 9 15.59z"/>',
+  clip: '<path d="M19 2h-4.18C14.4.84 13.3 0 12 0S9.6.84 9.18 2H5c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm7 18H5V4h2v3h10V4h2v16z"/>',
+  check: '<path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>',
+  go: '<path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>',
+  down: '<path d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"/>',
+  lock: '<path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6zm9 14H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"/>',
+  upload: '<path d="M19.35 10.04A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 0 0 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/>',
+  gift: '<path d="M20 6h-2.18c.11-.31.18-.65.18-1a2.996 2.996 0 0 0-5.5-1.65l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm11 15H4v-2h16v2zm0-5H4V8h5.08L7 10.83 8.62 12 11 8.76l1-1.36 1 1.36L15.38 12 17 10.83 14.92 8H20v6z"/>',
+  share: '<path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/>'
+};
+const crg = (name, style = '') => `<svg viewBox="0 0 24 24" aria-hidden="true"${style ? ` style="${style}"` : ''}><g fill="currentColor">${CRG[name]}</g></svg>`;
+
+/* ---------- Chrome for Android ---------- */
+function chromeScreen(inner, o = {}) {
+  let omni;
+  if (o.query) omni = `${crg('search')}<span class="cr-url">${esc(o.query)}</span>`;
+  else {
+    const [host, ...rest] = (o.url || 'rvlifesciences.in').split('/');
+    omni = `${crg('tune')}<span class="cr-url">${host}${rest.length ? `<i>/${rest.join('/')}</i>` : ''}</span>`;
+  }
+  return `<div class="cr">
+    <div class="cr-bar"><span class="cr-ic">${crg('home')}</span><div class="cr-omni">${omni}</div><span class="cr-tabs">${o.tabs || 6}</span><span class="cr-ic">${gl('more')}</span></div>
+    ${o.load ? '<div class="cr-load"><i></i></div>' : ''}
+    <div class="cr-page">${inner}</div>
+    ${o.overlay || ''}
+  </div>`;
+}
+
+/* ---------- search results with the Celin Gold ad ---------- */
+function serpPage() {
+  const src = (path) => `<div class="sr-src"><span class="fav">${rvMark(21)}</span><div class="sr-site"><b>RV Life Sciences</b><span>https://www.rvlifesciences.in › ${path}</span></div><span class="k3">${gl('more')}</span></div>`;
+  return `<div class="serp">
+    <div class="serp-box"><span class="sq">vitamin c zinc tablets for immunity</span><span class="si">${crg('close')}</span><span class="sdiv"></span><span class="si">${crg('mic')}</span><span class="si">${crg('lens')}</span></div>
+    <div class="serp-tabs"><span class="on">All</span><span>Shopping</span><span>Images</span><span>Videos</span><span>News</span><span>Short videos</span></div>
+    <div class="sres">
+      <div class="sp-lbl">Sponsored</div>
+      ${src('celin-gold › free-sample')}
+      <div class="sr-body"><div style="min-width:0">
+        <div class="sr-h live hint" data-act="next">Celin Gold Free 15-Day Sample | Vitamin C, Zinc &amp; Antioxidants</div>
+        <div class="sr-d">Supports your immunity this winter. Claim a free sample, delivered across Delhi NCR in 1–2 days. Nutraceutical. ${DISCLAIMER}</div></div>
+        <div class="sr-img"><img src="${IMG.pack}" alt=""></div></div>
+      <div class="sr-sl">${['Claim your free sample', 'What’s inside Celin Gold', 'Find a chemist near you'].map(t => `<div class="live" data-act="next"><span>${t}</span>${crg('chev')}</div>`).join('')}</div>
+    </div>
+    <div class="sres org">
+      ${src('celin-gold')}
+      <div class="sr-h live" data-act="next">Celin Gold: Vitamin C, Zinc and antioxidants in one daily tablet</div>
+      <div class="sr-d">An advanced daily supplement from RV Life Sciences to support your immunity. One tablet a day with a meal, as on the pack.</div>
+    </div>
+  </div>`;
+}
+
+/* ---------- RV landing page shell ---------- */
+function lpPage(inner, o = {}) {
+  return `<div class="lp">
+    <div class="lp-head"><span class="lp-logo">${rvMark(48)}</span><span class="lp-ic">${crg('search')}</span><span class="lp-ic">${crg('cart')}</span><span class="lp-ic">${crg('menu')}</span></div>
+    ${o.hero === 'mini' ? `<div class="lp-mini"><img src="${IMG.pack}" alt=""><div><b>Free Celin Gold sample</b><span>15 days · delivered free in Delhi NCR</span><em>Nutraceutical. ${DISCLAIMER}</em></div></div>` : o.hero === false ? '' : `<div class="lp-hero"><div class="k">FREE 15-DAY SAMPLE</div><h2>Try Celin Gold free</h2><p>Vitamin C, Zinc and antioxidants to support your immunity. Delhi NCR only.</p><img src="${IMG.pack}" alt="Celin Gold"></div>`}
+    ${inner}
+    <div class="lp-foot"><b>Nutraceutical. ${DISCLAIMER}</b><br>Read the label before use. <u>Privacy notice</u> · <u>Terms</u><br><span class="pw">Sample form by ${FS_LOGO_FULL.replace('class="full"', 'class="pw-logo"')}</span></div>
+  </div>`;
+}
+/* the embedded Freestand form card */
+function fsForm(inner, o = {}) {
+  return `<div class="fsf ${o.cls || ''}"${o.rv != null ? rv(o.rv, 'pop') : ''}>
+    <div class="fsf-top"><span class="fsf-step">Step ${o.n} of 4 · ${o.step}</span><span class="fsf-dots">${[1, 2, 3, 4].map(i => `<i class="${i < o.n ? 'd' : i === o.n ? 'c' : ''}"></i>`).join('')}</span></div>
+    ${inner}
+  </div>`;
+}
+/* an outlined input; o.at = ms when the typed value appears (animated), o.ph placeholder */
+function wField(label, value, o = {}) {
+  let v;
+  if (!value) v = `<span class="fp">${o.ph || ''}</span>`;
+  else if (o.at != null) v = `<span class="fp" data-rvhide="${o.at}">${o.ph || ''}</span><span class="fv"${rv(o.at, 'typein')}>${value}</span>`;
+  else v = `<span class="fv">${value}</span>`;
+  return `<div class="wf ${o.cls || ''}"><label>${label}</label><div class="wf-in">${o.pre ? `<span class="wf-pre">${o.pre}</span>` : ''}${v}</div>${o.after || ''}</div>`;
+}
+/* a button that becomes live at o.at (ms) when animating */
+function wCta(label, act, o = {}) {
+  const cls = o.cls || '';
+  if (o.still) return `<div class="wcta ${cls}">${label}</div>`;   // shown behind an overlay: looks the same, not tappable
+  if (o.at != null) return `<div class="wcta off ${cls}" data-rvhide="${o.at}">${label}</div><div class="wcta live hint ${cls}" data-act="${act}"${rv(o.at, 'x')}>${label}</div>`;
+  return `<div class="wcta ${act ? 'live' : 'off'} ${o.hint === false ? '' : 'hint'} ${cls}"${act ? ` data-act="${act}"` : ''}>${label}</div>`;
+}
+function otpBoxes(code, o = {}) {
+  const d = (code || '').split('');
+  return `<div class="otp ${o.ok ? 'ok' : ''}">${Array.from({ length: 6 }, (_, i) => `<span class="${!code && i === 0 && o.focus ? 'cur' : ''}"${o.at != null && d[i] ? rv(o.at + i * 70, 'pop') : ''}>${d[i] || ''}</span>`).join('')}</div>`;
+}
+/* Gboard numeric keypad with a clipboard suggestion (every key types the code) */
+function gboard(o) {
+  const keys = [['1'], ['2'], ['3'], ['−', 'fn'], ['4'], ['5'], ['6'], ['␣', 'fn'], ['7'], ['8'], ['9'], [crg('bksp'), 'fn'], [',', 'fn'], ['0'], ['.', 'fn'], [crg('go'), 'go']];
+  return `<div class="gb">
+    <div class="gb-sug">${o.clip ? `<span class="gb-clip live hint" data-act="${o.act}">${crg('clip')}${o.clip}</span><span class="gb-lbl">From clipboard</span>` : ''}</div>
+    <div class="gb-keys">${keys.map(([k, cls = '']) => `<span class="live ${cls}" data-act="${o.act}">${k}</span>`).join('')}</div>
+  </div>`;
+}
+/* WhatsApp heads-up notification over another app */
+function waHeadsUp(o, delay) {
+  return `<div class="hun wa-n live hint" data-act="${o.act}"${delay != null ? rv(delay, 'x') : ''}>
+    <div class="hun-top"><span class="appic wap">${gl('wa')}</span>WhatsApp · now</div>
+    <div class="hun-row"><div class="hun-main"><div class="hun-t">RV Life Sciences</div><div class="hun-b">${o.text}</div></div><span class="hun-lg">${rvMark(30)}</span></div>
+    <div class="hun-acts"><button class="live" data-act="${o.act}">Reply</button><button class="live" data-act="${o.act}">Mark as read</button></div>
+  </div>`;
+}
+/* option tiles for a web question */
+function qTiles(key, opts, def, sel) {
+  return opts.map(([v, sub]) => `<div class="qopt ${v === def && !sel ? 'hint' : ''}" data-act="set:${key}=${v}" data-delay="300"><span class="radio ${sel === v ? 'on' : ''}"></span><div>${v}${sub ? `<small>${sub}</small>` : ''}</div></div>`).join('');
+}
+
+/* ---------- the RV Wellness Club card (web) ---------- */
+function clubPage(n, o = {}) {
+  const st = i => (i < n ? `<div class="stamp on">${crg('check')}<small>${o.dates[i]}</small></div>` : `<div class="stamp">${i + 1}</div>`);
+  return `<div class="club">
+    <div class="lp-head"><span class="lp-logo">${rvMark(48)}<b class="club-t">Wellness Club</b></span><span class="lp-ic">${crg('menu')}</span></div>
+    <div class="club-card"${o.at != null ? rv(o.at, 'pop') : ''}><div class="k">RV WELLNESS CLUB</div><div class="n">Karan Bhatia</div><div class="m">Member RVC-DL-104729 · since ${o.since}</div>
+      <div class="club-pts"><b>${n} of 3</b> stamps to your free pack</div></div>
+    <div class="club-sec">Your stamps</div>
+    <div class="stamps">${[0, 1, 2].map(st).join('')}<div class="stamp gift">${crg('gift')}<small>4th pack free</small></div></div>
+    <div class="club-next">${3 - n === 1 ? 'One more pack and your 4th is free.' : `${3 - n} more packs and your 4th is free.`}</div>
+    <div class="club-how">
+      <div>${ic('cart')}<span>Buy anywhere: online or at your chemist</span></div>
+      <div>${ic('receipt')}<span>Send the bill on WhatsApp within 30 days</span></div>
+    </div>
+    <div class="club-btns">${wCta(`${crg('upload')}Upload a bill`, 'next')}${wCta(`${crg('share')}Refer a friend`, 'next', { cls: 'ghost', hint: false })}</div>
+    <div class="lp-foot"><b>Nutraceutical. ${DISCLAIMER}</b><br>Stamps are valid for 12 months. <u>Club terms</u></div>
+  </div>`;
+}
+
+/* ---------- a photographed chemist bill (WhatsApp image) ---------- */
+function artBill(date, time) {
+  return `<div class="bill-ph"><div class="bill">
+    <b>SANJEEVANI MEDICOS</b><span>Lajpat Nagar IV, New Delhi 110024</span><span>GST INVOICE · SM/26/18342</span>
+    <div class="bl"><span>${date}</span><span>${time}</span></div>
+    <div class="bi"><span>Celin Gold Tab 15's</span><span>1</span><span>285.00</span></div>
+    <div class="bt"><span>TOTAL</span><span>₹285.00</span></div>
+    <span class="thx">Thank you. Visit again.</span>
+  </div></div>`;
 }
 
 /* =================================================================
@@ -2776,7 +3259,7 @@ function peopleDoctor(c) {
   ];
 
   DEMOS.d2c = {
-    title: 'Celin Gold · Delhi pollution season', nextLabel: 'Celin Gold demo', short: 'D2C WhatsApp sampling', icon: 'megaphone', steps, writes,
+    title: 'Celin Gold · Delhi pollution season', nextLabel: 'D2C sampling demo', short: 'D2C WhatsApp sampling', icon: 'megaphone', steps, writes,
     defaults: { consent: 'agree', q1: 'Sometimes', q2: 'Immunity', q3: 'Me', deliv: 'ok', day7: 'Great', rating: '5', recommend: 'Yes', aqi: 'order', expo: 'yes' }
   };
 })();
@@ -3194,6 +3677,634 @@ function peopleDoctor(c) {
 })();
 
 /* =================================================================
+   Demo 3 · Celin Gold website sampling (search ad → web form →
+   WhatsApp OTP → claim → WhatsApp updates → loyalty → re-engagement)
+   ================================================================= */
+(function () {
+  const M = (s, b, ty, d, t, o = {}) => Object.assign({ s, b, ty, d, t }, o);
+  const W = (s, b, ty, k, v, src, d, t, o = {}) => Object.assign({ s, b, ty, k, v, src, d, t, subj: 'karan' }, o);
+  const D6 = '2026-11-06';
+  const OTP = '739214';
+  const Q1 = 'Do you currently take any daily supplement?';
+  const Q2 = 'What matters most to you this season?';
+  const Q3 = 'Who is the sample for?';
+  const STARS = { 5: 'Loved it', 4: 'Liked it', 3: 'It was okay', 2: 'Not for me', 1: 'Didn’t like it' };
+  const positive = c => +c.v('wrating') >= 4 && c.v('wrec') !== 'No';
+  const cohortName = c => (positive(c) ? 'Celin web trialists, positive' : 'Celin web trialists, follow-up');
+  // purchase path chosen at day 15: chemist (default), online, or later
+  const online = c => c.v('buy') === 'online';
+  const LOY = c => (online(c)
+    ? { d: '2026-12-09', dd: '09-12-2026', day: 'Wed, 9 Dec', since: '24 Nov 2026', n: 2, dates: ['24 Nov', '9 Dec'] }
+    : { d: '2026-11-27', dd: '27-11-2026', day: 'Fri, 27 Nov', since: '27 Nov 2026', n: 1, dates: ['27 Nov'] });
+  const REF = c => (online(c)
+    ? { d: '2026-12-21', day: 'Mon, 21 Dec', from: '9 Dec', snooze: 'Mon, 28 Dec', arrive: 'Wed, 23 Dec' }
+    : { d: '2026-12-09', day: 'Wed, 9 Dec', from: '27 Nov', snooze: 'Wed, 16 Dec', arrive: 'Fri, 11 Dec' });
+
+  /* ---------------- Karan's WhatsApp thread ---------------- */
+  function thread(c) {
+    const v = c.v, T = [];
+    // Step 3 · OTP (authentication template)
+    T.push(M(2, 1, 'biz', null, null, { text: 'Celin Gold samples and support on WhatsApp. Our nutraceuticals are not a substitute for medical advice.' }));
+    T.push(M(2, 1, 'sys', null, null, { text: 'This business uses a secure service from Meta to manage this chat. Tap to learn more.' }));
+    T.push(M(2, 1, 'in', D6, '7:14 pm', { text: `<b>${OTP}</b> is your verification code. For your security, do not share this code.`, ft: 'This code expires in 10 minutes.', btns: [{ t: 'Copy code', ic: 'copy', act: 'next', hint: true }], fast: true }));
+    // Step 6 · claimed on the web → booking confirmation
+    T.push(M(5, 0, 'in', D6, '7:16 pm', { text: 'Hi Karan, your free Celin Gold sample is booked.\n\nOrder <b>CG-26-60417</b> · arriving by Mon, 9 Nov. We’ll send shipping updates here. Reply STOP to opt out.', ft: DISCLAIMER }));
+    // Step 7 · shipped, delivered
+    T.push(M(6, 0, 'in', '2026-11-07', '12:41 pm', { text: 'Your Celin Gold sample has shipped.\nBlue Dart AWB 84261739502 · expected Mon, 9 Nov.', ft: DISCLAIMER, btns: [{ t: 'Track shipment', ic: 'ext', act: 'next', hint: true }], fast: true }));
+    T.push(M(6, 1, 'in', '2026-11-09', '11:53 am', {
+      media: { html: artPack() }, text: '<b>Your 15-day Celin Gold sample has arrived.</b>\n\nSuggested use: one tablet a day with a meal, as on the pack. We’ll check in on day 15.',
+      ft: DISCLAIMER, btns: [{ t: 'Received, thanks', act: 'set:wdeliv=ok', hint: true }, { t: 'Report an issue', act: 'set:wdeliv=issue' }]
+    }));
+    if (v('wdeliv') === 'issue') {
+      T.push(M(6, 2, 'out', '2026-11-09', '12:07 pm', { quote: q('Your 15-day Celin Gold sample has arrived.'), text: 'Report an issue' }));
+      T.push(M(6, 2, 'in', '2026-11-09', '12:07 pm', { text: 'Sorry about that, Karan. Our team will call you within 2 hours to sort it out.' }));
+    } else {
+      T.push(M(6, 2, 'out', '2026-11-09', '12:07 pm', { quote: q('Your 15-day Celin Gold sample has arrived.'), text: 'Received, thanks' }));
+      T.push(M(6, 2, 'in', '2026-11-09', '12:07 pm', { text: 'Wonderful. Enjoy the next 15 days.' }));
+    }
+    // Step 8 · day 15
+    const D24 = '2026-11-24';
+    T.push(M(7, 0, 'in', D24, '9:00 am', { text: 'Hi Karan, you’ve completed 15 days with Celin Gold. How would you rate your experience?', ft: DISCLAIMER, btns: [{ t: 'Rate now', ic: 'list', act: 'next', hint: true }] }));
+    const r = +v('wrating');
+    T.push(M(7, 2, 'out', D24, '9:06 am', { text: `<span style="color:#f5a623;letter-spacing:1px">${'★'.repeat(r)}</span><span style="color:#b7c0c6">${'★'.repeat(5 - r)}</span> ${STARS[r]}` }));
+    T.push(M(7, 2, 'in', D24, '9:06 am', { text: 'Thank you! Would you recommend Celin Gold to a friend or family member?', ft: DISCLAIMER, fast: true, btns: ['Yes', 'Maybe', 'No'].map(o => ({ t: o, act: `set:wrec=${o}`, hint: o === v('wrec') })) }));
+    T.push(M(7, 3, 'out', D24, '9:06 am', { quote: q('Would you recommend Celin Gold to a friend or family member?'), text: v('wrec') }));
+    T.push(M(7, 3, 'in', D24, '9:07 am', {
+      hdr: 'A thank-you from RV', text: 'Here’s 20% off your first pack online: code <b>CGWEB-K4M9</b> on rvlifesciences.in, valid till 10 Dec.\n\nPrefer your local chemist? Send us the bill here. Every 3 packs, your 4th is free.',
+      ft: DISCLAIMER, btns: [{ t: 'Chemists near me', act: 'set:buy=chemist', hint: true }, { t: 'Buy on rvlifesciences.in', ic: 'ext', act: 'set:buy=online' }, { t: 'Not now', act: 'set:buy=later' }]
+    }));
+    if (v('buy') === 'online') {
+      T.push(M(7, 4, 'in', D24, '9:21 am', { text: 'Thank you for your order, Karan. Order <b>CG-26-71230</b> (code CGWEB-K4M9 applied) arrives by Thu, 26 Nov.\n\nYou’re now in <b>RV Wellness Club</b>: stamp 1 of 3 added automatically.', ft: DISCLAIMER, fast: true }));
+    } else if (v('buy') === 'later') {
+      T.push(M(7, 4, 'out', D24, '9:07 am', { quote: q('Here’s 20% off your first pack online'), text: 'Not now' }));
+      T.push(M(7, 4, 'in', D24, '9:07 am', { text: 'No problem, Karan. Your code works till 10 Dec. Whenever you buy Celin Gold, online or at a chemist, send us the bill for your Club stamp.' }));
+    } else {
+      T.push(M(7, 4, 'out', D24, '9:07 am', { quote: q('Here’s 20% off your first pack online'), text: 'Chemists near me' }));
+      T.push(M(7, 4, 'in', D24, '9:07 am', { hdr: 'Celin Gold near 110024', text: '1. Sanjeevani Medicos, Lajpat Nagar IV · 450 m\n2. Kapoor Medical Store, Amar Colony · 900 m\n3. Delhi Pharma Point, Lajpat Nagar II · 1.6 km\n\nStock checked this morning. Send us the bill after you buy.', ft: DISCLAIMER }));
+    }
+    // Step 9 · bill → stamp
+    const L = LOY(c);
+    T.push(M(8, 1, 'out', L.d, '6:44 pm', { media: { html: artBill(L.dd, '18:42') }, text: 'Bill for Celin Gold' }));
+    T.push(M(8, 1, 'in', L.d, '6:44 pm', {
+      text: `Bill verified ✅\nSanjeevani Medicos · ${L.day} · Celin Gold 1 × 15 · ₹285\n\n${L.n === 1 ? 'Welcome to <b>RV Wellness Club</b>. Stamp <b>1 of 3</b> added.' : 'Stamp <b>2 of 3</b> added to your RV Wellness Club card.'} ${3 - L.n === 1 ? 'One more pack' : 'Two more packs'} and your 4th is free.`,
+      ft: DISCLAIMER, btns: [{ t: 'View my Club card', ic: 'ext', act: 'next', hint: true }]
+    }));
+    // Step 10 · refill reminder
+    const R = REF(c);
+    T.push(M(9, 0, 'in', R.d, '10:00 am', {
+      hdr: 'Time for a refill?', text: `Hi Karan, your Celin Gold pack from ${R.from} should be running low about now.\n\nReorder on rvlifesciences.in and the stamp is added by itself: that would be stamp <b>${L.n + 1} of 3</b>.`,
+      ft: 'Not medical advice. Reply STOP to opt out.', btns: [{ t: 'Reorder now', ic: 'ext', act: 'set:refill=order', hint: true }, { t: 'Remind me in a week', act: 'set:refill=snooze' }]
+    }));
+    if (v('refill') === 'snooze') {
+      T.push(M(9, 1, 'out', R.d, '10:09 am', { quote: q('Time for a refill?'), text: 'Remind me in a week' }));
+      T.push(M(9, 1, 'in', R.d, '10:09 am', { text: `Done. We’ll remind you on ${R.snooze}.` }));
+    } else {
+      T.push(M(9, 1, 'in', R.d, '10:15 am', { text: `Order <b>CG-26-80352</b> confirmed · arriving by ${R.arrive}.\n\nStamp <b>${L.n + 1} of 3</b> added to your Club card. ${L.n + 1 === 3 ? 'Your next pack is free.' : 'One more pack and the next one is free.'}`, ft: DISCLAIMER, fast: true }));
+    }
+    return T;
+  }
+
+  /* ---------------- CDP writes ---------------- */
+  function writes(c) {
+    const v = c.v, X = [];
+    // Step 1 · aggregate search signals from Google Ads
+    const A = (ty, k, val, o = {}) => X.push(Object.assign({ s: 0, b: 0, ty, k, v: val, src: 'gads', d: D6, t: '7:12 PM', subj: 'search' }, o));
+    A('metric', 'Searches matched today · Delhi NCR', '38,420 searches');
+    A('metric', 'Click-through rate', '5.7% · cost per click ₹7.53');
+    A('metric', 'Top search term', '“vitamin c zinc tablets”');
+    A('metric', 'What people searched for', '', { dist: { title: 'Aggregated by Google, no individuals', parts: [['Immunity', 46], ['Vitamin C', 32], ['Zinc', 22]] } });
+    A('metric', 'Device', '', { dist: { parts: [['Mobile', 86], ['Desktop', 11], ['Tablet', 3]] } });
+    // Step 2 · anonymous visitor on the landing page
+    X.push(W(1, 0, 'identity', 'Anonymous ID', 'fs_anon_7c1e94d2 · first-party cookie', 'webtag', D6, '7:12:41 PM'));
+    X.push(W(1, 0, 'event', 'Arrived from ad', 'Google Search · “vitamin c zinc tablets for immunity”', 'gads', D6, '7:12:41 PM', { note: 'gclid' }));
+    X.push(W(1, 0, 'trait', 'Device', 'Android 14 · Chrome 129', 'webtag', D6, '7:12:41 PM'));
+    X.push(W(1, 0, 'signal', 'Approximate area', 'South Delhi · city level, from IP', 'enrich', D6, '7:12:42 PM'));
+    // Step 3 · form submitted, OTP on WhatsApp, verified on the web
+    X.push(W(2, 0, 'event', 'Form submitted', 'Name, email and mobile · 1 min 24 s', 'web', D6, '7:14:05 PM'));
+    X.push(W(2, 0, 'identity', 'Name', 'Karan Bhatia', 'web', D6, '7:14:05 PM'));
+    X.push(W(2, 0, 'identity', 'Email', 'karan.b•••@gmail.com', 'web', D6, '7:14:05 PM'));
+    X.push(W(2, 0, 'identity', 'Mobile', '+91 98733 ••582 · not verified yet', 'web', D6, '7:14:05 PM'));
+    X.push(W(2, 0, 'consent', 'WhatsApp messages', 'Granted on web form · notice v3 (EN)', 'web', D6, '7:14:05 PM', { note: 'box was unticked' }));
+    X.push(W(2, 0, 'event', 'OTP sent', 'WhatsApp · celin_web_otp', 'waotp', D6, '7:14:06 PM'));
+    if (c.s === 2 && c.b < 3) X.push(W(2, 0, 'pending', 'OTP check', 'Waiting for the code on the web form', 'web', D6, ''));
+    X.push(W(2, 1, 'event', 'OTP read', 'Opened on WhatsApp after 13 s', 'waotp', D6, '7:14:19 PM'));
+    X.push(W(2, 3, 'identity', 'Mobile', '+91 98733 ••582 · verified by WhatsApp OTP', 'waotp', D6, '7:14:31 PM'));
+    X.push(W(2, 3, 'identity', 'Profile resolved', 'Cookie + email + WhatsApp number → fsp_5520871', 'identity', D6, '7:14:31 PM', { note: 'new profile' }));
+    X.push(W(2, 3, 'event', 'Duplicate check', 'No earlier claims in any RV programme', 'identity', D6, '7:14:32 PM'));
+    // Step 4 · questions
+    X.push(W(3, 1, 'trait', 'Daily supplement use', v('wq1'), 'web', D6, '7:14:48 PM'));
+    X.push(W(3, 2, 'trait', 'Priority this season', v('wq2'), 'web', D6, '7:14:57 PM'));
+    X.push(W(3, 3, 'trait', 'Sample is for', { Me: 'Himself', Parent: 'A parent', Family: 'His family' }[v('wq3')], 'web', D6, '7:15:06 PM'));
+    X.push(W(3, 3, 'trait', 'Segment', `${{ Yes: 'Regular', No: 'New to', Sometimes: 'Occasional' }[v('wq1')]} supplement user · ${v('wq2').toLowerCase()}-first`, 'enrich', D6, '7:15:07 PM', { note: 'derived' }));
+    // Step 5 · PIN, address, eligibility
+    X.push(W(4, 1, 'address', 'PIN code', '110024 · Lajpat Nagar, New Delhi', 'web', D6, '7:15:31 PM'));
+    X.push(W(4, 1, 'event', 'Delivery check', 'Serviceable · Blue Dart, Delhivery · 1–2 days', 'ful', D6, '7:15:32 PM'));
+    X.push(W(4, 2, 'address', 'Delivery address', 'C-112, 1st floor, Lajpat Nagar IV, New Delhi 110024', 'web', D6, '7:16:30 PM'));
+    X.push(W(4, 2, 'event', 'Eligibility checks', '5 of 5 passed · address score 0.96', 'identity', D6, '7:16:34 PM'));
+    // Step 6 · claimed
+    X.push(W(5, 0, 'event', 'Sample claimed', 'Order CG-26-60417 · sample 9,412 of 18,000', 'ful', D6, '7:16:35 PM'));
+    X.push(W(5, 0, 'event', 'Conversion sent', 'Google Ads · sample_claimed · matched by gclid', 'gads', D6, '7:16:36 PM'));
+    X.push(W(5, 0, 'event', 'Booking confirmed on WhatsApp', 'Utility template · celin_web_booked', 'wa', D6, '7:16:37 PM'));
+    // Step 7 · shipped, delivered
+    X.push(W(6, 0, 'event', 'Packed', 'Freestand FC, Gurugram', 'ful', '2026-11-07', '9:48:10 AM'));
+    X.push(W(6, 0, 'event', 'Shipped', 'Blue Dart · AWB 84261739502', 'courier', '2026-11-07', '12:40:52 PM'));
+    X.push(W(6, 1, 'event', 'Delivered', 'Handed to Karan · delivery OTP matched', 'courier', '2026-11-09', '11:52:14 AM'));
+    X.push(W(6, 1, 'event', 'Trial started', 'Day 0 of 15 · day-15 check-in scheduled', 'flows', '2026-11-09', '11:53:01 AM'));
+    X.push(v('wdeliv') === 'issue'
+      ? W(6, 2, 'event', 'Delivery issue reported', 'Call-back within 2 hours', 'wa', '2026-11-09', '12:07:40 PM')
+      : W(6, 2, 'trait', 'Delivery experience', 'Received, no issues', 'wa', '2026-11-09', '12:07:40 PM'));
+    // Step 8 · day 15
+    const D24 = '2026-11-24';
+    X.push(W(7, 0, 'event', 'Day 15 feedback sent', 'journey · celin_web_trial_15d', 'flows', D24, '9:00:00 AM'));
+    X.push(W(7, 2, 'trait', 'Rating after 15 days', `${v('wrating')} of 5 · ${STARS[+v('wrating')]}`, 'wa', D24, '9:06:12 AM'));
+    X.push(W(7, 3, 'trait', 'Would recommend', v('wrec'), 'wa', D24, '9:06:40 AM'));
+    X.push(W(7, 3, 'cohort', 'Joined cohort', cohortName(c), 'cohorts', D24, '9:06:41 AM'));
+    X.push(W(7, 3, 'event', 'First-purchase offer', 'CGWEB-K4M9 · 20% off online · till 10 Dec', 'flows', D24, '9:07:02 AM'));
+    if (v('buy') === 'online') {
+      X.push(W(7, 4, 'event', 'First purchase', 'rvlifesciences.in · CG-26-71230 · ₹228 with code', 'store', D24, '9:21:14 AM'));
+      X.push(W(7, 4, 'loyalty', 'RV Wellness Club', 'Joined · stamp 1 of 3, added automatically', 'loyalty', D24, '9:21:15 AM'));
+    } else if (v('buy') === 'later') {
+      X.push(W(7, 4, 'trait', 'Buying intent', 'Not now · code reminder on 7 Dec', 'wa', D24, '9:07:30 AM'));
+    } else {
+      X.push(W(7, 4, 'trait', 'Prefers to buy at', 'Local chemist', 'wa', D24, '9:07:30 AM'));
+      X.push(W(7, 4, 'event', 'Stockists shared', '3 chemists within 2 km of 110024', 'enrich', D24, '9:07:31 AM', { note: 'distributor feed' }));
+    }
+    // Step 9 · chemist bill → stamp
+    const L = LOY(c);
+    if (c.s === 8 && c.b === 0) X.push(W(8, 0, 'pending', 'Bill check', 'Listening for a bill on WhatsApp', 'receipt', L.d, ''));
+    X.push(W(8, 1, 'event', 'Bill received', 'Photo on WhatsApp', 'wa', L.d, '6:44:02 PM'));
+    X.push(W(8, 1, 'event', 'Bill verified', `Sanjeevani Medicos · Celin Gold 1 × 15 · ₹285`, 'receipt', L.d, '6:44:21 PM', { note: 'auto · 0.98' }));
+    X.push(W(8, 1, 'trait', 'Buys at', 'Chemist · Lajpat Nagar IV', 'receipt', L.d, '6:44:21 PM'));
+    X.push(W(8, 1, 'loyalty', 'RV Wellness Club', L.n === 1 ? 'Joined · stamp 1 of 3' : 'Stamp 2 of 3', 'loyalty', L.d, '6:44:22 PM'));
+    X.push(W(8, 2, 'event', 'Club card opened', 'club.rvlifesciences.in', 'webtag', L.d, '6:45:10 PM'));
+    // Step 10 · refill reminder
+    const R = REF(c);
+    X.push(W(9, 0, 'signal', 'Refill due', `Pack bought ${R.from} runs out in about 3 days`, 'flows', R.d, '10:00:00 AM', { note: 'derived' }));
+    X.push(W(9, 0, 'event', 'Refill reminder sent', 'refill_reminder_celin', 'flows', R.d, '10:00:04 AM'));
+    if (v('refill') === 'snooze') {
+      X.push(W(9, 1, 'trait', 'Refill reminder', `Snoozed 7 days · next on ${R.snooze}`, 'wa', R.d, '10:09:12 AM'));
+    } else {
+      X.push(W(9, 1, 'event', 'Reordered', 'rvlifesciences.in · CG-26-80352 · ₹285', 'store', R.d, '10:14:36 AM', { note: 'via refill reminder' }));
+      X.push(W(9, 1, 'loyalty', 'RV Wellness Club', `Stamp ${L.n + 1} of 3 · added automatically`, 'loyalty', R.d, '10:14:37 AM'));
+    }
+    // Step 11 · programme-level learning
+    const Z = (ty, k, val, o = {}) => X.push(Object.assign({ s: 10, b: 0, ty, k, v: val, src: 'analytics', d: '2027-01-15', t: '6:00 PM', subj: 'webres' }, o));
+    Z('cohort', 'RV Wellness Club members', '2,214 people · 3,146 bills verified', { src: 'loyalty' });
+    Z('metric', 'Average rating after 15 days', '4.3 of 5 · 10,450 ratings', { src: 'wa' });
+    Z('metric', 'First purchase, by channel', '', { dist: { parts: [['Chemist bill', 60], ['rvlifesciences.in', 40]] } });
+    Z('metric', 'How sign-ups verified', '', { dist: { parts: [['WhatsApp OTP', 97], ['SMS fallback', 3]] } });
+    Z('trait', 'Priority this season', '', { dist: { parts: [['Immunity', 57], ['Energy', 28], ['Focus', 15]] }, src: 'web' });
+    Z('trait', 'Daily supplement use', '', { dist: { parts: [['No', 47], ['Sometimes', 33], ['Yes', 20]] }, src: 'web' });
+    Z('identity', 'Web visits linked to a person', '17,640 profiles · cookie, email and WhatsApp number', { src: 'identity' });
+    return X;
+  }
+
+  /* ---------------- CDP subjects ---------------- */
+  const cnt = (ws, ty) => ws.filter(w => w.ty === ty).length;
+  const named = ws => ws.some(w => w.k === 'Name');
+  const verified = ws => ws.some(w => w.k === 'Mobile' && /verified by/.test(w.v));
+  SUBJECTS.search = {
+    name: 'Not identified yet', av: ic('eye'), bg: '#94a3b8',
+    meta: 'Someone searching in Delhi NCR. Google shares search performance in aggregate; RV learns who it is only when the form is submitted.',
+    badges: () => [chip('No profile yet', 'outline'), chip('Consent: none', 'outline')],
+    stats: () => [['—', 'Profile'], ['0', 'Traits'], ['1', 'Source']]
+  };
+  SUBJECTS.karan = {
+    name: ws => (named(ws) ? 'Karan Bhatia' : 'Anonymous visitor'),
+    av: ws => (named(ws) ? 'KB' : ic('globe')),
+    bg: ws => (named(ws) ? 'linear-gradient(135deg,#f97316,#c2410c)' : '#94a3b8'),
+    meta: ws => (!named(ws) ? 'fs_anon_7c1e94d2 · first-party cookie<br>Landed from a Google Search ad'
+      : !verified(ws) ? '+91 98733 ••582 (not verified) · karan.b•••@gmail.com'
+        : `+91 98733 ••582 · ${ws.some(w => w.k === 'PIN code') ? 'Lajpat Nagar, New Delhi' : 'South Delhi'}<br>Profile fsp_5520871 · created 6 Nov 2026`),
+    badges: ws => {
+      const out = [];
+      const cons = [...ws].reverse().find(w => w.ty === 'consent' && w.k === 'WhatsApp messages');
+      out.push(cons ? chip('WhatsApp opt-in', 'wag', 'check') : chip('Consent: pending', 'outline'));
+      if (verified(ws)) out.push(chip('Phone verified', 'green', 'shield'));
+      else if (named(ws)) out.push(chip('Phone not verified', 'amber'));
+      const club = [...ws].reverse().find(w => w.ty === 'loyalty');
+      if (club) out.push(chip('Club · ' + (/stamp (\d) of 3/i.exec(club.v) || [0, '1'])[1] + ' of 3', 'violet', 'award'));
+      ws.filter(w => w.ty === 'cohort').forEach(w => out.push(chip(w.v, 'navy', 'blend')));
+      return out;
+    },
+    stats: ws => [[cnt(ws, 'trait'), 'Traits'], [cnt(ws, 'event') + cnt(ws, 'identity'), 'Signals'], [new Set(ws.map(w => w.src)).size, 'Sources']]
+  };
+  SUBJECTS.webres = {
+    name: 'Celin Gold web trialists · Delhi NCR', av: ic('users'), bg: 'linear-gradient(135deg,#0a3578,#1b4fa0)',
+    meta: 'Everyone who claimed on rvlifesciences.in, 1 Nov – 15 Dec 2026',
+    badges: () => [chip('17,640 profiles', 'navy'), chip('100% phone-verified', 'wag')],
+    stats: () => [['17,640', 'Profiles'], ['10', 'Traits each'], ['8', 'Sources']]
+  };
+
+  /* ---------------- side cards ---------------- */
+  const phoneLayout = (phone, side) => `<div class="lay-phone">${phone}<div class="side-col">${side}</div></div>`;
+  function webTrace(c) {
+    const list = [
+      { t: 'Entry · Google Search ad', d: 'Keyword “vitamin c zinc tablets” · gclid captured', ts: '7:12:41 PM', at: [1, 0] },
+      { t: 'Form · name, email, mobile', ts: '7:14:05 PM', at: [2, 0], pend: 'typing' },
+      { t: 'Consent · WhatsApp updates', d: 'Notice v3 (EN) · box unticked by default', ts: '7:14:05 PM', at: [2, 0] },
+      { t: 'OTP sent on WhatsApp', d: 'Authentication template · celin_web_otp', ts: '7:14:06 PM', at: [2, 0] },
+      { t: 'OTP entered on the web form', ts: '7:14:31 PM', at: [2, 3], pend: 'waiting for code' },
+      { t: 'Questions 1–3', ts: '7:15:06 PM', at: [3, 3], pend: `${Math.min(c.s === 3 ? c.b : 0, 3)} of 3 answered` },
+      { t: 'PIN serviceability', d: '110024 · Blue Dart, Delhivery · 1–2 days', ts: '7:15:31 PM', at: [4, 1], pend: 'waiting' },
+      { t: 'Address and eligibility checks', d: 'One per person and household · address score 0.96', ts: '7:16:34 PM', at: [4, 2], pend: 'waiting' },
+      { t: 'Create sample order', d: 'CG-26-60417 · Freestand FC, Gurugram', ts: '7:16:35 PM', at: [5, 0] }
+    ];
+    return traceCard('Flow run', 'Celin web sampling v2 · run r_9120446', traceItems(list, c), { right: chip('Web session', 'outline', 'globe') });
+  }
+  function sessionCard() {
+    return `<div class="card">
+      <div class="card-h">${ic('globe', '', 'style="color:var(--primary)"')}<div class="grow"><h3>Web session</h3><div class="sub">rvlifesciences.in/celin-gold/free-sample</div></div>${liveChip('Live')}</div>
+      <div class="card-b"><dl class="kv">
+        <dt>Source</dt><dd>Google Ads · Search</dd><dt>Keyword</dt><dd>vitamin c zinc tablets <span class="muted">(phrase)</span></dd>
+        <dt>Campaign</dt><dd>Celin Gold · Web sampling · Delhi NCR</dd><dt>Click ID</dt><dd><span class="hash">gclid Cj0KCQiA4NWrBh…</span></dd>
+        <dt>Device</dt><dd>Android 14 · Chrome 129</dd><dt>Tags fired</dt><dd style="display:flex;gap:5px;flex-wrap:wrap">${chip('Google Ads', 'outline')}${chip('GA4', 'outline')}${chip('Meta Pixel', 'outline')}</dd></dl></div></div>`;
+  }
+  function otpCard(c) {
+    const b = c.b;
+    const row = (ok, t, ts) => `<div class="otp-tl ${ok ? 'ok' : ''}"><span class="d">${ok ? ic('check') : ''}</span><span>${t}</span><span class="ts">${ok ? ts : ''}</span></div>`;
+    return `<div class="card">
+      <div class="card-h"><span class="wa-g sm">${gl('wa')}</span><div class="grow"><h3>OTP on WhatsApp</h3><div class="sub">Authentication template · celin_web_otp</div></div>${chip('Approved by Meta', 'green')}</div>
+      <div class="card-b" style="display:grid;gap:9px">
+        <div class="otp-tls">${row(true, 'Sent to +91 98733 ••582', '7:14:06 PM')}${row(true, 'Delivered', '7:14:07 PM')}${row(b >= 1, 'Read on WhatsApp', '7:14:19 PM')}${row(b >= 3, 'Code entered on rvlifesciences.in', '7:14:31 PM')}</div>
+        <div class="muted tiny" style="line-height:1.5">Code valid 10 minutes · 5 attempts · bound to this web session. SMS fallback only if WhatsApp can’t deliver in 30 s (3.2% of sign-ups).</div>
+      </div></div>`;
+  }
+  function identityCard(c) {
+    const a = c.anim;
+    const idr = (icn, k, v, s, i) => `<div class="idr"${a ? rv(500 + i * 260, 'flash') : ''}><span class="ii">${ic(icn)}</span><div><b>${v}</b><span>${k} · ${s}</span></div></div>`;
+    return `<div class="card"${a ? rv(250, 'pop') : ''}>
+      <div class="card-h">${ic('fingerprint', '', 'style="color:var(--violet)"')}<div class="grow"><h3>Identity resolution</h3><div class="sub">Three identifiers, one person</div></div>${chip('Resolved', 'green', 'checkc')}</div>
+      <div class="card-b" style="display:grid;gap:8px">
+        ${idr('link', 'Cookie', 'fs_anon_7c1e94d2', 'web tag · 7:12 PM', 0)}${idr('mail', 'Email', 'karan.b•••@gmail.com', 'web form · 7:14 PM', 1)}${idr('smartphone', 'WhatsApp number', '+91 98733 ••582', 'verified by OTP · 7:14 PM', 2)}
+        <div class="id-merge"${a ? rv(1400, 'pop') : ''}>${ic('merge')}<div><b>fsp_5520871 · Karan Bhatia</b><span>New profile · no earlier claims · ad click kept for attribution</span></div></div>
+      </div></div>`;
+  }
+  function eligCard(c) {
+    const on = c.b >= 2, a = c.anim && c.b === 2;
+    const rows = on
+      ? [['One sample per person', 'No earlier claim on this number, email or device'], ['One per household', 'No other claim at C-112, Lajpat Nagar IV'], ['Address quality', 'Score 0.96 · geocoded to the building'], ['Serviceable PIN', '110024 · Blue Dart, Delhivery · 1–2 days'], ['Stock reserved', 'Sample 9,412 of 18,000 · Gurugram FC']]
+      : [['One sample per person', 'Number, email and device against every claim'], ['One per household', 'Address against every earlier claim'], ['Address quality', 'Geocoded and scored before booking'], ['Serviceable PIN', 'Courier coverage and delivery time'], ['Stock reserved', 'Campaign stock at the nearest hub']];
+    return `<div class="card">
+      <div class="card-h">${ic('shield', '', 'style="color:var(--green)"')}<div class="grow"><h3>Eligibility checks</h3><div class="sub">Run before a sample is reserved</div></div>${on ? chip('5 of 5 passed', 'green', 'checkc') : chip('Waiting for address', 'outline')}</div>
+      <div class="card-b" style="display:grid;gap:2px">${rows.map(([t, d], i) => `<div class="elg ${on ? 'ok' : ''}"${a ? rv(400 + i * 330, 'flash') : ''}><span class="d">${on ? ic('check') : ''}</span><div><b>${t}</b><span>${d}</span></div></div>`).join('')}</div></div>`;
+  }
+  function conversionsCard(c) {
+    const a = c.anim;
+    return `<div class="card">
+      <div class="card-h">${ic('upload', '', 'style="color:var(--primary)"')}<div class="grow"><h3>Conversions sent to Google Ads</h3><div class="sub">Matched by gclid and hashed email · every 15 minutes</div></div>${liveChip('Syncing')}</div>
+      <table class="tbl"><thead><tr><th>Event</th><th>Time (IST)</th><th>Status</th></tr></thead><tbody>
+        <tr><td><span class="mono" style="font-size:12px">otp_verified</span></td><td>7:14:31 PM</td><td>${chip('Sent', 'green', 'check')}</td></tr>
+        <tr class="hl"${a ? rv(900, 'flash') : ''}><td><span class="mono" style="font-size:12px">sample_claimed</span></td><td>7:16:36 PM</td><td>${chip('Sent', 'green', 'check')}</td></tr>
+        <tr><td><span class="mono" style="font-size:12px">first_purchase</span></td><td class="muted">—</td><td>${chip('Waiting', 'outline', 'clock')}</td></tr>
+      </tbody></table>
+      <div class="run-strip"><span>Today <b>1,212</b> conversions synced</span><span>Match rate <b>96.4%</b></span><span>Cost per claim <b>₹40.40</b></span></div></div>`;
+  }
+  function webOrderCard() {
+    const st = [['done', 'Booked', '6 Nov · 7:16 PM'], ['todo', 'Packed', 'Gurugram FC'], ['todo', 'Shipped', 'Blue Dart'], ['todo', 'Delivered', 'by Mon, 9 Nov']];
+    return `<div class="card">
+      <div class="order" style="grid-template-columns:1fr"><div class="o-l" style="border-right:0"><img src="${IMG.pack}" alt=""><div style="min-width:0">
+        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap"><b style="font-size:14px">Order CG-26-60417</b>${chip('Booked', 'green')}${chip('Web claim', 'outline', 'globe')}</div>
+        <div class="muted" style="font-size:12px;margin-top:2px">Celin Gold 15-day sample · 1 × 15 tablets</div>
+        <div style="font-size:12px;margin-top:4px">Karan B. · C-112, 1st floor, Lajpat Nagar IV, New Delhi 110024</div>
+        <div style="margin-top:6px;display:flex;gap:6px;flex-wrap:wrap">${chip('Phone verified on WhatsApp', 'green', 'shield')}${chip('Updates on WhatsApp', 'wag')}</div></div></div></div>
+      <div class="tl-h" style="grid-template-columns:repeat(4,1fr)">${st.map(([s, t, d]) => `<div class="st ${s}"><span class="dot">${s === 'done' ? ic('check') : ''}</span><b>${t}</b><span>${d}</span></div>`).join('')}</div></div>`;
+  }
+  function journeyTrace(c) {
+    const list = [
+      { t: 'Sample booked · web claim', d: 'Confirmation on WhatsApp · CG-26-60417', ts: '6 Nov · 7:16 PM', at: [5, 0] },
+      { t: 'Shipped · courier webhook', d: 'Blue Dart · AWB 84261739502', ts: '7 Nov · 12:41 PM', at: [6, 0] },
+      { t: 'Delivered · delivery OTP matched', ts: '9 Nov · 11:52 AM', at: [6, 1], pend: 'expected 9 Nov' },
+      { t: 'Day 15 feedback', ts: '24 Nov · 9:00 AM', at: [7, 0], pend: 'scheduled 24 Nov' },
+      { t: 'Rating and recommendation', ts: '24 Nov · 9:06 AM', at: [7, 3], pend: 'waiting' },
+      { t: 'First-purchase offer', d: 'Code CGWEB-K4M9 online, or a bill from any chemist', ts: '24 Nov · 9:07 AM', at: [7, 3] },
+      { t: 'Eligible for loyalty and re-engagement', d: 'RV Wellness Club · refill reminders · AQI alerts', ts: '24 Nov', at: [7, 4] }
+    ];
+    const day = c.s === 5 ? 'Booked' : c.s === 6 ? (c.b >= 1 ? 'Day 0 of 15' : 'In transit') : 'Day 15 of 15';
+    return traceCard('Journey', 'Celin web trial · Karan Bhatia', traceItems(list, c), { icon: 'route', right: chip(day, 'navy') });
+  }
+  function cohortCard(c) {
+    const joined = c.s > 7 || (c.s === 7 && c.b >= 3);
+    const pos = positive(c);
+    return `<div class="card"${c.anim && c.s === 7 && c.b === 3 ? rv((c.phoneEnd || 900) + 200, 'anim') : ''}>
+      <div class="card-h">${ic('blend', '', 'style="color:var(--primary)"')}<div class="grow"><h3>Celin web trialists, positive</h3><div class="sub">Cohort · updates in real time</div></div><span class="chip navy num">${joined && pos ? '3,807' : '3,806'}</span></div>
+      <div class="card-b" style="display:grid;gap:7px">
+        <div class="rrow">${tok('Rating after 15 days')}${tok('≥', 'op')}${tok('4', 'val')}</div>
+        <div class="rrow">${tok('Would recommend')}${tok('=', 'op')}${tok('Yes', 'val')}</div>
+        <div class="rrow">${tok('Source')}${tok('=', 'op')}${tok('web claim', 'val', 'globe')}</div>
+        <div class="muted tiny" style="margin-top:2px">${joined ? (pos ? '<b style="color:var(--green-ink)">Karan joined at 9:06 AM.</b> ' : '<b style="color:var(--amber-ink)">Karan went to “follow-up” instead.</b> ') : ''}Used by: Refill reminder · Refer a friend · AQI alert</div>
+      </div></div>`;
+  }
+  function billCard(c) {
+    const L = LOY(c), a = c.anim;
+    const f = (k, v, conf) => `<dt>${k}</dt><dd>${v}${conf ? ` <span class="muted" style="font-weight:500">· ${conf}</span>` : ''}</dd>`;
+    return `<div class="card"${a ? rv((c.phoneEnd || 900) + 100, 'pop') : ''}>
+      <div class="card-h">${ic('receipt', '', 'style="color:var(--primary)"')}<div class="grow"><h3>Bill check</h3><div class="sub">Read from the photo on WhatsApp · 19 s</div></div>${chip('Auto-approved', 'green', 'checkc')}</div>
+      <div class="card-b" style="display:grid;gap:10px"><dl class="kv">${f('Retailer', 'Sanjeevani Medicos, Lajpat Nagar IV', '0.99')}${f('Date', `${L.day} 2026 · 6:42 PM`, '0.98')}${f('Item', 'Celin Gold Tab · 1 × 15', '0.97')}${f('Amount', '₹285.00', '0.99')}${f('Bill no.', 'SM/26/18342')}</dl>
+        <div style="display:flex;gap:6px;flex-wrap:wrap">${chip('Not a duplicate', 'green', 'check')}${chip('Within 30 days', 'green', 'check')}${chip('Known stockist', 'green', 'check')}</div></div></div>`;
+  }
+  function clubCard() {
+    return `<div class="card">
+      <div class="card-h">${ic('award', '', 'style="color:var(--violet)"')}<div class="grow"><h3>RV Wellness Club</h3><div class="sub">Loyalty programme · live since 1 Nov 2026</div></div>${liveChip('Live')}</div>
+      <div class="cmp-kpis"><div><b>2,214</b><span>Members</span></div><div><b>3,146</b><span>Bills verified</span></div><div><b>318</b><span>Free packs sent</span></div></div>
+      <div class="card-b" style="display:grid;gap:7px;font-size:12.5px">
+        ${[['cart', 'One stamp per Celin Gold pack, bought anywhere'], ['receipt', 'Bills on WhatsApp, read and checked in about 20 s'], ['globe', 'rvlifesciences.in orders stamp automatically'], ['gift', 'Every 4th pack free · shipped by Freestand']].map(([i, t]) => `<div style="display:flex;gap:8px;align-items:center;color:var(--fg-2)">${ic(i, '', 'style="width:15px;height:15px;color:var(--primary)"')}${t}</div>`).join('')}
+      </div></div>`;
+  }
+  function avenuesCard() {
+    const rows = [
+      ['repeat', 'Refill reminder', '12 days after a verified purchase', 'Sent 2,146 · reordered 28.5%', 1],
+      ['wind', 'AQI alert', 'AQI at home PIN above 300 for 2 hours', 'Sent 5,860 · ordered 12.0%'],
+      ['award', 'One stamp to go', 'Club members at 2 of 3 stamps', 'Sent 1,146 · bought 34.1%'],
+      ['clock', 'Code expiring', 'First-purchase code unused, 3 days left', 'Sent 4,970 · redeemed 11.8%'],
+      ['share', 'Refer a friend', 'Rated 4 or more and would recommend', 'Invites 2,318 · new claims 874']
+    ];
+    return `<div class="card">
+      <div class="card-h">${ic('route', '', 'style="color:var(--primary)"')}<div class="grow"><h3>Re-engagement journeys</h3><div class="sub">Celin web trialists · 5 live · last 30 days</div></div>${liveChip('Live')}</div>
+      <div class="avn">${rows.map(([i, t, d, st, sel]) => `<div class="av-r ${sel ? 'sel' : ''}"><span class="ai">${ic(i)}</span><div class="av-t"><b>${t}</b><span>${d}</span></div><span class="av-s">${st}</span></div>`).join('')}</div></div>`;
+  }
+  const FLOW_HEAD = (extra = []) => ({
+    crumb: ['Launch', 'Flows'], title: 'Celin web sampling · live session',
+    chips: [liveChip('Live'), chip('Embedded on rvlifesciences.in', 'outline', 'globe'), ...extra],
+    right: `<span class="ph-meta">${ic('workflow')}Celin web sampling v2</span><button class="btn sm">${ic('eye')}Preview form</button>`
+  });
+  const KARAN_HEAD = (extra = []) => ({
+    crumb: ['Operate', 'Conversations'], title: 'Karan Bhatia',
+    chips: [chip('WhatsApp', 'wag'), chip('From web claim', 'outline', 'globe'), ...extra],
+    right: `<span class="ph-meta">${ic('workflow')}Celin web trial</span><button class="btn sm">${ic('user')}Open profile</button>`
+  });
+  const timeOf = (c, fallback) => { const th = thread(c).filter(m => vis(m, c) && m.t); const t = th.length ? th[th.length - 1].t : fallback; return t.replace(/ ?[ap]m$/, ''); };
+  const web = (c, inner, o = {}) => phoneFrame(chromeScreen(inner, Object.assign({}, o, { load: c.anim && o.load !== false })), { time: o.time || '7:14', sw: c.anim && o.sw });
+
+  /* ---------------- web screens ---------------- */
+  function formView(c) {
+    const a = c.anim;
+    const at = t => (a ? t : null);
+    const inner = fsForm(`
+      <h3>Get your free sample</h3><p class="lead">Takes a minute. We verify your number on WhatsApp.</p>
+      ${wField('Full name', 'Karan Bhatia', { ph: 'Your name', at: at(700) })}
+      ${wField('Email', 'karan.bhatia86@gmail.com', { ph: 'you@example.com', at: at(1400) })}
+      ${wField('Mobile number', '98733 41582', { pre: '+91', ph: '10-digit mobile', at: at(2200), after: `<span class="wf-wa">${gl('wa')}</span>` })}
+      <div class="wchk"><span class="bx">${a ? `<span class="on"${rv(2900, 'pop')}>${crg('check')}</span>` : `<span class="on">${crg('check')}</span>`}</span><span>I’m 18+ and agree to get my code and sample updates from RV Life Sciences on WhatsApp. <a>Privacy notice</a></span></div>
+      ${wCta(`${gl('wa')}Send code on WhatsApp`, 'next', { at: at(3100) })}`, { n: 1, step: 'Your details' });
+    return lpPage(inner);
+  }
+  function otpView(c) {
+    const b = c.b, a = c.anim;
+    const filled = b >= 3;
+    const kb = b === 2;
+    const inner = fsForm(`
+      <h3>${filled ? 'Number verified' : 'Enter the code'}</h3>
+      <p class="lead">${filled ? 'Thanks, Karan. Your WhatsApp number is confirmed.' : 'We sent a 6-digit code to your WhatsApp: <b>+91 98733 41582</b>. <a class="lnk">Change</a>'}</p>
+      ${otpBoxes(filled ? OTP : '', { focus: !filled, ok: filled, at: filled && a ? 150 : null })}
+      ${filled ? `<div class="v-ok"${a ? rv(700, 'pop') : ''}>${crg('check')}Verified on WhatsApp</div>${wCta('Continue', 'next', { at: a ? 900 : null })}`
+        : `<div class="otp-row"><span>Didn’t get it? Resend in 0:${String(b === 0 ? 29 : 17).padStart(2, '0')}</span><a>Get it by SMS</a></div>
+           <div class="wa-tip"><span class="g">${gl('wa')}</span><span>Open WhatsApp and tap <b>Copy code</b> on the message from RV Life Sciences.</span></div>
+           ${wCta('Verify', null, { hint: false })}`}`, { n: 2, step: 'Verify your number' });
+    const page = lpPage(inner, { hero: 'mini' });
+    let overlay = '';
+    if (b === 0) overlay = waHeadsUp({ text: `${OTP} is your verification code. For your security, do not share this code.`, act: 'next' }, a ? 1100 : null);
+    if (kb) overlay = gboard({ clip: OTP, act: 'next' });
+    return web(c, page, { url: 'rvlifesciences.in/celin-gold/free-sample', overlay, load: b === 0, sw: b === 2, time: b >= 2 ? '7:14' : '7:14' });
+  }
+  function questionView(c) {
+    const b = c.b, a = c.anim;
+    const qs = [
+      ['wq1', Q1, [['Yes'], ['No'], ['Sometimes']]],
+      ['wq2', Q2, [['Immunity'], ['Energy'], ['Focus']]],
+      ['wq3', Q3, [['Me'], ['Parent', 'For my mother or father'], ['Family', 'To share at home']]]
+    ];
+    let inner;
+    if (b < 3) {
+      const [k, text, opts] = qs[b];
+      inner = fsForm(`<div class="qbar"><i style="width:${((b + 1) / 3) * 100}%"></i></div>
+        <div class="q-k">Question ${b + 1} of 3</div><h3 class="q-t">${text}</h3>
+        ${qTiles(k, opts, c.v(k))}
+        <div class="q-n">There are no right answers. Your answers help RV understand what people look for this winter.</div>`, { n: 3, step: 'About you', rv: a && b > 0 ? 60 : null });
+    } else {
+      inner = fsForm(`<div class="q-done"${a ? rv(100, 'pop') : ''}><span class="big">${crg('check')}</span><h3>Thanks, Karan</h3><p>Last step: tell us where to send your free 15-day sample.</p></div>
+        ${wCta('Continue to delivery', 'next', { at: a ? 700 : null })}`, { n: 3, step: 'About you' });
+    }
+    return web(c, lpPage(inner, { hero: 'mini' }), { url: 'rvlifesciences.in/celin-gold/free-sample', load: false, time: '7:15' });
+  }
+  function addressView(c) {
+    const b = c.b, a = c.anim;
+    let inner;
+    if (b === 0) {
+      inner = fsForm(`<h3>Where should we deliver?</h3><p class="lead">We check your PIN code first, so you only fill in an address we can deliver to.</p>
+        ${wField('PIN code', '110024', { ph: '6-digit PIN', at: a ? 600 : null, cls: 'focus' })}
+        ${wCta('Check PIN code', 'next', { at: a ? 1300 : null })}`, { n: 4, step: 'Delivery' });
+    } else {
+      const at = t => (a && b === 1 ? t : null);
+      inner = fsForm(`<div class="pin-ok"${a && b === 1 ? rv(150, 'pop') : ''}>${crg('check')}<div><b>We deliver to 110024</b><span>Lajpat Nagar, New Delhi · free · 1–2 days</span></div></div>
+        ${wField('Flat, house no.', 'C-112, 1st floor', { ph: 'Flat or house number', at: at(600) })}
+        ${wField('Street, area', 'Lajpat Nagar IV', { ph: 'Street and area', at: at(1250) })}
+        ${wField('Landmark', 'Near Amar Colony market', { ph: 'Optional', at: at(1900) })}
+        ${wField('City, state', 'New Delhi, Delhi', { cls: 'lock' })}
+        ${wCta('Claim my free sample', 'next', { at: at(2500), still: b === 2 })}`, { n: 4, step: 'Delivery' });
+    }
+    let overlay = '';
+    if (b === 2) {
+      const row = (t, i) => `<div class="chk-row"><span class="sp"${a ? ` data-rvhide="${500 + i * 600}"` : ' style="display:none"'}></span><span class="ok"${a ? rv(500 + i * 600, 'pop') : ''}>${crg('check')}</span>${t}</div>`;
+      overlay = `<div class="wdim"></div><div class="wmodal"><h4>Confirming your sample</h4><p class="lead" style="margin:0 0 6px">Just a moment…</p>
+        ${row('One sample per person and household', 0)}${row('Verifying your address', 1)}${row('Reserving your sample', 2)}
+        <div style="margin-top:14px">${wCta('See my confirmation', 'next', { at: a ? 2100 : null })}</div></div>`;
+    }
+    return web(c, lpPage(inner, { hero: 'mini' }), { url: 'rvlifesciences.in/celin-gold/free-sample', load: false, overlay, time: b === 0 ? '7:15' : '7:16' });
+  }
+  function successView(c) {
+    const a = c.anim;
+    const inner = `<div class="ws-ok"><span class="big"${a ? rv(250, 'pop') : ''}>${crg('check')}</span><h2>You’re in, Karan!</h2><p>Your free Celin Gold sample is booked.</p></div>
+      <div class="ws-ord"><img src="${IMG.pack}" alt=""><div><div class="t">Celin Gold · 15-day sample</div><div class="s">Order CG-26-60417<br>Arriving by <b>Mon, 9 Nov</b><br>C-112, Lajpat Nagar IV, New Delhi</div></div></div>
+      <div class="ws-wa"><div class="r">${gl('wa')}<span>Every update comes on WhatsApp from <b>RV Life Sciences</b>: shipping, delivery and a day-15 check-in. Reply STOP any time.</span></div>
+        ${wCta(`${gl('wa')}Open WhatsApp`, 'next', { cls: 'wgreen', at: a ? 900 : null })}${wCta(`${crg('share')}Share with a friend`, 'next', { cls: 'ghost', hint: false })}</div>`;
+    return web(c, lpPage(inner, { hero: false }), { url: 'rvlifesciences.in/celin-gold/thank-you', time: '7:16' });
+  }
+
+  /* ---------------- steps ---------------- */
+  const steps = [
+    { // 1 · Search ad
+      nav: 'campaigns', subject: 'search', cdpDelay: 500,
+      cap: { t: 'He searches, and sees the ad', d: 'A Google Search ad on his phone, for people looking up vitamin C and zinc in Delhi NCR.' },
+      head: { crumb: ['Launch', 'Campaigns'], title: 'Celin Gold · Website sampling', chips: [liveChip('Live'), chip('Google Ads · Search', 'outline', 'search')], right: `<span class="ph-meta">${ic('calendar')}1 Nov – 15 Dec 2026</span><button class="btn sm">${ic('pause')}Pause</button><button class="btn sm">${ic('edit')}Edit</button>` },
+      view: c => phoneLayout(phoneFrame(chromeScreen(serpPage(), { query: 'vitamin c zinc tablets for immunity', tabs: 5 }), { time: '7:12' }), gadsCard())
+    },
+    { // 2 · Landing page form
+      nav: 'flows', subject: 'karan', cdpDelay: 600,
+      cap: { t: 'Name, email and phone on RV’s page', d: 'The Freestand form sits on RV’s own landing page. The WhatsApp opt-in box starts unticked.' },
+      head: FLOW_HEAD(),
+      view: c => phoneLayout(web(c, formView(c), { url: 'rvlifesciences.in/celin-gold/free-sample', time: '7:13' }), sessionCard() + webTrace(c))
+    },
+    { // 3 · OTP on WhatsApp, typed on the web
+      nav: c => (c.b >= 3 ? 'identity' : 'flows'), subject: 'karan', beats: 4, cdpDelay: c => (c.b === 1 ? null : 400),
+      cap: c => [
+        { t: 'The code arrives on WhatsApp', d: 'An authentication template from RV’s verified business number, not an SMS.' },
+        { t: 'One tap copies the code', d: 'WhatsApp’s Copy code button. The chat is now open for updates.' },
+        { t: 'Back on the page to paste it', d: 'The keyboard offers the copied code. One tap fills all six boxes.' },
+        { t: 'Verified: one profile, not three', d: 'Cookie, email and WhatsApp number now point to the same person.' }
+      ][c.b],
+      head: c => (c.b >= 3
+        ? { crumb: ['Data', 'Identity'], title: 'Karan Bhatia', chips: [chip('Resolved', 'green', 'checkc'), chip('3 identifiers', 'outline', 'fingerprint')], right: `<span class="ph-meta">${ic('fingerprint')}Match keys: phone · email · cookie</span>` }
+        : FLOW_HEAD()),
+      view: c => {
+        if (c.b === 1) {
+          const phone = phoneFrame(waScreen({ c, thread: thread(c) }), { time: '7:14', sw: c.anim });
+          return phoneLayout(phone, otpCard(c) + webTrace(c));
+        }
+        return phoneLayout(otpView(c), (c.b >= 3 ? identityCard(c) : '') + otpCard(c) + (c.b >= 3 ? '' : webTrace(c)));
+      }
+    },
+    { // 4 · Questions on the web
+      nav: 'flows', subject: 'karan', beats: 4, cdpDelay: 350,
+      cap: c => (c.b < 3 ? { t: 'Three sincere questions', d: 'One tap each. Every answer is written to his profile as a trait.' } : { t: 'Answers saved, on to delivery', d: 'His segment is derived from the answers: new to supplements, immunity-first.' }),
+      head: FLOW_HEAD(),
+      view: c => phoneLayout(questionView(c), webTrace(c))
+    },
+    { // 5 · PIN, address, checks
+      nav: 'flows', subject: 'karan', beats: 3, cdpDelay: c => [900, 400, 1500][c.b],
+      cap: c => [
+        { t: 'PIN code first', d: 'Freestand checks serviceability before he types an address.' },
+        { t: 'Address, then claim', d: '110024 is served in 1–2 days. City and state are filled in for him.' },
+        { t: 'Checks run before stock is reserved', d: 'One per person and household, address quality, stock. All in about 2 seconds.' }
+      ][c.b],
+      head: FLOW_HEAD(),
+      view: c => phoneLayout(addressView(c), eligCard(c) + webTrace(c))
+    },
+    { // 6 · Claim success
+      nav: 'exports', subject: 'karan', cdpDelay: 700,
+      cap: { t: 'Claimed, and the ad gets the credit', d: 'A confirmation page and a WhatsApp message. The claim is sent back to Google Ads.' },
+      head: { crumb: ['Data', 'Exports'], title: 'Google Ads · conversion sync', chips: [liveChip('Syncing'), chip('Every 15 min', 'outline', 'refresh')], right: `<span class="ph-meta">${ic('clock')}6 Nov, 7:16 PM IST</span><button class="btn sm">${ic('settings')}Mapping</button>` },
+      view: c => phoneLayout(successView(c), conversionsCard(c) + webOrderCard())
+    },
+    { // 7 · WhatsApp updates
+      nav: 'conversations', subject: 'karan', beats: 3,
+      cap: c => [
+        { t: 'Every update on WhatsApp', d: 'The chat that carried his code now carries his order: booked, then shipped.' },
+        { t: 'Delivered, and the trial clock starts', d: 'The courier’s delivery scan sends this message and schedules his day-15 check-in.' },
+        { t: 'Delivery confirmed', d: 'His one-tap reply is saved to his profile.' }
+      ][c.b],
+      head: c => KARAN_HEAD([chip(c.b >= 1 ? 'Day 0' : 'In transit', 'navy')]),
+      view: c => phoneLayout(phoneFrame(waScreen({ c, thread: thread(c) }), { time: timeOf(c, '12:41'), sw: c.anim && c.b === 0 }), journeyTrace(c))
+    },
+    { // 8 · Day 15 feedback + first purchase
+      nav: c => (c.b >= 3 ? 'cohorts' : 'conversations'), subject: 'karan', beats: 5,
+      cap: c => [
+        { t: 'Day 15 feedback', d: 'He has finished the sample. RV asks for a rating.' },
+        { t: 'Star rating, native to WhatsApp', d: 'A list message: one tap to rate.' },
+        { t: 'Would he recommend it?', d: 'His rating is saved; one more question.' },
+        { t: 'Offer code, and a cohort update', d: `20% off online, or a bill from any chemist. He joins “${cohortName(c)}”.` },
+        c.v('buy') === 'online' ? { t: 'He buys online', d: 'The store webhook records the order and his first Club stamp.' }
+          : c.v('buy') === 'later' ? { t: 'Not yet, and that’s fine', d: 'The code stays valid. A reminder is set for three days before it expires.' }
+            : { t: 'Where to buy, nearby', d: 'Chemists within 2 km that stock Celin Gold, from RV’s distributor feed.' }
+      ][c.b],
+      head: c => (c.b >= 3
+        ? { crumb: ['Consumers', 'Cohorts'], title: cohortName(c), chips: [chip('Live cohort', 'green'), chip(positive(c) ? '3,807 people' : '1,126 people', 'navy')], right: `<span class="ph-meta">${ic('refresh')}Updated 24 Nov, 9:06 AM IST</span><button class="btn sm">${ic('upload')}Export</button>` }
+        : KARAN_HEAD([chip('Day 15', 'navy')])),
+      view: c => {
+        const overlay = c.b === 1 ? listSheet({ title: 'Rate your 15 days', rows: [5, 4, 3, 2, 1].map(n => ({ t: STARS[n], stars: n, act: `set:wrating=${n}` })) }) : null;
+        return phoneLayout(phoneFrame(waScreen({ c, thread: thread(c), overlay }), { time: timeOf(c, '9:00') }), cohortCard(c) + journeyTrace(c));
+      }
+    },
+    { // 9 · Loyalty: chemist bill → Club stamp
+      nav: c => (c.b === 1 ? 'conversations' : 'people'), subject: 'karan', beats: 3, layoutKey: c => (c.b === 0 ? 'scene' : 'phone'),
+      cdpDelay: c => (c.b === 0 ? 900 : c.b === 2 ? 900 : null),
+      cap: c => [
+        { t: 'Loyalty: he buys at his chemist', d: `${LOY(c).day}. A pack from the neighbourhood store, and he keeps the bill.` },
+        { t: 'The bill becomes a Club stamp', d: 'He sends a photo on WhatsApp. It’s read, checked and stamped in about 20 seconds.' },
+        { t: 'His RV Wellness Club card', d: 'Every 3 packs, the 4th is free. Chemist and online purchases both count.' }
+      ][c.b],
+      head: c => (c.b === 1 ? KARAN_HEAD([chip('RV Wellness Club', 'violet', 'award')])
+        : { crumb: ['Consumers', 'People'], title: 'Karan Bhatia', chips: [chip('RV Wellness Club', 'violet', 'award'), chip(`Stamps ${c.b === 0 ? LOY(c).n - 1 : LOY(c).n} of 3`, 'outline')], right: `<span class="ph-meta">${ic('receipt')}Bills verified: ${c.b === 0 ? 0 : 1}</span><button class="btn sm">${ic('msg')}Message</button>` }),
+      view: c => {
+        if (c.b === 0) {
+          const strip = `<div class="card"><div class="run-strip" style="border-top:0;background:#fff;border-radius:14px">${ic('store', '', 'style="width:16px;height:16px;color:var(--primary)"')}<span><b>38</b> chemists near 110024 stock Celin Gold</span><span><b>612</b> bills sent this week</span><span><b>94%</b> verified automatically</span><span style="margin-left:auto" class="muted">${LOY(c).day} · 6:42 PM IST</span></div></div>`;
+          return `<div class="lay-vsplit">${sceneChemist(c)}${strip}</div>`;
+        }
+        if (c.b === 1) return phoneLayout(phoneFrame(waScreen({ c, thread: thread(c) }), { time: '6:44' }), billCard(c) + clubCard());
+        const L = LOY(c);
+        return phoneLayout(web(c, clubPage(L.n, { since: L.since, dates: L.dates, at: c.anim ? 350 : null }), { url: 'club.rvlifesciences.in/card', time: '6:45', sw: true }), clubCard() + billCard(Object.assign({}, c, { anim: false })));
+      }
+    },
+    { // 10 · Re-engagement
+      nav: 'flows', subject: 'karan', beats: 2,
+      cap: c => (c.b === 0
+        ? { t: 'Re-engagement: refill reminder', d: 'Twelve days after a verified purchase, one message, with his stamp count in it.' }
+        : c.v('refill') === 'snooze' ? { t: 'He snoozed it', d: 'The reminder moves by a week. His preference is saved.' } : { t: 'Reordered, stamp added', d: 'The store webhook records the order and adds the stamp. No bill needed online.' }),
+      head: { crumb: ['Launch', 'Flows'], title: 'Refill reminder · Celin web trialists', chips: [liveChip('Live'), chip('Trigger: purchase + 12 days', 'outline', 'repeat')], right: `<span class="ph-meta">${ic('clock')}Runs daily, 10:00 AM IST</span><button class="btn sm">${ic('edit')}Edit flow</button>` },
+      view: c => {
+        const R = REF(c), L = LOY(c);
+        const rule = ruleCard({
+          title: 'Refill reminder', sub: 'Trigger rule · owned by Neha Kapoor',
+          nl: 'If <code>verified purchase + 12 days</code> and no newer purchase',
+          blocks: [
+            { tag: 'when', rows: [tok('Verified purchase', '', 'receipt'), '<span class="rsub">Chemist bills on WhatsApp · rvlifesciences.in orders · 15-tablet pack</span>'] },
+            { tag: 'if', rows: [tok('Days since purchase') + tok('=', 'op') + tok('12', 'val') + tok('No newer purchase')] },
+            { tag: 'and', rows: [tok('WhatsApp consent') + tok('granted', 'val') + tok('Not snoozed')] },
+            { tag: 'then', rows: [tok('Send template', '', 'send') + tok('refill_reminder_celin', 'val') + chip('Marketing · approved', 'green'), `<span class="rsub">10:00 AM–12:00 PM IST · stamp count personalised (Karan: ${L.n + 1} of 3)</span>`] }
+          ],
+          run: `<span>${R.day} · <b>146</b> due today</span><span>Sent <b>146</b></span><span>Reordered so far <b>41</b></span>`
+        });
+        return `<div class="lay-rule"><div class="rule-col" style="display:flex;flex-direction:column;gap:12px">${avenuesCard()}${rule}</div>${phoneFrame(waScreen({ c, thread: thread(c) }), { time: timeOf(c, '10:00') })}</div>`;
+      }
+    },
+    { // 11 · Analytics
+      nav: 'analytics', subject: 'webres', cdpDelay: 500,
+      cap: { t: 'Results: from search to repeat purchase', d: '94,310 ad clicks to 1,036 repeat buyers, with chemist sales finally visible.' },
+      head: { crumb: ['Measure', 'Analytics'], title: 'Celin Gold · Website sampling', chips: [chip('Completed', 'green', 'checkc')], right: `<span class="ph-meta">${ic('refresh')}Updated 15 Jan, 6:00 PM IST</span><button class="btn sm">${ic('share')}Share</button>` },
+      view: () => `<div class="lay-page">
+        ${filtersRow([['calendar', '1 Nov 2026 – 15 Jan 2027'], ['pin', 'Delhi NCR', '· 198 PINs'], ['search', 'Google Ads · Search']])}
+        ${kpiRow([{ l: 'Total spend', v: '₹23.3 L', d: 'Google Ads ₹7.1 L · samples and delivery ₹16.2 L' }, { l: 'Cost per sampled consumer', v: '₹136', d: 'incl. media, sample and last mile' }, { l: 'Verified on WhatsApp', v: '91.4%', d: 'of form sign-ups · SMS pilot: 76%' }, { l: 'First purchase', v: '17.4%', d: '2,980 of 17,120 trialists' }])}
+        <div class="an-grid">
+          ${funnelCard({
+            title: 'Website sampling funnel', sub: 'Bars show share of the stage’s base; right column shows step conversion',
+            rows: [
+              { div: 'Google Ads · 16.5 lakh impressions' },
+              { n: 'Ad clicks', sub: '89,640 landing page views', v: 94310, bar: 100, pct: '5.7%', pctLbl: 'click-through' },
+              { div: 'Website · share of landing page views' },
+              { n: 'Form submitted', sub: 'name, email, mobile', v: 26880, bar: 30.0, pct: '30.0%', pctLbl: 'of views' },
+              { n: 'Verified on WhatsApp', sub: 'OTP typed on the page', v: 24570, bar: 27.4, pct: '91.4%', pctLbl: 'of submitted' },
+              { n: 'Sample claimed', sub: 'after checks · cap 18,000', v: 17640, bar: 19.7, pct: '71.8%', pctLbl: 'of verified' },
+              { div: 'After the sample · share of 17,120 delivered' },
+              { n: 'First purchase', sub: 'chemist 1,790 · online 1,190', v: 2980, bar: 17.4, pct: '17.4%', pctLbl: 'of delivered' },
+              { n: 'Repeat purchase', sub: 'RV Wellness Club members', v: 1036, bar: 6.1, pct: '34.8%', pctLbl: 'of first buyers' }
+            ]
+          })}
+          ${insightsCard([
+            { icon: 'receipt', html: '<b>60% of first purchases were at chemists</b> (1,790 of 2,980), seen only through bills sent on WhatsApp. Share the top 40 chemists with RV’s field team.' },
+            { icon: 'shield', html: '<b>WhatsApp OTP verified 91.4% of sign-ups</b>, against 76% for SMS in October’s pilot, and blocked 1,812 repeat claims.' },
+            { icon: 'repeat', html: '<b>Refill reminders drove 59% of repeat purchases</b> (612 of 1,036). Members one stamp from a free pack bought 2.3× faster.' }
+          ])}
+        </div></div>`
+    }
+  ];
+
+  /* Google Ads campaign card (step 1) */
+  function gadsCard() {
+    return `<div class="card">
+      <div class="card-h">${ic('search', '', 'style="color:var(--primary)"')}<div class="grow"><h3>Google Ads · Search</h3><div class="sub">Flight 1 Nov – 15 Dec 2026 · Delhi NCR</div></div>${liveChip('Live')}</div>
+      <div class="card-b" style="display:grid;gap:10px"><dl class="kv">
+        <dt>Campaign</dt><dd>Celin Gold · Web sampling · Delhi NCR</dd>
+        <dt>Final URL</dt><dd>rvlifesciences.in/celin-gold/free-sample → <span style="color:var(--primary)">Celin web sampling v2</span></dd>
+        <dt>Negatives</dt><dd>cure, treatment, covid, medicine for cold <span class="muted">(+14)</span></dd>
+        <dt>Goals</dt><dd>OTP verified · sample claimed <span class="muted">(sent back by gclid)</span></dd></dl></div>
+      <table class="tbl"><thead><tr><th>Keyword</th><th class="r">Clicks</th><th class="r">CTR</th></tr></thead><tbody>
+        <tr class="hl"><td>vitamin c zinc tablets <span class="muted tiny">phrase</span></td><td class="r num">4,212</td><td class="r num">6.8%</td></tr>
+        <tr><td>immunity supplement <span class="muted tiny">phrase</span></td><td class="r num">3,904</td><td class="r num">5.1%</td></tr>
+        <tr><td>vitamin c tablets for adults <span class="muted tiny">exact</span></td><td class="r num">2,318</td><td class="r num">5.9%</td></tr></tbody></table>
+      <div class="cmp-kpis" style="border-top:1px solid var(--line)"><div><b>3,12,480</b><span>Impressions</span></div><div><b>17,806</b><span>Clicks</span><em>5.7%</em></div><div><b>₹7.53</b><span>Cost per click</span></div></div>
+      <div class="card-b" style="display:grid;gap:10px">
+        <div><div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:5px"><span class="muted">Budget spent</span><b>₹1,34,080 <span class="muted" style="font-weight:500">of ₹8,00,000</span></b></div><div class="pbar"><i style="width:16.8%"></i></div></div>
+        <div><div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:5px"><span class="muted">Samples claimed</span><b>3,318 <span class="muted" style="font-weight:500">of 18,000 cap</span></b></div><div class="pbar"><i style="width:18.4%;background:var(--orange)"></i></div></div>
+      </div></div>`;
+  }
+
+  DEMOS.web = {
+    title: 'Celin Gold · Website sampling', nextLabel: 'Website sampling demo', short: 'Website sampling', icon: 'globe', steps, writes,
+    defaults: { wq1: 'No', wq2: 'Immunity', wq3: 'Me', wdeliv: 'ok', wrating: '5', wrec: 'Yes', buy: 'chemist', refill: 'order' }
+  };
+})();
+
+/* =================================================================
    Shell + boot
    ================================================================= */
 function buildShell() {
@@ -3203,8 +4314,9 @@ function buildShell() {
       <div class="tb-brand">${FS_LOGO_FULL}${FS_LOGO_MARK}</div>
       <div class="ws" title="Switch workspace"><span class="ws-badge">${rvMark(24)}</span><div><div class="ws-name">RV Life Sciences</div><div class="ws-sub">Enterprise workspace</div></div>${ic('updown')}</div>
       <div class="prog"><div class="prog-toggle" role="tablist" aria-label="Programme">
-        <button role="tab" data-demo="d2c">${ic('megaphone')}<span class="pt-txt">Celin Gold · Delhi pollution season</span><span class="pt-sub">D2C sampling</span></button>
+        <button role="tab" data-demo="d2c">${ic('megaphone')}<span class="pt-txt">Delhi pollution season</span><span class="pt-sub">D2C WhatsApp sampling</span></button>
         <button role="tab" data-demo="doc">${ic('stetho')}<span class="pt-txt">Doctor network activation</span><span class="pt-sub">Offline × WhatsApp</span></button>
+        <button role="tab" data-demo="web">${ic('globe')}<span class="pt-txt">Website sampling</span><span class="pt-sub">Search ad × web form</span></button>
       </div></div>
       <div class="tb-right">
         <div class="search" id="search" role="button" tabindex="0">${ic('search')}<span>Search people, flows, orders…</span><kbd>⌘K</kbd></div>
@@ -3238,6 +4350,12 @@ function buildShell() {
   $$('.prog-toggle button').forEach(bt => bt.classList.toggle('on', bt.dataset.demo === ST.demo));
   render({ stepChange: true, anim: true, dir: 1 });
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => fitAll());
+  // a deep link pasted into an open tab (render() itself uses replaceState, which doesn't fire this)
+  window.addEventListener('hashchange', () => {
+    readHash();
+    $$('.prog-toggle button').forEach(bt => bt.classList.toggle('on', bt.dataset.demo === ST.demo));
+    render({ stepChange: true, anim: true, dir: 1 });
+  });
 })();
 
 </script>
