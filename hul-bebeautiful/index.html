@@ -1365,6 +1365,155 @@ table.tbl{width:100%;border-collapse:collapse;font-size:12px}
 .sr-h.hint{animation:linkHint 1.6s ease-out infinite}
 .sr-sl div[data-act]{cursor:pointer}
 
+/* ---------------- Freestand analytics (Analytics V2 + MagicFlow) ---------------- */
+.workspace.wide{grid-template-columns:minmax(0,1fr)}
+.workspace.wide .cdp{display:none}
+.av-page{padding:0}
+.av2{display:grid;grid-template-columns:190px minmax(0,1fr);min-height:100%;background:#fff;border:1px solid #e5e5e5;border-radius:6px}
+.av2-side{border-right:1px solid #e5e5e5;padding:12px 10px;display:flex;flex-direction:column;gap:2px;background:#fafafa;border-radius:6px 0 0 6px}
+.av-back{display:flex;align-items:center;gap:4px;font-size:12px;color:var(--muted);padding:2px 6px 8px}
+.av-back .ic{width:14px;height:14px}
+.av-sg{font-size:10.5px;font-weight:650;letter-spacing:.08em;text-transform:uppercase;color:var(--muted-2);padding:10px 8px 4px}
+.av-si{display:flex;align-items:center;gap:8px;height:32px;padding:0 8px;border-radius:6px;font-size:12.8px;font-weight:500;color:var(--fg-2);white-space:nowrap}
+.av-si .ic{width:15px;height:15px;color:var(--muted)}
+.av-si[data-act]{cursor:pointer}
+.av-si[data-act]:hover{background:#eef2f8}
+.av-si.on{background:#e8eefb;color:#052762;font-weight:650}
+.av-si.on .ic{color:#052762}
+.av-n{margin-left:auto;font-size:10.5px;font-weight:600;background:#eef1f6;border-radius:9px;padding:1px 6px;color:var(--muted)}
+.av2-main{min-width:0;padding:14px 18px 18px;display:flex;flex-direction:column;gap:14px}
+.av-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.av-vt{display:inline-flex;border:1px solid #e5e5e5;border-radius:8px;padding:2px;font-size:11.5px;font-weight:600;color:var(--muted)}
+.av-vt span{padding:4px 9px;border-radius:6px}
+.av-vt .on{background:#052762;color:#fff}
+.av-sel{display:inline-flex;align-items:center;gap:7px;height:32px;padding:0 10px;border:1px solid #d9d9d9;border-radius:6px;font-size:12.5px;font-weight:500;color:var(--fg);background:#fff}
+.av-sel .ic{width:15px;height:15px;color:var(--muted)}
+.av-sel svg:last-child{width:16px;height:16px;color:var(--muted)}
+.av-ref{width:32px;height:32px;border-radius:50%;border:1px solid #d9d9d9;display:grid;place-items:center;color:var(--fg-2)}
+.av-ref .ic{width:15px;height:15px}
+.av-date,.av-auto{display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 12px;border:1px solid #d9d9d9;border-radius:999px;font-size:12.5px;font-weight:500;color:var(--fg);background:#fff}
+.av-date .ic{width:14px;height:14px;color:var(--muted)}
+.av-date svg:last-child,.av-auto svg{width:16px;height:16px;color:var(--muted)}
+.av-auto b{font-weight:600}
+.av-cmp{font-size:11px;color:#8c8c8c}
+.av-h{margin:0;font-size:20px;font-weight:650;letter-spacing:-.015em;display:flex;align-items:center;gap:8px}
+.av-h .ic{width:20px;height:20px;color:#052762}
+.av-hs{font-size:12px;font-weight:500;color:var(--muted)}
+.av-card{background:#fff;border:1px solid #e5e5e5;border-radius:6px;min-width:0;display:flex;flex-direction:column}
+.av-card:hover{box-shadow:0 1px 2px rgba(0,0,0,.05)}
+.av-ch{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;padding:9px 12px;border-bottom:1px solid #eeeeee}
+.av-ch h3{margin:0;font-size:14px;font-weight:550;color:var(--fg)}
+.av-ch span{display:block;font-size:11.5px;color:var(--muted);margin-top:1px}
+.av-max .ic,.av-tools .ic{width:15px;height:15px;color:var(--muted-2)}
+.av-tools{display:flex;gap:10px}
+.av-cb{padding:12px;min-width:0}
+.av-q{display:inline-grid;place-items:center;width:13px;height:13px;border-radius:50%;border:1px solid #c4c4c4;font-size:9px;color:#8c8c8c;margin-left:4px;vertical-align:1px}
+.av-live{display:grid;grid-template-columns:repeat(auto-fit,minmax(128px,1fr));gap:14px;padding:16px 16px 18px}
+.av-live>div{text-align:center;display:flex;flex-direction:column;align-items:center;gap:3px}
+.av-live b{font-size:28px;font-weight:600;letter-spacing:-.02em;color:#052762;line-height:1.1}
+.av-live small{font-size:11.5px;color:#8c8c8c}
+.av-live span{font-size:12.5px;color:#595959;display:flex;align-items:center}
+.av-row2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+.av-row2.wa{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr)}
+.av-kd{background:#f5f8ff;border:1px solid #dbe6fd;border-radius:6px;padding:10px 12px;margin-bottom:12px}
+.av-kd .k{font-size:10.5px;font-weight:700;letter-spacing:.1em;color:#2872F4}
+.av-kd p{margin:4px 0 8px;font-size:13px;line-height:1.45;color:var(--fg)}
+.av-kd .pill{display:inline-block;font-size:11.5px;font-weight:600;background:#D4E3FD;color:#052762;border-radius:999px;padding:2px 10px}
+.av-rank{display:grid;gap:8px}
+.av-rank div{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) 26px;gap:10px;align-items:center;font-size:12.3px;color:var(--fg-2)}
+.av-rank i{height:10px;background:#eef1f6;border-radius:4px;overflow:hidden}
+.av-rank em{display:block;height:100%;background:#0A49B7;border-radius:0 4px 4px 0}
+.av-rank b{font-size:11.5px;color:var(--muted);text-align:right;font-weight:600}
+.av-segs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.av-seg{border:1px solid #e5e5e5;border-radius:6px;padding:9px 10px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.av-tag{align-self:flex-start;font-size:9.5px;font-weight:700;letter-spacing:.08em;padding:2px 6px;border-radius:4px}
+.av-seg.t .av-tag{background:#e6f7f0;color:#047857}
+.av-seg.d .av-tag{background:#fde9ee;color:#be123c}
+.av-sp{font-size:11.8px;color:var(--fg-2);line-height:1.35;min-height:32px}
+.av-pi{display:flex;align-items:baseline;gap:5px;flex-wrap:wrap}
+.av-pi b{font-size:21px;font-weight:650;color:var(--fg)}
+.av-pi span{font-size:11px;color:var(--muted)}
+.av-pi em{font-style:normal;font-size:10.5px;font-weight:600;background:#eef1f6;color:var(--fg-2);border-radius:4px;padding:1px 5px}
+.av-nn{font-size:11px;color:var(--muted)}
+.av-ai{display:flex;gap:9px;align-items:flex-start;margin-top:10px;background:#eef2ff;border-left:3px solid #6366f1;border-radius:4px;padding:9px 11px}
+.av-ai .ic{width:16px;height:16px;color:#6366f1;flex:none;margin-top:1px}
+.av-ai p{margin:0;font-size:12.5px;line-height:1.45;color:#312e81}
+.av-funnel{display:flex;align-items:center;background:#fff;border:1px solid #e5e5e5;border-radius:6px;padding:14px 8px;overflow-x:auto}
+.av-funnel>div{flex:1;min-width:98px;text-align:center;display:flex;flex-direction:column;gap:3px}
+.av-funnel>i{width:1px;height:40px;background:#e5e5e5;flex:none}
+.av-funnel b{font-size:24px;font-weight:600;color:#052762;letter-spacing:-.02em;white-space:nowrap}
+.av-funnel b small{font-size:13px;font-weight:500;color:#8c8c8c}
+.av-funnel span{font-size:12px;color:#8c8c8c;display:flex;align-items:center;justify-content:center}
+.av-radio{position:relative}
+.av-radio input{position:absolute;opacity:0;pointer-events:none}
+.av-radio label{display:inline-block;font-size:12px;font-weight:500;padding:4px 11px;border:1px solid #d9d9d9;cursor:pointer;color:var(--fg-2);margin-bottom:8px}
+.av-radio label[for=avDay]{border-radius:6px 0 0 6px}
+.av-radio label[for=avCum]{border-radius:0 6px 6px 0;margin-left:-1px}
+.av-radio input:checked+label{border-color:#052762;color:#052762;background:#f5f8ff;position:relative}
+.av-radio input:focus-visible+label{outline:2px solid #2872F4;outline-offset:2px}
+.av-cum{display:none}
+#avCum:checked~.av-day{display:none}
+#avCum:checked~.av-cum{display:block}
+.av-svg{display:block;width:100%;height:auto}
+.av-hit:hover{fill:rgba(5,39,98,.05)}
+.av-leg{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--fg-2);margin-top:6px}
+.av-leg span{display:inline-flex;align-items:center;gap:6px}
+.av-leg i{width:10px;height:10px;border-radius:3px;display:inline-block}
+.av-leg i.ln{height:3px;width:14px;border-radius:2px}
+.av-tbl td,.av-tbl th{padding:7px 10px}
+.av-tbl .av-total td{background:#fafafa;font-weight:650}
+.av-conv{display:inline-block;font-size:11.5px;font-weight:600;padding:1px 7px;border-radius:4px;border:1px solid}
+.av-conv.g{background:#f6ffed;border-color:#b7eb8f;color:#389e0d}
+.av-conv.b{background:#e6f4ff;border-color:#91caff;color:#0958d9}
+.av-conv.o{background:#fff7e6;border-color:#ffd591;color:#d46b08}
+.av-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.av-grid .av-cb{min-height:178px;display:flex;flex-direction:column;justify-content:center}
+.av-div{padding:4px 0 0}
+.av-bars{display:grid;gap:10px}
+.av-br{display:grid;grid-template-columns:minmax(90px,.9fr) minmax(0,1.6fr) 46px;gap:10px;align-items:center;font-size:12.5px;color:var(--fg-2)}
+.av-bt{height:14px;background:#f1f4f9;border-radius:4px;overflow:hidden}
+.av-bt i{display:block;height:100%;border-radius:0 4px 4px 0;transform-origin:0 50%;animation:barIn .9s cubic-bezier(.2,.8,.2,1) both}
+.av-br b{text-align:right;font-weight:650;color:var(--fg);font-variant-numeric:tabular-nums}
+.av-donut{display:flex;align-items:center;gap:14px}
+.av-donut svg{width:136px;height:136px;flex:none}
+.av-donut path{cursor:default}
+.av-dl{display:grid;gap:7px;font-size:12.5px;color:var(--fg-2);min-width:0}
+.av-dl span{display:flex;align-items:center;gap:7px}
+.av-dl i{width:10px;height:10px;border-radius:3px;flex:none}
+.av-dl b{margin-left:auto;padding-left:10px;color:var(--fg);font-weight:650}
+.av-kpi{text-align:center}
+.av-kpi b{display:block;font-size:46px;font-weight:700;color:#052762;letter-spacing:-.03em;line-height:1.1}
+.av-kpi span{font-size:12.5px;color:var(--muted)}
+.mf-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.mf-kpi{min-height:96px;border:1px solid #e5e5e5;border-top:3px solid;border-radius:8px;padding:10px 12px;display:flex;justify-content:space-between;gap:8px;background:#fff}
+.mf-kpi.navy{border-top-color:#052762}.mf-kpi.blue{border-top-color:#2872F4}.mf-kpi.amber{border-top-color:#F4B400}.mf-kpi.orange{border-top-color:#f17720}
+.mf-kpi span{font-size:11.5px;color:var(--muted);display:flex;align-items:center}
+.mf-kpi b{display:block;font-size:22px;font-weight:600;margin-top:4px;letter-spacing:-.01em}
+.mf-kpi small{display:block;font-size:11.3px;color:var(--muted);margin-top:2px}
+.mf-kpi i{width:30px;height:30px;border-radius:8px;display:grid;place-items:center;flex:none}
+.mf-kpi i .ic{width:16px;height:16px}
+.mf-kpi.navy i{background:#D4E3FD;color:#052762}.mf-kpi.blue i{background:#e6efff;color:#0A49B7}.mf-kpi.amber i{background:#FFF6D8;color:#9A6500}.mf-kpi.orange i{background:#FFF0E9;color:#c2560f}
+.mf-ins{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-bottom:10px}
+.mf-ins div{background:#f7f9fc;border-radius:6px;padding:7px 10px}
+.mf-ins span{display:block;font-size:11px;color:var(--muted)}
+.mf-ins b{font-size:13.5px;font-weight:650}
+.mf-out{display:grid;gap:9px}
+.mf-out div{display:grid;grid-template-columns:70px minmax(0,1fr) 54px;gap:10px;align-items:center;font-size:12.5px;color:var(--fg-2)}
+.mf-out i{height:12px;background:#f1f4f9;border-radius:4px;overflow:hidden}
+.mf-out em{display:block;height:100%;background:#0A49B7;border-radius:0 4px 4px 0}
+.mf-out .f em{background:#c8322b}
+.mf-out b{text-align:right;color:var(--fg);font-weight:650;font-variant-numeric:tabular-nums}
+.mf-sig{display:grid;gap:8px}
+.mf-sig div{display:grid;grid-template-columns:24px 1fr auto;gap:8px;align-items:center;font-size:12.5px}
+.mf-sig span{width:24px;height:24px;border-radius:6px;display:grid;place-items:center}
+.mf-sig span .ic{width:14px;height:14px}
+.mf-sig .ok{background:#e6f7f0;color:#047857}
+.mf-sig .nt{background:#D4E3FD;color:#052762}
+.mf-sig b{font-weight:600}
+.mf-sig em{font-style:normal;color:var(--muted);font-size:12px}
+@media (max-width:1180px){.av2{grid-template-columns:1fr}.av2-side{display:none}.av-row2,.av-row2.wa{grid-template-columns:1fr}.av-segs{grid-template-columns:1fr}}
+@media (max-width:640px){.mf-kpis{grid-template-columns:1fr 1fr}.mf-ins{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -1618,6 +1767,7 @@ function doAct(act, el) {
     return;
   }
   if (kind === 'jump') return jump(+rest);
+  if (kind === 'beat') return go(ST.pos[ST.demo].s, +rest, { anim: true, dir: 1 });
   if (kind === 'demo') return switchDemo(rest, false);
   if (kind === 'nav') {
     const steps = DEMOS[ST.demo].steps;
@@ -1800,6 +1950,7 @@ function render(opts = {}) {
   lastRenderKey = layoutKey;
   renderCDP(c, step);
   renderStepbar(c, step, opts.stepChange);
+  $('.workspace').classList.toggle('wide', !!val(step.wide, c));
   $$('.prog-toggle button').forEach(bt => bt.classList.toggle('on', c.s >= +bt.dataset.jump && c.s < +bt.dataset.end));
   fitAll();
   if (step.after) step.after(stage, c);
@@ -2825,6 +2976,200 @@ function sceneBrandManager(c) {
 
 
 /* =================================================================
+   Freestand analytics, as the product shows them:
+   Analytics V2 (Overview · Live Analytics · Data Visualisation) and
+   MagicFlow WhatsApp analytics. Palette validated with the dataviz
+   checks: Freestand blue 700, orange, blue 400, amber (stepped).
+   ================================================================= */
+const AV = { s1: '#0A49B7', s2: '#e8671b', s3: '#538FF6', s4: '#b87800', crit: '#c8322b', grid: '#e7ebf2', axis: '#8a94a6', ink: '#1f2937' };
+const avTip = (title, rows) => esc(`<b>${title}</b>${rows.map(r => `<br>${r}`).join('')}`);
+
+/* deterministic daily series, 4 Aug to 30 Sep 2026 (58 days) */
+const AV_DAYS = Array.from({ length: 58 }, (_, i) => { const d = new Date(Date.UTC(2026, 7, 4 + i)); return { d, lbl: `${d.getUTCDate()} ${MON3[d.getUTCMonth()]}` }; });
+function avSpread(total, weights) {
+  const sum = weights.reduce((a, b) => a + b, 0);
+  const out = weights.map(w => Math.floor(total * w / sum));
+  let rest = total - out.reduce((a, b) => a + b, 0);
+  for (let i = 0; rest > 0; i = (i + 1) % out.length) if (weights[i] > 0) { out[i]++; rest--; }
+  return out;
+}
+const AV_CLAIMS = avSpread(5000, AV_DAYS.map((x, i) => (i > 39 ? 0 : (0.55 + 0.45 * Math.min(1, i / 6)) * (1.18 - i / 90) * ([0, 6].includes(x.d.getUTCDay()) ? 1.22 : 1) * (1 + 0.12 * Math.sin(i * 1.7)))));
+const AV_DELIV = avSpread(4318, AV_DAYS.map((_, i) => (i < 1 ? 0 : (AV_CLAIMS[i - 1] || 0) * 0.6 + (AV_CLAIMS[i - 2] || 0) * 0.4)));
+const AV_FEED = avSpread(3022, AV_DAYS.map((_, i) => (i < 3 ? 0 : (AV_DELIV[i - 3] || 0))));
+
+/* ---------- combo chart: bars Claims + Deliveries, line Feedbacks (one axis) ---------- */
+function avCombo(cumulative) {
+  const W = 660, H = 250, L = 44, R = 12, T = 14, B = 30;
+  const n = AV_DAYS.length, bw = (W - L - R) / n;
+  const cum = a => a.reduce((acc, v, i) => (acc.push((acc[i - 1] || 0) + v), acc), []);
+  const C = cumulative ? cum(AV_CLAIMS) : AV_CLAIMS, D = cumulative ? cum(AV_DELIV) : AV_DELIV, F = cumulative ? cum(AV_FEED) : AV_FEED;
+  const max = cumulative ? 5000 : 200, step = cumulative ? 1000 : 50;
+  const y = v => T + (H - T - B) * (1 - v / max);
+  let g = '';
+  for (let v = 0; v <= max; v += step) g += `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="${AV.grid}"/><text x="${L - 8}" y="${y(v) + 4}" text-anchor="end" font-size="10.5" fill="${AV.axis}">${inr(v)}</text>`;
+  AV_DAYS.forEach((x, i) => { if (i % 7 === 0) g += `<text x="${L + bw * i + bw / 2}" y="${H - 10}" text-anchor="middle" font-size="10.5" fill="${AV.axis}">${x.lbl}</text>`; });
+  let marks = '';
+  if (cumulative) {
+    const line = (arr, col, w) => `<polyline points="${arr.map((v, i) => `${L + bw * i + bw / 2},${y(v)}`).join(' ')}" fill="none" stroke="${col}" stroke-width="${w}" stroke-linejoin="round" stroke-linecap="round"/>`;
+    marks += line(C, AV.s1, 2) + line(D, AV.s3, 2) + line(F, AV.s2, 2);
+  } else {
+    const hw = Math.max(1.5, (bw - 3) / 2);
+    AV_DAYS.forEach((_, i) => {
+      const x0 = L + bw * i + 1;
+      if (C[i]) marks += `<path d="M${x0} ${y(0)}V${y(C[i]) + 2}q0 -2 2 -2h${hw - 4 > 0 ? hw - 4 : 0}q2 0 2 2V${y(0)}Z" fill="${AV.s1}"/>`;
+      if (D[i]) marks += `<path d="M${x0 + hw + 1} ${y(0)}V${y(D[i]) + 2}q0 -2 2 -2h${hw - 4 > 0 ? hw - 4 : 0}q2 0 2 2V${y(0)}Z" fill="${AV.s3}"/>`;
+    });
+    marks += `<polyline points="${F.map((v, i) => `${L + bw * i + bw / 2},${y(v)}`).join(' ')}" fill="none" stroke="${AV.s2}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>`;
+  }
+  // hover columns: one invisible hit target per day, wider than the marks
+  const hits = AV_DAYS.map((x, i) => `<rect x="${L + bw * i}" y="${T}" width="${bw}" height="${H - T - B}" fill="transparent" class="av-hit" data-tip="${avTip(`${x.lbl} 2026`, [`Claims ${inr(C[i])}`, `Deliveries ${inr(D[i])}`, `Feedbacks ${inr(F[i])}`])}"/>`).join('');
+  return `<svg class="av-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="${cumulative ? 'Cumulative' : 'Day wise'} claims, deliveries and feedbacks">${g}${marks}${hits}</svg>`;
+}
+const avLegend = items => `<div class="av-leg">${items.map(([t, col, line]) => `<span><i class="${line ? 'ln' : ''}" style="background:${col}"></i>${t}</span>`).join('')}</div>`;
+
+/* ---------- horizontal bars (survey questions, drivers) ---------- */
+function avBars(rows, o = {}) {
+  const max = Math.max(...rows.map(r => r[1]));
+  return `<div class="av-bars">${rows.map(([l, v, sub]) => `<div class="av-br" data-tip="${avTip(l, [`${o.fmt ? o.fmt(v) : v + '%'}${sub ? ` · ${sub}` : ''}`])}">
+      <span class="av-bl">${l}</span><span class="av-bt"><i style="width:${(v / max) * 100}%;background:${o.col || AV.s1}"></i></span><b>${o.fmt ? o.fmt(v) : v + '%'}</b></div>`).join('')}</div>`;
+}
+/* ---------- donut with 2px surface gaps and direct labels ---------- */
+function avDonut(parts, o = {}) {
+  const cols = [AV.s1, AV.s2, AV.s3, AV.s4];
+  const R = 62, r = 38, cx = 80, cy = 80;
+  let a0 = -Math.PI / 2, segs = '';
+  const tot = parts.reduce((s, p) => s + p[1], 0);
+  parts.forEach(([l, v], i) => {
+    const a1 = a0 + (v / tot) * Math.PI * 2;
+    const p = (rad, a) => `${cx + rad * Math.cos(a)} ${cy + rad * Math.sin(a)}`;
+    const big = a1 - a0 > Math.PI ? 1 : 0;
+    segs += `<path d="M${p(R, a0)}A${R} ${R} 0 ${big} 1 ${p(R, a1)}L${p(r, a1)}A${r} ${r} 0 ${big} 0 ${p(r, a0)}Z" fill="${cols[i]}" stroke="#fff" stroke-width="2" data-tip="${avTip(l, [`${v}%${o.n ? ` · ${inr(Math.round(o.n * v / 100))} people` : ''}`])}"/>`;
+    a0 = a1;
+  });
+  return `<div class="av-donut"><svg viewBox="0 0 160 160" role="img" aria-label="${esc(o.label || '')}">${segs}<text x="80" y="78" text-anchor="middle" font-size="18" font-weight="700" fill="${AV.ink}">${o.center || ''}</text><text x="80" y="95" text-anchor="middle" font-size="10" fill="${AV.axis}">${o.centerSub || ''}</text></svg>
+    <div class="av-dl">${parts.map(([l, v], i) => `<span><i style="background:${cols[i]}"></i>${l}<b>${v}%</b></span>`).join('')}</div></div>`;
+}
+/* ---------- WhatsApp message trend (4 lines, one axis) ---------- */
+/* WhatsApp series: 30 points, one every two days from 4 Aug */
+const AV_WA = (() => {
+  const days = Array.from({ length: 30 }, (_, i) => { const d = new Date(Date.UTC(2026, 7, 4 + i * 2)); return `${d.getUTCDate()} ${MON3[d.getUTCMonth()]}`; });
+  const out = avSpread(41880, days.map((_, i) => (1.3 - i / 40) * (1 + 0.18 * Math.sin(i * 1.3)) + (i === 4 ? 0.5 : 0)));
+  const del = out.map((v, i) => Math.round(v * (0.976 + 0.006 * Math.sin(i))));
+  const inb = avSpread(18630, out);
+  const fail = avSpread(754, out);
+  const pk = out.indexOf(Math.max(...out));
+  return { days, out, del, inb, fail, peak: `${inr(out[pk])} on ${days[pk]}` };
+})();
+function avWaTrend() {
+  const n = 30, W = 660, H = 220, L = 44, R = 12, T = 12, B = 28;
+  const { days, out, del, inb, fail } = AV_WA;
+  const max = 2500, y = v => T + (H - T - B) * (1 - v / max), bw = (W - L - R) / (n - 1);
+  let g = '';
+  for (let v = 0; v <= max; v += 500) g += `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="${AV.grid}"/><text x="${L - 8}" y="${y(v) + 4}" text-anchor="end" font-size="10.5" fill="${AV.axis}">${inr(v)}</text>`;
+  days.forEach((l, i) => { if (i % 5 === 0) g += `<text x="${L + bw * i}" y="${H - 8}" text-anchor="middle" font-size="10.5" fill="${AV.axis}">${l}</text>`; });
+  const line = (a, col, dash) => `<polyline points="${a.map((v, i) => `${L + bw * i},${y(v)}`).join(' ')}" fill="none" stroke="${col}" stroke-width="2" ${dash ? 'stroke-dasharray="5 4"' : ''} stroke-linejoin="round" stroke-linecap="round"/>`;
+  const hits = days.map((l, i) => `<rect x="${L + bw * i - bw / 2}" y="${T}" width="${bw}" height="${H - T - B}" fill="transparent" class="av-hit" data-tip="${avTip(l, [`Outbound ${inr(out[i])}`, `Delivered/read ${inr(del[i])}`, `Inbound ${inr(inb[i])}`, `Failed ${inr(fail[i])}`])}"/>`).join('');
+  return `<svg class="av-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="Daily outbound, delivered, inbound and failed messages">${g}${line(out, AV.s1)}${line(del, AV.s3)}${line(inb, AV.s2)}${line(fail, AV.crit, true)}${hits}</svg>`;
+}
+
+/* ---------- page frame ---------- */
+function avFrame(c, active, body) {
+  const item = (t, beat, extra = '') => `<div class="av-si ${beat === active ? 'on' : ''}"${beat != null ? ` data-act="beat:${beat}"` : ''}>${t}${extra}</div>`;
+  const wa = active === 3;
+  return `<div class="av2">
+    <aside class="av2-side">
+      <div class="av-back">${ic('left')}Consolidated</div>
+      <div class="av-sg">Analytics</div>
+      ${item(`${ic('chart')}Overview`, 0)}${item(`${ic('zap')}Live Analytics`, 1)}${item(`${ic('layers')}Data Visualisation`, 2)}${item(`${ic('trend')}Statistical Analysis`, null)}${item(`${ic('video')}UGC Content`, null, '<span class="av-n">24</span>')}
+      <div class="av-sg">Dashboards</div>
+      ${item(`${ic('layers')}HUL monsoon board`, null)}${item(`${ic('store')}Retail partners`, null)}
+      <div class="av-sg">WhatsApp</div>
+      ${item(`${ic('msg')}Conversation analytics`, 3)}
+    </aside>
+    <div class="av2-main">
+      <div class="av-top">
+        ${wa ? `<span class="av-sel">${gl('wa', '', 'width:15px;height:15px;color:#1faa53')}BeBeautiful by HUL · +91 80690 41127${crg('down')}</span>`
+          : `<span class="av-vt"><span>Legacy</span><span class="on">New view</span></span><span class="av-sel">${ic('package')}BeBeautiful Box · Monsoon reset${crg('down')}</span>`}
+        <span style="flex:1"></span>
+        ${wa ? `<span class="av-auto">Auto-refresh <b>Off</b>${crg('down')}</span>` : `<span class="av-ref" title="Refresh">${ic('refresh')}</span><span class="btn sm">Duplicate Orders</span>`}
+        <span class="av-date">${ic('calendar')}${wa ? 'Last 30 days' : 'All time (no filter)'}${crg('down')}</span>${wa ? '<span class="av-cmp">vs previous 30 days</span>' : ''}
+      </div>
+      ${body}
+    </div></div>`;
+}
+const avCard = (title, body, o = {}) => `<div class="av-card ${o.cls || ''}"${o.at != null ? rv(o.at, 'anim') : ''}><div class="av-ch"><div><h3>${title}</h3>${o.sub ? `<span>${o.sub}</span>` : ''}</div>${o.right || `<span class="av-max">${ic('maximize')}</span>`}</div><div class="av-cb">${body}</div></div>`;
+const avQ = '<span class="av-q">?</span>';
+
+function avOverview(c) {
+  const a = c.anim, at = ms => (a ? ms : null);
+  const tiles = [['12,150', '(10,570 verified)', 'Interactions'], ['5,000', '(3,550 store · 1,450 home)', 'Claimants'], ['4,318', '(2,912 store · 1,406 home)', 'Delivered'], ['70%', '(3,022)', 'Feedback Rate'], ['56%', '(2,418)', 'Purchase Intent'], ['3,480', '5,912 total', 'Re-engagement']];
+  const drivers = [['Rated the minis 4 or 5', 100, '#1'], ['Picked up at a partner store', 82, '#2'], ['Wears sunscreen every day', 61, '#3'], ['Hair concern: Frizz', 47, '#4'], ['Skin type: Combination', 38, '#5']];
+  const seg = (tag, path, pct, idx, n) => `<div class="av-seg ${tag === 'TARGET' ? 't' : 'd'}"><span class="av-tag">${tag}</span><div class="av-sp">${path}</div><div class="av-pi"><b>${pct}%</b><span>PI rate</span><em>Index ${idx}</em></div><div class="av-nn">n = ${n}</div></div>`;
+  return avFrame(c, 0, `<h1 class="av-h">Overview</h1>
+    <div class="av-card"${a ? rv(100, 'anim') : ''}><div class="av-ch"><div><h3 style="font-size:17px">Live Numbers</h3></div></div>
+      <div class="av-live">${tiles.map(([v, s, l]) => `<div><b>${v}</b><small>${s}</small><span>${l}${avQ}</span></div>`).join('')}</div></div>
+    <div class="av-row2">
+      ${avCard('Purchase Intent Drivers', `<div class="av-kd"><div class="k">KEY DRIVER</div><p>Shoppers who rated the minis 4 or 5 show 1.4× the average purchase intent.</p><span class="pill">PI 78% vs 56% average</span></div>
+        <div class="av-rank">${drivers.map(([l, v, r]) => `<div data-tip="${avTip(l, [`Driver rank ${r}`])}"><span>${l}</span><i><em style="width:${v}%"></em></i><b>${r}</b></div>`).join('')}</div>`, { at: at(350), right: '' })}
+      ${avCard('Target Audiences', `<div class="av-segs">${seg('TARGET', 'Store pickup › Rated 4 or 5', 78, 139, '1,846')}${seg('TARGET', 'Store pickup › Sunscreen every day', 71, 127, '604')}${seg('DEPRIORITIZE', 'Home delivery › Rarely wears sunscreen', 31, 55, '362')}</div>
+        <div class="av-ai">${ic('sparkles')}<p>Put more of the Meta budget into PIN codes with a partner store within 1 km. Store pickups show 1.3× the purchase intent of home deliveries and bought Red Label 2.2× as often.</p></div>`, { at: at(550), right: '' })}
+    </div>`);
+}
+function avLive(c) {
+  const a = c.anim;
+  const f = [['OTP Triggered', '12,150'], ['OTP Verified', '10,570'], ['Claimants', '5,000'], ['Delivered', '4,318'], ['Feedback Rate', '70%', '3,022'], ['Purchase Intent', '56%', '2,418'], ['Re-engagement', '3,480']];
+  const utm = [['meta · instagram_feed', 7050, 6130, 2900, 2504, 1753, 1402], ['google · search', 5100, 4440, 2100, 1814, 1269, 1016]];
+  const conv = r => (r[3] / r[1] * 100).toFixed(1);
+  const tag = p => `<span class="av-conv ${p > 50 ? 'g' : p > 30 ? 'b' : 'o'}">${p}%</span>`;
+  const tot = [1, 2, 3, 4, 5, 6].map(k => utm.reduce((s, r) => s + r[k], 0));
+  return avFrame(c, 1, `<h1 class="av-h">Live Analytics</h1>
+    <div class="av-funnel"${a ? rv(100, 'anim') : ''}>${f.map(([l, v, n]) => `<div><b>${v}${n ? ` <small>(${n})</small>` : ''}</b><span>${l}${avQ}</span></div>`).join('<i></i>')}</div>
+    ${avCard('Live analytics', `<div class="av-radio"><input type="radio" name="avmode" id="avDay" checked><label for="avDay">Day wise claims</label><input type="radio" name="avmode" id="avCum"><label for="avCum">Cumulative claims</label>
+        <div class="av-day">${avCombo(false)}</div><div class="av-cum">${avCombo(true)}</div></div>
+      ${avLegend([['Claims', AV.s1], ['Deliveries', AV.s3], ['Feedbacks', AV.s2, true]])}`, { at: a ? 300 : null, right: `<span class="av-tools">${ic('chart')}${ic('download')}</span>` })}
+    ${avCard('UTM Source Breakdown', `<table class="tbl av-tbl"><thead><tr><th>Source</th><th class="r">OTP Triggered</th><th class="r">OTP Verified</th><th class="r">Claims</th><th class="r">Deliveries</th><th class="r">Feedbacks</th><th class="r">Purchase Intent</th><th class="r">Conversion</th></tr></thead><tbody>
+      ${utm.map(r => `<tr><td>${r[0]}</td>${r.slice(1).map(v => `<td class="r num">${inr(v)}</td>`).join('')}<td class="r">${tag(conv(r))}</td></tr>`).join('')}
+      <tr class="av-total"><td>Total</td>${tot.map(v => `<td class="r num">${inr(v)}</td>`).join('')}<td class="r">${tag((tot[2] / tot[0] * 100).toFixed(1))}</td></tr></tbody></table>`, { at: a ? 500 : null, right: '' })}`);
+}
+function avDataViz(c) {
+  const a = c.anim, at = i => (a ? 150 + i * 120 : null);
+  const stores = [['Gupta General Store', 'Lajpat Nagar IV', 164, 52], ['Sharma Kirana', 'Amar Colony', 131, 38], ['New Bharat Stores', 'Lajpat Nagar II', 118, 29], ['Agarwal Provision', 'Kalkaji', 109, 31], ['Bansal Stores', 'Malviya Nagar', 97, 27]];
+  return avFrame(c, 2, `<h1 class="av-h">Data Visualisation</h1>
+    <div class="av-grid">
+      ${avCard('What is your skin type?', avBars([['Combination', 41], ['Oily', 33], ['Dry', 16], ['Normal', 10]]), { sub: 'Bar · n = 10,570', at: at(0) })}
+      ${avCard('Your biggest hair concern this monsoon?', avDonut([['Frizz', 44], ['Hair fall', 31], ['Dullness', 15], ['Dandruff', 10]], { n: 10570, center: '10,570', centerSub: 'answers', label: 'Hair concern' }), { sub: 'Pie · n = 10,570', at: at(1) })}
+      ${avCard('How often do you wear sunscreen?', avBars([['Only when I go out', 51], ['Rarely', 25], ['Every day', 24]]), { sub: 'Bar · n = 10,570', at: at(2) })}
+      ${avCard('How would you like your box?', avDonut([['Store pickup', 71], ['Home delivery', 29]], { n: 5000, center: '5,000', centerSub: 'boxes', label: 'Delivery choice' }), { sub: 'Pie · n = 5,000', at: at(3) })}
+      ${avCard('How are the minis working?', avBars([['Loving them', 68], ['They’re okay', 24], ['Not for me', 8]]), { sub: 'Bar · WhatsApp feedback · n = 3,022', at: at(4) })}
+      ${avCard('Red Label on the bill', `<div class="av-kpi"><b>1,100</b><span>31% after store pickup · 14% after home delivery</span></div>`, { sub: 'KPI', at: at(5) })}
+    </div>
+    <div class="fun-div av-div">Reengagement data</div>
+    <div class="av-grid">
+      ${avCard('Bills by HUL brand', avBars([['Red Label', 1100], ['Surf Excel', 842], ['Dove', 716], ['Pears', 488], ['Horlicks', 334]], { fmt: v => inr(v), col: AV.s1 }), { sub: 'Bar · 3,480 bills read on WhatsApp', at: at(6) })}
+      ${avCard('Top partner stores', `<table class="tbl av-tbl"><thead><tr><th>Store</th><th class="r">Pickups</th><th class="r">Red Label</th><th class="r">Payout</th></tr></thead><tbody>${stores.map(([n, ar, p, r]) => `<tr><td>${n}<span class="sub">${ar}</span></td><td class="r num">${p}</td><td class="r num">${r}</td><td class="r num">₹${inr(p * 15 + r * 10)}</td></tr>`).join('')}</tbody></table>`, { sub: 'Table · of 640 stores', at: at(7) })}
+    </div>`);
+}
+function avWhatsApp(c) {
+  const a = c.anim;
+  const kpi = (t, v, d, icn, tone) => `<div class="mf-kpi ${tone}"><div><span>${t}${avQ}</span><b>${v}</b><small>${d}</small></div><i>${ic(icn)}</i></div>`;
+  const outc = [['Reached', 10448, 100], ['Delivered', 10260, 98.2], ['Read', 9630, 92.2], ['Engaged', 7904, 75.6], ['Failed', 188, 1.8]];
+  return avFrame(c, 3, `<h1 class="av-h">${ic('chart')}Analytics <span class="av-hs">WhatsApp · MagicFlow</span></h1>
+    <div class="mf-kpis"${a ? rv(100, 'anim') : ''}>${kpi('Contacts', '10,570', '10,570 new in period', 'users', 'navy')}${kpi('Reached', '10,448', '41,880 outbound messages attempted', 'send', 'blue')}${kpi('Delivery rate', '98.2%', '10,260 reached contacts', 'checkc', 'amber')}${kpi('Engaged', '7,904', '7,904 contacts, 18,630 inbound', 'msg', 'orange')}</div>
+    <div class="av-row2 wa">
+      ${avCard('Message Trend', `<div class="mf-ins"><div><span>Outbound peak</span><b>${AV_WA.peak}</b></div><div><span>Inbound replies</span><b>18,630</b></div><div><span>Failed messages</span><b>754 · 1.8%</b></div></div>${avWaTrend()}
+        ${avLegend([['Outbound', AV.s1, true], ['Delivered/read', AV.s3, true], ['Inbound', AV.s2, true], ['Failed', AV.crit, true]])}`, { sub: 'Daily outbound, delivery, replies, and failures.', at: a ? 300 : null, right: '' })}
+      <div style="display:flex;flex-direction:column;gap:12px;min-width:0">
+        ${avCard('Contact Outcomes', `<div class="mf-out">${outc.map(([l, v, p]) => `<div class="${l === 'Failed' ? 'f' : ''}" data-tip="${avTip(l, [`${inr(v)} contacts · ${p}%`])}"><span>${l}</span><i><em style="width:${l === 'Failed' ? Math.max(p, 2) : p}%"></em></i><b>${inr(v)}</b></div>`).join('')}</div>`, { at: a ? 450 : null, right: '' })}
+        ${avCard('Signals', `<div class="mf-sig"><div><span class="ok">${ic('checkc')}</span><b>Delivery stable</b><em>98.2% delivered</em></div><div><span class="ok">${ic('checkc')}</span><b>Attention healthy</b><em>92.2% read</em></div><div><span class="nt">${ic('msg')}</span><b>Engagement</b><em>75.6% replied</em></div><div><span class="nt">${ic('users')}</span><b>Active conversations</b><em>412 open now</em></div></div>`, { at: a ? 600 : null, right: '' })}
+      </div>
+    </div>`);
+}
+function analyticsView(c) {
+  return `<div class="lay-page av-page">${[avOverview, avLive, avDataViz, avWhatsApp][c.b](c)}</div>`;
+}
+
+
+/* =================================================================
    HUL · BeBeautiful Box: online to offline sampling
    Google or Meta ad → bebeautiful.in form → WhatsApp OTP typed on the
    web → brand questions → PIN and address → store pickup (full box) or
@@ -3376,11 +3721,17 @@ function sceneBrandManager(c) {
       head: { crumb: ['Consumers', 'People'], title: 'HUL wallet', chips: [liveChip('Live'), chip('8 brands', 'outline', 'award')], right: `<span class="ph-meta">${ic('users')}4,318 members</span><button class="btn sm">${ic('edit')}Edit rewards</button>` },
       view: c => walletView(c)
     },
-    { // 13 · Dashboard
-      nav: 'analytics', subject: 'program', cdpDelay: 500,
-      cap: { t: 'Results: from ad to purchase', d: '5,000 boxes, 4,318 verified trials, and store pickups bought Red Label 2.2× as often.' },
-      head: { crumb: ['Measure', 'Analytics'], title: 'BeBeautiful Box · Delhi NCR', chips: [chip('Season complete', 'green', 'checkc')], right: `<span class="ph-meta">${ic('refresh')}Updated 30 Sep, 6:00 PM IST</span><button class="btn sm">${ic('share')}Share</button>` },
-      view: c => dashView(c)
+    { // 13 · Freestand analytics
+      nav: c => (c.b === 3 ? 'conversations' : 'analytics'), subject: 'program', beats: 4, cdpDelay: 500, wide: true,
+      cap: c => [
+        { t: 'Freestand analytics: Overview', d: 'Live Numbers for the whole campaign, what drives purchase intent, and which audiences to target next.' },
+        { t: 'Live Analytics', d: 'The audience funnel from OTP to purchase intent, claims and deliveries by day, and results by ad source.' },
+        { t: 'Data Visualisation', d: 'Every brand question as a chart, plus re-engagement: bills by HUL brand and the top partner stores.' },
+        { t: 'WhatsApp analytics', d: 'Messages sent, delivered and answered on BeBeautiful by HUL’s WhatsApp, from MagicFlow.' }][c.b],
+      head: c => (c.b === 3
+        ? { crumb: ['Operate', 'Conversations'], title: 'WhatsApp analytics', chips: [chip('BeBeautiful by HUL', 'wag')], right: `<span class="ph-meta">${ic('refresh')}Updated 30 Sep, 6:00 PM IST</span><button class="btn sm">${ic('download')}Export</button>` }
+        : { crumb: ['Measure', 'Analytics'], title: 'BeBeautiful Box · Monsoon reset', chips: [chip('Season complete', 'green', 'checkc'), chip('4 Aug to 30 Sep 2026', 'outline', 'calendar')], right: `<span class="ph-meta">${ic('refresh')}Updated 30 Sep, 6:00 PM IST</span><button class="btn sm">${ic('share')}Share</button>` }),
+      view: c => analyticsView(c)
     }
   ];
 
