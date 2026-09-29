@@ -21,3 +21,7 @@ Move with Next/Back or the ← → keys; buttons inside the phone are clickable;
 
 ## Archive
 - `archive/rv_hub_spray_gummies_web.html` — previous hub with all three tabs (pain relief spray, gummies, website sampling). The live `index.html` shows only the website sampling demo; the spray and gummies demos are also kept inside it under `window.HUB_DEMOS_HIDDEN`.
+
+## HUL BeBeautiful SmartPick Box demo
+
+`hul-smartpick/index.html` is a clone of the Celin Gold shell (same skeleton, CSS, engine, hash routing, step bar and CDP panel), re-themed in blush, cream and deep plum. It has one 10-step journey: BeBeautiful article widget, three questions with store pickup, WhatsApp OTP and confirmation, delivery to Gupta General Store, pickup QR, retailer-app QR verification, the Red Label counter cross-sell, bill upload with points, the HUL wallet explainer and the results dashboard. Deep links run from `#web-1` to `#web-10`, and the top tabs jump between chapters. It is self-contained (only Google Fonts load externally). All people, stores, numbers and records in it are fictional.
