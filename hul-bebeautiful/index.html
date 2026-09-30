@@ -12,7 +12,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20127%20128%22%3E%3Crect%20width%3D%22127%22%20height%3D%22128%22%20rx%3D%2226%22%20fill%3D%22%230D2A69%22/%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%228%22%20stroke-linecap%3D%22round%22%3E%3Cpath%20d%3D%22M94.8%2062.2v40.2c0%201.8%200%203%200%203H68.3V62.2m26.5%200H68.3m26.5%200h4V51.4H68.3v10.8%22/%3E%3Cpath%20d%3D%22M32.7%2062.2v40.2c0%201.8%200%203%200%203h24.6V62.2m-24.6%200h24.6m-24.6%200h-4V51.4h28.6v10.8%22/%3E%3Cpath%20d%3D%22M28.7%2041.7h27.5l-1.6-1.8c-4.7-5.9-13.7-11.7-13.3-21.5.2-4.8%207.1-10.3%2014.2-3.3%205.6%205.6%206.6%2015.9%206.3%2020.3%202.3-6.5%208.9-18.3%2016.7-13.9%209.7%205.5-2.2%2015.7-4.6%2016.7-1.9%201-3.8%202.5-5%203.1h29.8%22/%3E%3C/g%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600&family=Roboto:wght@400;500;700;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 /* ================================================================
    Freestand · HUL BeBeautiful Box: app shell + demo components
@@ -1541,58 +1541,135 @@ table.tbl{width:100%;border-collapse:collapse;font-size:12px}
 .av-chips span.on{background:#052762;border-color:#052762;color:#fff}
 .av-ugc{display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:10px}
 .la-panel{flex:1;display:flex;flex-direction:column;min-height:0;overflow:auto}
-/* the BeBeautiful Rewards app */
-.la{flex:1;display:flex;flex-direction:column;min-height:0;background:#fbf5ef;font-family:var(--pf);color:#2b1526}
-.la-head{flex:none;display:flex;align-items:center;justify-content:space-between;padding:8px 14px 10px;background:#4A1942;color:#fff}
-.la-head>span:first-child{display:flex;align-items:center;gap:8px}
-.la-head b{font-size:15.5px;font-weight:600}
-.la-bell .ic{width:20px;height:20px;color:#f6d9d5}
-.la-body{flex:1;min-height:0;overflow-y:auto;padding:12px 12px 14px;display:flex;flex-direction:column;gap:10px;scrollbar-width:none}
-.la-body::-webkit-scrollbar{display:none}
-.la-hello{font-size:17px;font-weight:700;color:#3a1234}
-.la-pts{border-radius:16px;padding:14px 14px 12px;background:linear-gradient(135deg,#4A1942,#7d3471 70%,#c9506f);color:#fff;box-shadow:0 8px 20px rgba(74,25,66,.25)}
-.la-pts .k{font-size:10px;font-weight:700;letter-spacing:.16em;color:#f6d9d5}
-.la-pts .n{font-size:34px;font-weight:800;letter-spacing:-.02em;margin-top:4px;line-height:1}
-.la-pts .n span{font-size:13px;font-weight:500;color:#f3dfe9;letter-spacing:0}
-.la-bar{height:8px;border-radius:5px;background:rgba(255,255,255,.22);overflow:hidden;margin:10px 0 5px}
-.la-bar i{display:block;height:100%;background:#f4a3b4;border-radius:5px}
-.la-pts .s{font-size:12px;color:#f6d9d5}
-.la-st{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;margin-top:10px}
-.la-st span{display:flex;flex-direction:column;align-items:center;gap:3px}
-.la-st span svg{width:26px;height:26px;padding:5px;border-radius:50%;background:#f4a3b4;color:#4A1942}
-.la-st span.gift svg{background:transparent;border:2px solid #E2B46A;color:#E2B46A;padding:3px}
-.la-st em{font-style:normal;font-size:8.8px;color:#f3dfe9;text-align:center;line-height:1.1}
-.la-q{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
-.la-q div{background:#fff;border-radius:12px;padding:9px 4px;display:flex;flex-direction:column;align-items:center;gap:5px;font-size:10.5px;font-weight:600;color:#4f3547;text-align:center;box-shadow:0 1px 2px rgba(74,25,66,.08)}
-.la-q .ic{width:18px;height:18px;color:#C9506F}
-.la-card{background:#fff;border-radius:14px;padding:11px;box-shadow:0 1px 3px rgba(74,25,66,.08)}
-.la-next{display:flex;gap:11px;align-items:center}
-.la-next img{width:56px;border-radius:6px;flex:none}
-.la-next b{display:block;font-size:14px}
-.la-next span{display:block;font-size:12px;color:#6d4c62;line-height:1.35;margin-top:2px}
-.la-next em{display:block;font-style:normal;font-size:11px;font-weight:600;color:#C9506F;margin-top:4px}
-.la-h2{font-size:16px;font-weight:700;color:#3a1234}
-.la-sub{font-size:12px;color:#866f7d;margin-top:-6px}
-.la-row{display:flex;align-items:center;gap:10px;background:#fff;border-radius:12px;padding:9px 10px;box-shadow:0 1px 2px rgba(74,25,66,.08)}
-.la-row>div{flex:1;min-width:0}
-.la-row b{display:block;font-size:13px;font-weight:600;line-height:1.25}
-.la-row small{display:block;font-size:11px;color:#866f7d;margin-top:1px;line-height:1.3}
-.la-ic{width:32px;height:32px;border-radius:10px;background:#fbe7ef;color:#9c3561;display:grid;place-items:center;flex:none}
-.la-ic .ic{width:17px;height:17px}
-.la-sw{width:10px;align-self:stretch;border-radius:4px;flex:none}
-.la-pt{font-size:13px;font-weight:800;color:#5B1F52;white-space:nowrap;display:inline-flex;align-items:center;gap:3px}
-.la-pt.done{font-size:11px;font-weight:700;color:#15803d;background:#f0fdf4;border-radius:8px;padding:3px 7px}
-.la-pt.done svg{width:12px;height:12px}
-.la-rd{display:grid;grid-template-columns:minmax(0,1fr) 70px auto;gap:10px;align-items:center;background:#fff;border-radius:12px;padding:9px 10px;box-shadow:0 1px 2px rgba(74,25,66,.08)}
-.la-rd b{display:block;font-size:13px}
-.la-rd small{font-size:11px;color:#866f7d}
-.la-bar.sm{margin:0;height:6px;background:#f3e3ea}
-.la-bar.sm i{background:#C9506F}
-.la-rd>span{font-size:11px;font-weight:700;color:#5B1F52;white-space:nowrap}
-.la-nav{flex:none;display:flex;justify-content:space-around;padding:6px 4px 4px;background:#fff;border-top:1px solid #f1e4ea}
-.la-nav span{display:flex;flex-direction:column;align-items:center;gap:2px;font-size:10px;font-weight:600;color:#9a8390}
-.la-nav span .ic{width:19px;height:19px}
-.la-nav span.on{color:#4A1942}
+/* Glow Club (HUL loyalty app, after the Joy Club pattern) */
+.gc{flex:1;display:flex;flex-direction:column;min-height:0;background:#f5f2f6;font-family:'Poppins',var(--pf);color:#1d1320;position:relative}
+.gc-top{flex:none;display:flex;align-items:center;justify-content:space-between;padding:8px 12px 10px;background:linear-gradient(135deg,#3d1438,#6a2c5f)}
+.gc-logo{display:flex;align-items:center;gap:6px;background:#fff;border-radius:8px;padding:4px 8px 4px 4px}
+.gc-logo b{font:italic 700 12px/1 Georgia,serif;color:#5B1F52}
+.gc-name{text-align:right;cursor:pointer}
+.gc-name b{display:block;font-size:21px;font-weight:800;font-style:italic;color:#fff;letter-spacing:-.01em;line-height:1}
+.gc-name b i{color:#E2B46A}
+.gc-name small{display:block;font-size:6.6px;font-weight:700;letter-spacing:.14em;color:#f3dfe9;margin-top:3px}
+.gc-body{flex:1;min-height:0;overflow-y:auto;padding:12px 12px 16px;display:flex;flex-direction:column;gap:9px;scrollbar-width:none}
+.gc-body::-webkit-scrollbar{display:none}
+.gc-hero{margin:-12px -12px 0;padding:14px 16px 46px;background:linear-gradient(135deg,#4A1942,#7d3471);color:#fff}
+.gc-hero em{display:block;font-size:14px;font-weight:600;font-style:italic}
+.gc-hero b{display:block;font-size:26px;font-weight:800;line-height:1.15}
+.gc-hero span{font-size:12px;color:#f3dfe9}
+.gc-pts{margin-top:-44px;border-radius:18px;padding:13px 16px 12px;background:linear-gradient(135deg,#6a2c5f,#8a3a74);color:#fff;box-shadow:0 10px 24px rgba(61,20,56,.3)}
+.gc-tier{display:flex;justify-content:space-between;font-size:10px;font-weight:700;letter-spacing:.1em;color:#f6d9d5}
+.gc-tier span:first-child{color:#E2B46A}
+.gc-big{font-size:32px;font-weight:800;letter-spacing:-.02em;margin:4px 0 2px}
+.gc-bar{height:7px;border-radius:4px;background:rgba(255,255,255,.2);overflow:hidden;margin:6px 0 6px}
+.gc-bar i{display:block;height:100%;background:#E2B46A;border-radius:4px;transition:width .5s}
+.gc-small{font-size:11.5px;color:#f3dfe9}
+.gc-small b{color:#E2B46A}
+.gc-sec{font-size:10.5px;font-weight:700;letter-spacing:.12em;color:#5B1F52;margin-top:6px}
+.gc-earn{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.gc-eb{display:flex;align-items:center;gap:9px;background:#fff;border-radius:14px;padding:10px;cursor:pointer;box-shadow:0 1px 2px rgba(61,20,56,.06);transition:transform .15s}
+.gc-eb:active{transform:scale(.97)}
+.gc-eb.wide{grid-column:1/-1;background:#efe3f0}
+.gc-eb b{display:block;font-size:12.5px;font-weight:600;line-height:1.25}
+.gc-eb em{font-style:normal;font-size:11.5px;font-weight:700;color:#6a2c5f}
+.gc-eb.done em{color:#15803d}
+.gc-ei{width:34px;height:34px;border-radius:50%;background:#fbe7ef;color:#9c3561;display:grid;place-items:center;flex:none}
+.gc-ei .ic{width:16px;height:16px}
+.gc-ei.dark{background:#4A1942;color:#fff}
+.gc-card{background:#fff;border-radius:14px;padding:11px 12px;box-shadow:0 1px 2px rgba(61,20,56,.06)}
+.gc-hist{display:flex;align-items:center;gap:10px}
+.gc-hist img{width:40px;border-radius:6px;flex:none}
+.gc-hist>div{flex:1;min-width:0}
+.gc-hist b,.gc-prod b,.gc-rw b,.gc-row b{display:block;font-size:13.5px;font-weight:600;line-height:1.3}
+.gc-hist span,.gc-prod span,.gc-rw span,.gc-row span{display:block;font-size:11.5px;color:#7a6b78}
+.gc-st{font-size:11px;font-weight:600;border-radius:999px;padding:3px 9px;white-space:nowrap}
+.gc-st.ok{background:#e6f7ec;color:#15803d}
+.gc-st.wip{background:#fdf1d8;color:#9a6500}
+.gc-th{width:44px;height:44px;border-radius:10px;display:grid;place-items:center;flex:none;overflow:hidden}
+.gc-foot{text-align:center;font-size:11px;color:#8e7f8c;margin-top:4px}
+.gc-banner{border-radius:16px;padding:13px 14px;background:linear-gradient(135deg,#4A1942,#7d3471);color:#fff}
+.gc-banner .k,.gc-feat .k,.gc-chal .k{font-size:10px;font-weight:700;letter-spacing:.14em;color:#E2B46A}
+.gc-banner b{display:block;font-size:17px;font-weight:700;margin:3px 0}
+.gc-banner span{font-size:11.5px;color:#f3dfe9;line-height:1.4}
+.gc-chips{display:flex;gap:6px}
+.gc-chips span{font-size:11.5px;font-weight:600;padding:4px 11px;border-radius:999px;background:#fff;color:#5B1F52;border:1px solid #eadcea}
+.gc-chips span.on{background:#4A1942;color:#fff;border-color:#4A1942}
+.gc-prod{display:flex;align-items:center;gap:10px}
+.gc-prod>div{flex:1;min-width:0}
+.gc-buy{height:34px;padding:0 16px;border-radius:999px;background:#4A1942;color:#fff;font-size:13px;font-weight:600;cursor:pointer;flex:none}
+.gc-buy:hover{background:#5B1F52}
+.gc-title{display:flex;align-items:center;justify-content:space-between}
+.gc-title h2,.gc-h{margin:0;font-size:22px;font-weight:700;letter-spacing:-.01em}
+.gc-pill{background:#E2B46A;color:#2b1526;font-size:13px;font-weight:700;border-radius:999px;padding:6px 13px}
+.gc-feat{display:flex;align-items:stretch;border-radius:16px;overflow:hidden;background:linear-gradient(135deg,#4A1942,#7d3471);color:#fff}
+.gc-feat>div{flex:1;padding:12px 13px}
+.gc-feat b{display:block;font-size:16px;font-weight:700;margin:4px 0 2px}
+.gc-feat span{font-size:11.5px;color:#f3dfe9}
+.gc-feat img{width:84px;object-fit:cover}
+.gc-rw{display:flex;align-items:center;gap:10px}
+.gc-rw>div{flex:1;min-width:0}
+.gc-cost{height:34px;padding:0 13px;border-radius:999px;border:1.5px solid #6a2c5f;color:#4A1942;font-size:12px;font-weight:700;background:#fff;cursor:pointer;white-space:nowrap;flex:none}
+.gc-cost.can{background:#4A1942;color:#fff;animation:raHint 1.6s ease-out infinite}
+.gc-cost.done{border-color:#15803d;color:#15803d}
+.gc-perk{font-size:12px;font-weight:700;color:#4A1942}
+.gc-art{display:flex;flex-direction:column;gap:3px}
+.gc-art-hero{border-radius:10px;overflow:hidden;margin-bottom:6px}
+.gc-art-hero svg{display:block;width:100%;height:auto}
+.gc-art b{font-size:15px;font-weight:700}
+.gc-art span{font-size:11.5px;color:#7a6b78}
+.gc-cta{margin-top:8px;height:40px;border-radius:12px;background:#E2B46A;color:#2b1526;font-size:14px;font-weight:600;cursor:pointer;width:100%}
+.gc-row{display:flex;align-items:center;gap:10px;cursor:pointer}
+.gc-row>div{flex:1;min-width:0}
+.gc-chev{font-size:20px;color:#b3a0ab}
+.gc-back{font-size:13px;font-weight:600;color:#6a2c5f;cursor:pointer}
+.gc-meta{font-size:11.5px;color:#7a6b78}
+.gc-p{margin:0;font-size:13px;line-height:1.55;color:#3a2a38}
+.gc-chal b{display:block;font-size:15px;font-weight:700;margin-top:3px}
+.gc-chal span{font-size:11.5px;color:#7a6b78}
+.gc-chal .k{color:#9c3561}
+.gc-mos{display:grid;grid-template-columns:repeat(6,1fr);gap:4px;margin-top:8px}
+.gc-mos i{aspect-ratio:3/4;border-radius:6px;background-size:cover;background-position:center}
+.gc-poll b{display:block;font-size:14px;font-weight:600;margin-bottom:8px}
+.gc-opt{position:relative;display:flex;justify-content:space-between;align-items:center;height:34px;padding:0 11px;border-radius:9px;border:1.5px solid #eadcea;margin-bottom:6px;font-size:12.5px;cursor:pointer;overflow:hidden}
+.gc-opt i{position:absolute;left:0;top:0;bottom:0;background:#f3e6f1;z-index:0;transition:width .6s}
+.gc-opt span,.gc-opt em{position:relative;z-index:1}
+.gc-opt em{font-style:normal;font-weight:700;color:#4A1942}
+.gc-opt.on{border-color:#6a2c5f}
+.gc-opt.on i{background:#ead2e6}
+.gc-poll small{font-size:11px;color:#8e7f8c}
+.gc-who{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.gc-who span{width:28px;height:28px;border-radius:50%;background:#efe3f0;color:#5B1F52;display:grid;place-items:center;font-size:11px;font-weight:700}
+.gc-who b{font-size:13px;font-weight:600}
+.gc-who em{font-style:normal;font-size:10.5px;color:#8e7f8c;margin-left:auto}
+.gc-post p{margin:0;font-size:13px;line-height:1.45}
+.gc-ans{margin-top:7px;background:#f7f1f6;border-left:3px solid #9c3561;border-radius:6px;padding:7px 9px;font-size:12px;line-height:1.45;color:#3a2a38}
+.gc-acts{display:flex;gap:14px;margin-top:8px;font-size:12px;color:#8e7f8c}
+.gc-acts span{cursor:pointer}
+.gc-acts span.on{color:#d0386b;font-weight:700}
+.gc-prof{padding:0 12px}
+.gc-prof div{position:relative;padding:9px 0;border-bottom:1px solid #f0e7ef}
+.gc-prof div:last-child{border-bottom:0}
+.gc-prof small{display:block;font-size:10.5px;color:#8e7f8c}
+.gc-prof b{font-size:14px;font-weight:600}
+.gc-prof em{position:absolute;right:0;top:50%;font-style:normal;font-size:12px;font-weight:600;color:#6a2c5f}
+.gc-del{border:1.5px solid #f3c7cf}
+.gc-del b{color:#b3261e}
+.gc-nav{flex:none;display:flex;justify-content:space-between;gap:2px;padding:6px 6px 5px;background:#fff;border-top:1px solid #f0e7ef}
+.gc-nav span{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;font-size:9.5px;font-weight:600;color:#7a6b78;padding:6px 0;border-radius:12px;cursor:pointer}
+.gc-nav span .ic{width:18px;height:18px}
+.gc-nav span.on{background:#4A1942;color:#fff}
+.gc-dim{position:absolute;inset:0;background:rgba(29,19,32,.45);z-index:10;animation:fadeIn .2s}
+.gc-sheet{position:absolute;left:0;right:0;bottom:0;z-index:11;background:#fff;border-radius:20px 20px 0 0;padding:6px 14px 16px;animation:sheetUp .3s cubic-bezier(.2,.8,.2,1)}
+.gc-grab{width:36px;height:4px;border-radius:2px;background:#ddd;margin:2px auto 10px}
+.gc-sheet>b{display:block;font-size:15px;font-weight:700}
+.gc-sheet>span{display:block;font-size:12px;color:#7a6b78;margin-bottom:8px}
+.gc-opt2{display:flex;align-items:center;gap:10px;padding:10px 11px;border:1.5px solid #eee4ee;border-radius:12px;margin-top:7px;cursor:pointer}
+.gc-opt2>div{flex:1}
+.gc-opt2 b{display:block;font-size:13.5px;font-weight:600}
+.gc-opt2 small{font-size:11.5px;color:#7a6b78}
+.gc-opt2 i{font-style:normal;color:#b3a0ab;font-size:18px}
+.gc-opt2.star{border-color:#6a2c5f;background:#faf3f9}
+.gc-opt2 em{font-style:normal;font-size:10.5px;font-weight:700;color:#fff;background:#4A1942;border-radius:6px;padding:2px 7px}
+.gc-toast{position:absolute;left:12px;right:12px;bottom:70px;z-index:12;background:#1d1320;color:#fff;font-size:12.5px;font-weight:500;border-radius:12px;padding:10px 12px;text-align:center;animation:fadeUp .25s ease;box-shadow:0 8px 20px rgba(0,0,0,.25)}
 
 .ig .ig-bot{bottom:64px}
 .ig .ig-cap{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:12.5px}
@@ -1600,6 +1677,46 @@ table.tbl{width:100%;border-collapse:collapse;font-size:12px}
 .ig .ig-grad{height:34%}
 .ig .ig-video .reel-photo{bottom:120px;background-position:center 30%}
 .ig .ig-top b{visibility:hidden}
+
+/* Glow Club: Lakmé Glam Squad style earn / redeem, and the Ask BeBeautiful bubble */
+.gc-seg{display:flex;background:#fff;border-radius:999px;padding:3px;gap:2px;box-shadow:0 1px 2px rgba(61,20,56,.06)}
+.gc-seg span{flex:1;text-align:center;font-size:11.5px;font-weight:600;padding:6px 0;border-radius:999px;color:#7a6b78;cursor:pointer}
+.gc-seg span.on{background:#9b1b4f;color:#fff}
+.gc-wtitle{text-align:center;font:600 17px/1.2 Georgia,'Times New Roman',serif;letter-spacing:.04em;color:#1d1320;margin-top:4px}
+.gc-ways{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.gc-way{background:#fde8ee;border-radius:4px;padding:12px 8px 0;display:flex;flex-direction:column;align-items:center;text-align:center;overflow:hidden}
+.gc-wic{width:42px;height:42px;border-radius:50%;background:#fff;color:#9b1b4f;display:grid;place-items:center}
+.gc-wic .ic{width:20px;height:20px}
+.gc-way b{font:700 9.5px/1.3 Georgia,serif;letter-spacing:.12em;margin-top:8px}
+.gc-way p{margin:5px 0 8px;font-size:10.5px;line-height:1.4;color:#3a2a38;flex:1}
+.gc-wpts{align-self:stretch;margin:0 -8px;background:#fff;border-radius:50% 50% 0 0/14px 14px 0 0;padding:10px 4px 9px;font:700 10px/1.3 Georgia,serif;letter-spacing:.14em;color:#e0457b}
+.gc-wpts small{display:block;font:500 8.5px/1.3 var(--pf);letter-spacing:.08em;color:#e0457b;margin-top:2px}
+.gc-redeem{display:flex;flex-direction:column;align-items:center;text-align:center;padding:14px 14px 13px}
+.gc-gic{width:52px;height:52px;border-radius:50%;border:1.5px solid #d9b56a;color:#b8892b;display:grid;place-items:center}
+.gc-gic .ic{width:24px;height:24px}
+.gc-redeem b{font:700 11px/1.3 Georgia,serif;letter-spacing:.14em;margin-top:8px}
+.gc-redeem p{margin:5px 0 9px;font-size:12px;line-height:1.45;color:#3a2a38}
+.gc-click{height:32px;padding:0 16px;border-radius:3px;background:#9b1b4f;color:#fff;font-size:11.5px;font-weight:600;letter-spacing:.04em;cursor:pointer}
+.gc-askb{position:absolute;right:12px;bottom:74px;z-index:9;width:52px;height:52px;border-radius:50%;background:#111;border:2px solid #d9b56a;color:#d9b56a;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 6px 16px rgba(0,0,0,.3);line-height:1}
+.gc-askb small{font-size:8px;font-weight:700;letter-spacing:.1em}
+.gc-askb b{font:italic 700 17px/1 Georgia,serif}
+.gc-askb.in{position:static;width:40px;height:40px;flex:none;box-shadow:none}
+.gc-askb.in b{font-size:13px}
+.gc-askh{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.gc-askh b{display:block;font-size:15px;font-weight:700}
+.gc-askh small{font-size:11.5px;color:#7a6b78}
+.gc-faq{border:1.5px solid #eee4ee;border-radius:12px;padding:9px 11px;margin-top:6px;cursor:pointer}
+.gc-faq b{display:flex;justify-content:space-between;gap:8px;font-size:13px;font-weight:600}
+.gc-faq b i{font-style:normal;color:#9b1b4f;font-size:16px;line-height:1}
+.gc-faq p{margin:6px 0 0;font-size:12px;line-height:1.5;color:#3a2a38}
+.gc-faq.on{border-color:#9b1b4f;background:#fff7fa}
+.gc-askin{display:flex;align-items:center;justify-content:space-between;margin-top:10px;height:40px;border-radius:20px;background:#f5f2f6;padding:0 6px 0 14px;font-size:12.5px;color:#9a8b98}
+.gc-askin span{width:30px;height:30px;border-radius:50%;background:#4A1942;color:#fff;display:grid;place-items:center}
+.gc-askin .ic{width:14px;height:14px}
+
+.gc-askh>div{flex:1}
+.gc-x{float:right;width:30px;height:30px;border-radius:50%;background:#f5f2f6;display:grid;place-items:center;font-size:19px;line-height:1;color:#5B1F52;cursor:pointer}
+.gc-sheet{max-height:86%;overflow-y:auto;scrollbar-width:none}
 
 </style>
 </head>
@@ -1953,7 +2070,7 @@ const SRC = {
   receipt: ['Bill scan', () => ic('receipt')],
   loyalty: ['HUL wallet', () => ic('award')],
   ugc: ['Instagram UGC', () => ic('video')],
-  app: ['Rewards app', () => ic('smartphone')]
+  app: ['Glow Club app', () => ic('smartphone')]
 };
 const srcChip = k => { const s = SRC[k] || [k, () => '']; return `<span class="src-chip">${s[1]()}${s[0]}</span>`; };
 
@@ -3578,9 +3695,10 @@ function analyticsView(c) {
     X.push(W(11, 0, 'event', 'UGC invite sent', 'Post an unboxing reel · +30 points', 'flows', BILL_D(c), '8:00:00 PM'));
     X.push(W(11, 1, 'event', 'Unboxing posted', 'Instagram Reel · #BeBeautifulBox · tagged @bebeautiful_india', 'ugc', D10 > BILL_D(c) ? D10 : BILL_D(c), '9:42:10 PM'));
     X.push(W(11, 1, 'loyalty', 'HUL wallet', '+30 unboxing reel · 180 points', 'loyalty', D10 > BILL_D(c) ? D10 : BILL_D(c), '9:42:11 PM'));
-    X.push(W(12, 0, 'event', 'Loyalty app opened', 'BeBeautiful Rewards · Android', 'app', '2026-08-12', '8:14:02 PM'));
-    X.push(W(12, 1, 'event', 'Avenue viewed', 'Earn: upload a bill, buy full size, review, refer', 'app', '2026-08-12', '8:14:40 PM'));
-    X.push(W(12, 2, 'event', 'Offer saved', 'Pears Naturale 250 ml at Gupta General Store · +60 points', 'app', '2026-08-12', '8:15:05 PM'));
+    X.push(W(12, 0, 'event', 'Loyalty app opened', 'Glow Club · Android', 'app', '2026-08-12', '8:14:02 PM'));
+    X.push(W(12, 1, 'event', 'Shop tapped', 'Pears Naturale 250 ml · partner store pickup', 'app', '2026-08-12', '8:14:40 PM'));
+    X.push(W(12, 2, 'event', 'Reward viewed', '₹50 off at Gupta General Store · 150 points', 'app', '2026-08-12', '8:15:05 PM'));
+    X.push(W(12, 4, 'trait', 'Community', 'Voted: favourite mini is Pears body wash', 'app', '2026-08-12', '8:16:30 PM'));
     const Z = (ty, k, val, o = {}) => X.push(Object.assign({ s: 14, b: 0, ty, k, v: val, src: 'analytics', d: '2026-09-30', t: '6:00 PM', subj: 'program' }, o));
     Z('metric', 'Where sign-ups came from', '', { dist: { parts: [['Meta ads', 58], ['Google Search', 42]] }, src: 'web' });
     Z('metric', 'Delivery choice', '', { dist: { parts: [['Store pickup', 71], ['Home delivery', 29]] }, src: 'web' });
@@ -3725,53 +3843,196 @@ function analyticsView(c) {
   }
   const ugcReel = c => phoneFrame(`<div class="ugc-reel" style="background-image:url(${IMG.reels[3]})"></div>`, { time: '9:44', dark: true, sw: c.anim });
 
-  /* ---------------- the loyalty app: post-sampling avenues ---------------- */
+  /* ---------------- Glow Club: the HUL loyalty app (interactive) ----------------
+     Tabs are demo beats (data-act="beat:N"), so the caption and the Freestand
+     panel follow the tab. Everything else (buy, redeem, read, like, vote,
+     earn) is local app state handled by data-la, and only re-renders the app. */
+  const LA = { pts: 180, redeemed: {}, liked: {}, vote: null, sheet: null, article: null, toast: '', done: { reel: true }, rtab: 0, ask: false, faq: null };
+  const TABS = [['Home', 'store', 0], ['Shop', 'cart', 1], ['Rewards', 'gift', 2], ['Articles', 'file', 3], ['Community', 'users', 4]];
+  const tile = (inner, bg) => `<span class="gc-th" style="background:${bg}">${svgWrap('0 0 40 64', inner, 'width:26px')}</span>`;
+  const PRODUCTS = [
+    ['Pears Naturale Body Wash 250 ml', '₹185 · sampled ✓', tile(miniPears(20, 62), '#fdf1c9'), 'Body'],
+    ['Dove 10 in 1 Deep Repair', '₹299 · sampled ✓', tile(miniDove(20, 62), '#e9eef8'), 'Hair'],
+    ['Simple Refreshing Face Wash', '₹349 · sampled ✓', tile(miniSimple(20, 62), '#e3f5da'), 'Skin'],
+    ['Lakmé Sun Expert SPF 50', '₹399 · sampled ✓', tile(miniLakme(20, 62), '#fff0d6'), 'Sun'],
+    ['Pond’s Hydra Miracle Gel', '₹399 · sampled ✓', tile(miniPonds(20, 62), '#fde3ea'), 'Skin'],
+    ['Tresemmé Keratin Smooth', '₹399 · new launch', tile(`<g transform="translate(20 62)"><path d="M-12 0V-44Q-12 -51 -5 -51H5Q12 -51 12 -44V0Z" fill="#1c1c1c"/><rect x="-7" y="-60" width="14" height="9" rx="2" fill="#d4a64a"/><rect x="-12" y="-36" width="24" height="3" fill="#d4a64a"/></g>`, '#ece7de'), 'Hair']
+  ];
+  const REWARDS = [
+    ['₹50 off at Gupta General Store', 'Partner store', 150],
+    ['BeBeautiful masterclass seat', 'Beauty', 200],
+    ['Next BeBeautiful Box', 'Skincare', 250],
+    ['Full-size Dove Body Wash', 'Bodycare', 500],
+    ['Tresemmé salon blow-dry voucher', 'Haircare', 700],
+    ['Lakmé Salon ₹500 voucher', 'Beauty', 900]
+  ];
+  const ARTICLES = [
+    ['Your monsoon skincare reset', 'Skin · 4 min read', 'Sticky afternoons and 85% humidity ask your skin to work twice as hard. The reset is four small swaps: a creamy body wash, SPF even on grey days, a light gel instead of heavy cream, and a keratin treatment for frizz.'],
+    ['Frizz-free in 85% humidity', 'Hair · 3 min read', 'Humidity swells the hair cuticle. A 10-in-1 repair treatment after every wash seals it back down, and a cool rinse helps it stay that way till evening.'],
+    ['SPF, even when it’s grey', 'Sun · 2 min read', 'Clouds let most UV through. A light, non-sticky SPF 50 is the one step not to skip, even on the rainiest day.'],
+    ['The 3-step Diwali glow', 'Makeup · 5 min read', 'Prep with a gel moisturiser, add a dewy base, finish with a highlighter on the high points. Ten minutes, and it lasts through the evening.']
+  ];
+  const EARN = [['video', 'Post UGC', '+30', 'reel'], ['star', 'Review on Nykaa', '+40', 'review'], ['users', 'Refer a friend', '+100', 'refer'], ['receipt', 'Upload a bill', '+50 / bill', 'bill']];
+
+  function laToast(msg) {
+    LA.toast = msg;
+    clearTimeout(laToast.t);
+    laToast.t = setTimeout(() => { LA.toast = ''; laRefresh(); }, 2200);
+  }
+  function laRefresh() {
+    const el = document.getElementById('gcApp');
+    if (el) el.outerHTML = laScreen(ctx());
+  }
+  document.addEventListener('click', e => {
+    const t = e.target.closest('[data-la]');
+    if (!t || !document.getElementById('gcApp')) return;
+    const [k, v] = t.dataset.la.split(':');
+    if (k === 'buy') LA.sheet = +v;
+    else if (k === 'close') LA.sheet = null;
+    else if (k === 'store') { laToast(v === 'gupta' ? 'Saved: pick up today at Gupta General Store · +60 pts' : `Opening ${v}…`); LA.sheet = null; }
+    else if (k === 'redeem') {
+      const [n, , cost] = REWARDS[+v];
+      if (LA.redeemed[v]) laToast('Already redeemed · show the code at the counter');
+      else if (LA.pts >= cost) { LA.pts -= cost; LA.redeemed[v] = true; laToast(`Redeemed: ${n} · code BB-${4217 + +v}`); }
+      else laToast(`${cost - LA.pts} more points for ${n}`);
+    } else if (k === 'earn') {
+      if (LA.done[v]) laToast('Done already · points added');
+      else { LA.done[v] = true; const pts = { review: 40, refer: 100, bill: 50, trial: 60 }[v] || 0; LA.pts += pts; laToast(`+${pts} points · ${LA.pts} total`); }
+    } else if (k === 'read') { LA.article = +v; }
+    else if (k === 'back') { LA.article = null; }
+    else if (k === 'readdone') { if (!LA.done['read' + v]) { LA.done['read' + v] = true; LA.pts += 10; laToast(`+10 points for reading · ${LA.pts} total`); } LA.article = null; }
+    else if (k === 'like') LA.liked[v] = !LA.liked[v];
+    else if (k === 'vote') LA.vote = +v;
+    else if (k === 'rtab') LA.rtab = +v;
+    else if (k === 'ask') { LA.ask = !LA.ask; LA.faq = null; }
+    else if (k === 'faq') LA.faq = LA.faq === +v ? null : +v;
+    else if (k === 'refcode') laToast('Code PRIYA100 copied · you both get 100 points');
+    laRefresh();
+  });
+
   function laScreen(c) {
-    const b = c.b, a = c.anim, at = ms => (a ? rv(ms, 'pop') : '');
-    const tab = ['Home', 'Earn', 'Rewards'][b];
-    let body;
-    if (b === 0) {
-      body = `<div class="la-hello">Hi Priya 👋</div>
-        <div class="la-pts"${at(150)}><div class="k">BEBEAUTIFUL REWARDS · GLOW</div><div class="n">180 <span>points</span></div>
-          <div class="la-bar"><i style="width:72%"></i></div><div class="s">70 more to your next free BeBeautiful Box</div>
-          <div class="la-st">${['Box claimed', 'Bill', 'Red Label', 'Reel', 'Free box'].map((l, i) => `<span class="${i < 4 ? 'on' : 'gift'}">${i < 4 ? crg('check') : crg('gift')}<em>${l}</em></span>`).join('')}</div></div>
-        <div class="la-q">${[['upload', 'Upload a bill'], ['qr', 'Scan store QR'], ['share', 'Refer a friend'], ['video', 'Masterclass']].map(([i, l]) => `<div>${ic(i)}<span>${l}</span></div>`).join('')}</div>
-        <div class="la-card la-next"${at(400)}>${`<img src="${IMG.boxOpen}" alt="">`}<div><b>Your next box</b><span>Five minis, picked from your answers. Unlocks at 250 points.</span><em>At Gupta General Store · 350 m</em></div></div>`;
-    } else if (b === 1) {
-      const rows = [['receipt', 'Upload any HUL bill', 'Red Label, Surf Excel, Dove, Pears, Horlicks', '+50', 'Done ×1'],
-        ['store', 'Buy a full size at a partner store', 'Pears Naturale 250 ml at Gupta General Store', '+60', ''],
-        ['star', 'Review your minis', '2 minutes, right on WhatsApp', '+20', ''],
-        ['video', 'Post an unboxing reel', 'Tag @bebeautiful_india', '+30', 'Done'],
-        ['share', 'Refer a friend', 'When they claim their own box', '+100', ''],
-        ['user', 'Finish your beauty profile', '5 more questions', '+20', ''],
-        ['qr', 'Check in at a partner store', 'Scan the counter QR', '+10', '']];
-      body = `<div class="la-h2">Ways to earn</div><div class="la-sub">Every avenue adds to one HUL wallet.</div>
-        ${rows.map(([i, t, d, pt, st], k) => `<div class="la-row"${at(120 + k * 90)}><span class="la-ic">${ic(i)}</span><div><b>${t}</b><small>${d}</small></div><span class="la-pt ${st ? 'done' : ''}">${st ? `${crg('check')}${st}` : pt}</span></div>`).join('')}`;
+    const tab = Math.min(c.b, 5);
+    const next = Math.max(0, 250 - LA.pts);
+    let body = '';
+    if (tab === 0) {
+      body = `<div class="gc-hero"><em>Good to see you again,</em><b>Priya!</b><span>Keep glowing. Keep earning.</span></div>
+        <div class="gc-pts"><div class="gc-tier"><span>♛ BLUSH MEMBER</span><span>NEXT: GLOW ›</span></div><div class="gc-big">${inr(LA.pts)} pts</div>
+          <div class="gc-bar"><i style="width:${Math.min(100, LA.pts / 250 * 100)}%"></i></div><div class="gc-small">${next ? `${next} pts to <b>Glow</b> · your next free BeBeautiful Box` : 'Your next free BeBeautiful Box is unlocked!'}</div></div>
+        <div class="gc-sec">PARTICIPATE &amp; EARN</div>
+        <div class="gc-earn">${EARN.map(([i, t, p, k]) => `<div class="gc-eb ${LA.done[k] ? 'done' : ''}" data-la="earn:${k}"><span class="gc-ei">${ic(i)}</span><div><b>${t}</b><em>${LA.done[k] ? '✓ done' : p}</em></div></div>`).join('')}
+          <div class="gc-eb wide ${LA.done.trial ? 'done' : ''}" data-la="earn:trial"><span class="gc-ei dark">${ic('star')}</span><div><b>Try Simple Vitamin C serum &amp; give feedback</b><em>${LA.done.trial ? '✓ done' : '+60 pts'}</em></div></div></div>
+        <div class="gc-sec">SAMPLE HISTORY</div>
+        <div class="gc-card gc-hist"><img src="${IMG.boxOpen}" alt=""><div><b>BeBeautiful Box</b><span>Picked up 6 Aug · Gupta General Store</span></div><span class="gc-st ok">Delivered</span></div>
+        <div class="gc-card gc-hist">${tile(miniSimple(20, 62), '#e3f5da')}<div><b>Simple Vitamin C serum</b><span>New launch trial · 28 Aug</span></div><span class="gc-st wip">In progress</span></div>
+        <div class="gc-foot">One wallet · 14 HUL brands</div>`;
+    } else if (tab === 1) {
+      body = `<div class="gc-banner"><div class="k">CURATED SHOPPING</div><b>Find your favourites again</b><span>Official brand stores, quick-commerce and your partner store, straight to the products you sampled.</span></div>
+        <div class="gc-chips">${['All', 'Skin', 'Hair', 'Body', 'Sun'].map((x, i) => `<span class="${i ? '' : 'on'}">${x}</span>`).join('')}</div>
+        ${PRODUCTS.map(([n, s, th], i) => `<div class="gc-card gc-prod">${th}<div><b>${n}</b><span>${s}</span></div><button class="gc-buy" data-la="buy:${i}">Buy</button></div>`).join('')}
+        <div class="gc-foot">Gupta General Store · Blinkit · Nykaa · Amazon · BigBasket</div>`;
+    } else if (tab === 2) {
+      const seg = `<div class="gc-seg">${['Rewards', 'Ways to earn', 'Ways to redeem'].map((x, i) => `<span class="${LA.rtab === i ? 'on' : ''}" data-la="rtab:${i}">${x}</span>`).join('')}</div>`;
+      if (LA.rtab === 1) {
+        const ways = [['user', 'JOIN GLOW CLUB', 'Claim your first BeBeautiful Box and points land in your wallet automatically.', '50 GLOW POINTS', ''],
+          ['users', 'REFER AND EARN', 'When your friend claims a box with your code, you both earn points, and you earn again on their first bill.', '100 GLOW POINTS', 'for both you and your friend'],
+          ['msg', 'WEEKLY BEAUTY TIPS', 'Say yes to BeBeautiful tips on WhatsApp, one message a week.', '20 GLOW POINTS', ''],
+          ['receipt', 'EVERY HUL BILL', 'Send any HUL bill on WhatsApp: Pears, Dove, Lakmé, Pond’s, Surf Excel, Red Label.', '50 GLOW POINTS', 'per bill']];
+        body = `<div class="gc-title"><h2>Rewards</h2><span class="gc-pill">${inr(LA.pts)} pts</span></div>${seg}<div class="gc-wtitle">WAYS TO EARN</div>
+          <div class="gc-ways">${ways.map(([i, t, d, pts, sub]) => `<div class="gc-way"><span class="gc-wic">${ic(i)}</span><b>${t}</b><p>${d}</p><div class="gc-wpts">${pts}${sub ? `<small>${sub}</small>` : ''}</div></div>`).join('')}</div>`;
+      } else if (LA.rtab === 2) {
+        body = `<div class="gc-title"><h2>Rewards</h2><span class="gc-pill">${inr(LA.pts)} pts</span></div>${seg}
+          ${[['share', 'REFERRALS', 'Ask your friends to claim a box with your link to get Glow Points and more.', 'refcode'], ['gift', 'WAYS TO REDEEM', 'At checkout on bebeautiful.in, or at your partner store counter, use your Glow Points along with your payment.', 'rtab:0'], ['help', 'FAQ', 'Have a question? Let our BeBeautiful experts answer your queries.', 'ask']].map(([i, t, d, act]) => `<div class="gc-card gc-redeem"><span class="gc-gic">${ic(i)}</span><b>${t}</b><p>${d}</p><button class="gc-click" data-la="${act}">CLICK HERE</button></div>`).join('')}`;
+      } else body = `<div class="gc-title"><h2>Rewards</h2><span class="gc-pill">${inr(LA.pts)} pts</span></div>${seg}
+        <div class="gc-feat"><div><div class="k">FEATURED</div><b>Diwali glow kit</b><span>1,000 pts · full sizes</span></div><img src="${IMG.boxOpen}" alt=""></div>
+        ${REWARDS.map(([n, cat, cost], i) => `<div class="gc-card gc-rw"><div><b>${n}</b><span>${cat}</span></div><button class="gc-cost ${LA.redeemed[i] ? 'done' : LA.pts >= cost ? 'can' : ''}" data-la="redeem:${i}">${LA.redeemed[i] ? '✓ Redeemed' : `${inr(cost)} pts`}</button></div>`).join('')}
+        <div class="gc-card gc-rw"><div><b>Early access · festive beauty sale</b><span>Glow tier</span></div><span class="gc-perk">Tier perk</span></div>`;
+    } else if (tab === 3) {
+      if (LA.article != null) {
+        const [t, m, txt] = ARTICLES[LA.article];
+        body = `<div class="gc-back" data-la="back">‹ Articles</div><div class="gc-art-hero">${articleArt(LA.article)}</div><h2 class="gc-h">${t}</h2><div class="gc-meta">${m} · by Team BeBeautiful</div>
+          <p class="gc-p">${txt}</p><p class="gc-p">Shop the routine in the Shop tab, or pick it up at Gupta General Store with 60 bonus points.</p>
+          <button class="gc-cta" data-la="readdone:${LA.article}">${LA.done['read' + LA.article] ? 'Done · back to articles' : 'Finish reading · +10 pts'}</button>`;
+      } else {
+        const [t, m] = ARTICLES[0];
+        body = `<h2 class="gc-h">Articles</h2>
+          <div class="gc-card gc-art"><div class="gc-art-hero">${articleArt(0)}</div><b>${t}</b><span>${m} · Pears, Pond’s, Lakmé</span><button class="gc-cta" data-la="read:0">Read article</button></div>
+          ${ARTICLES.slice(1).map(([t2, m2], i) => `<div class="gc-card gc-row" data-la="read:${i + 1}"><div><b>${t2}</b><span>${m2}</span></div>${LA.done['read' + (i + 1)] ? '<span class="gc-st ok">Read</span>' : '<span class="gc-chev">›</span>'}</div>`).join('')}
+          <div class="gc-foot">Read 3 articles this week · earn 30 pts</div>`;
+      }
+    } else if (tab === 4) {
+      const poll = [['Pears body wash', 41], ['Pond’s Hydra Miracle', 27], ['Simple face wash', 18], ['Lakmé Sun Expert', 14]];
+      const posts = [['Neha K.', 'Is Pond’s Hydra Miracle okay for oily skin in this humidity?', 'BeBeautiful expert: Yes. It’s a water gel, so it won’t feel heavy. Use a pea-sized amount at night.', 86], ['Arjun M.', 'Tried the Dove 10 in 1 after every wash for a week. Frizz is honestly down by half.', '', 212]];
+      body = `<h2 class="gc-h">Community</h2>
+        <div class="gc-card gc-chal"><div class="k">THIS WEEK’S CHALLENGE</div><b>#BeBeautifulBox unboxing</b><span>248 posts · post yours for +30 pts</span>
+          <div class="gc-mos">${IMG.ugc.slice(3, 9).map(u => `<i style="background-image:url(${u})"></i>`).join('')}</div></div>
+        <div class="gc-card gc-poll"><b>Which mini did you love most?</b>${poll.map(([o, p], i) => `<div class="gc-opt ${LA.vote === i ? 'on' : ''}" data-la="vote:${i}">${LA.vote != null ? `<i style="width:${p}%"></i>` : ''}<span>${o}</span>${LA.vote != null ? `<em>${p}%</em>` : ''}</div>`).join('')}<small>${LA.vote != null ? '3,418 votes · thanks for voting' : 'Tap to vote'}</small></div>
+        ${posts.map(([who, q, a, likes], i) => `<div class="gc-card gc-post"><div class="gc-who"><span>${who.split(' ').map(x => x[0]).join('')}</span><b>${who}</b><em>Glow Club member</em></div><p>${q}</p>${a ? `<div class="gc-ans">${a}</div>` : ''}<div class="gc-acts"><span class="${LA.liked[i] ? 'on' : ''}" data-la="like:${i}">♥ ${likes + (LA.liked[i] ? 1 : 0)}</span><span>Reply</span></div></div>`).join('')}`;
     } else {
-      body = `<div class="la-h2">Offers near you</div><div class="la-sub">Gupta General Store · 350 m · open till 10 PM</div>
-        ${[['Pears Naturale 250 ml', '₹20 off at the counter', '+60', '#f2c230'], ['Surf Excel Matic 1 kg', 'Any HUL bill counts', '+60', '#1f6fd1'], ['Brooke Bond Red Label 500 g', 'Your usual, bigger', '+80', '#C8102E']].map(([t, d, pt, col], k) => `<div class="la-row"${at(120 + k * 100)}><span class="la-sw" style="background:${col}"></span><div><b>${t}</b><small>${d}</small></div><span class="la-pt">${pt}</span></div>`).join('')}
-        <div class="la-h2" style="margin-top:12px">Redeem</div>
-        ${[['Next BeBeautiful Box', 250], ['Masterclass seat', 200], ['Full-size Dove', 500]].map(([t, cost], k) => `<div class="la-rd"${at(450 + k * 100)}><div><b>${t}</b><small>${cost} points</small></div><div class="la-bar sm"><i style="width:${Math.min(100, 180 / cost * 100)}%"></i></div><span>${180 >= cost ? 'Redeem' : `${cost - 180} to go`}</span></div>`).join('')}`;
+      body = `<h2 class="gc-h">Profile</h2><div class="gc-meta" style="margin-top:-6px">Your account and privacy controls.</div>
+        <div class="gc-card gc-prof">${[['Name', 'Priya Sharma'], ['Email', 'priya.sharma92@gmail.com'], ['Phone', '+91 98104 22719'], ['Language', 'English', 'Change ›']].map(([k, v, x]) => `<div><small>${k}</small><b>${v}</b>${x ? `<em>${x}</em>` : ''}</div>`).join('')}</div>
+        <div class="gc-card gc-row"><div><b>Log out</b></div></div>
+        <div class="gc-sec">MANAGE YOUR DATA</div>
+        <div class="gc-card gc-row"><div><b>Export data</b><span>Request a copy of the data linked to this account.</span></div></div>
+        <div class="gc-card gc-row gc-del"><div><b>Request data deletion</b><span>DPDP-compliant erasure of your profile.</span></div></div>
+        <div class="gc-foot">Consent ledger, opt-out and erasure handled by FreeStand on HUL’s behalf.</div>`;
     }
-    return `<div class="la">
-      <div class="la-head"><span>${bbMark(26)}<b>BeBeautiful Rewards</b></span><span class="la-bell">${ic('bell')}</span></div>
-      <div class="la-body">${body}</div>
-      <div class="la-nav">${[['Home', 'store'], ['Earn', 'award'], ['Rewards', 'gift'], ['Stores', 'pin'], ['Profile', 'user']].map(([l, i]) => `<span class="${l === tab ? 'on' : ''}">${ic(i)}${l}</span>`).join('')}</div>
+    let sheet = '';
+    if (LA.sheet != null) {
+      const [n] = PRODUCTS[LA.sheet];
+      sheet = `<div class="gc-dim" data-la="close"></div><div class="gc-sheet"><div class="gc-grab"></div><span class="gc-x" data-la="close">×</span><b>${n}</b><span>Where would you like to buy it?</span>
+        ${[['gupta', 'Gupta General Store', 'Pick up today · 350 m · +60 pts', 1], ['Blinkit', 'Blinkit', 'In about 12 minutes'], ['Nykaa', 'Nykaa', 'Free delivery over ₹499'], ['Amazon', 'Amazon', 'Tomorrow'], ['BigBasket', 'BigBasket', 'Slot today 6 to 8 PM']].map(([k, t, d, star]) => `<div class="gc-opt2 ${star ? 'star' : ''}" data-la="store:${k}"><div><b>${t}</b><small>${d}</small></div>${star ? '<em>Best</em>' : '<i>›</i>'}</div>`).join('')}</div>`;
+    }
+    return `<div class="gc" id="gcApp">
+      <div class="gc-top"><span class="gc-logo">${bbMark(22)}<b>be beautiful</b></span><span class="gc-name" data-act="beat:5" title="Profile"><b>Glow <i>Club</i></b><small>DISCOVER · EARN · BE REWARDED</small></span></div>
+      <div class="gc-body">${body}</div>
+      ${LA.ask ? askSheet() : ''}${sheet}<div class="gc-askb" data-la="ask"><small>ASK</small><b>BB</b></div>${LA.toast ? `<div class="gc-toast">${LA.toast}</div>` : ''}
+      <div class="gc-nav">${TABS.map(([l, i, b]) => `<span class="${tab === b ? 'on' : ''}" data-act="beat:${b}">${ic(i)}${l}</span>`).join('')}</div>
     </div>`;
   }
-  function avenuesPanel(c) {
-    const rows = [['receipt', 'Bill upload, any HUL brand', 'After every verified trial', '3,480 of 4,318 · 80.6%', 0],
-      ['store', 'Full size at a partner store', 'Offer 7 days after the trial', '1,284 of 3,120 · 41.2%', 1],
-      ['star', 'Review your minis', 'Day 3 on WhatsApp', '3,022 of 4,318 · 70.0%', 1],
-      ['video', 'Unboxing reel', 'After the first bill', '248 posts · 1.9M views', 0],
-      ['share', 'Refer a friend', 'Rated 4 or 5', '1,960 shares · 612 new claims', 0],
-      ['qr', 'Partner store check-in', 'Counter QR', '2,044 scans', 2]];
-    const hl = [0, 1, 2][c.b];
-    return `<div class="card la-panel">
-      <div class="card-h">${ic('route', '', 'style="color:var(--primary)"')}<div class="grow"><h3>Post-sampling avenues</h3><div class="sub">BeBeautiful Rewards app · run on Freestand</div></div>${liveChip('Live')}</div>
-      <div class="cmp-kpis"><div><b>3,112</b><span>App installs</span></div><div><b>64%</b><span>Monthly active</span></div><div><b>182</b><span>Avg points</span></div></div>
-      <div class="avn">${rows.map(([i, t, d, st, g]) => `<div class="av-r ${g === hl ? 'sel' : ''}"><span class="ai">${ic(i)}</span><div class="av-t"><b>${t}</b><span>${d}</span></div><span class="av-s">${st}</span></div>`).join('')}</div>
-      <div class="run-strip"><span>Repeat HUL purchase within 30 days <b>38%</b></span><span>vs <b>11%</b> for non-members</span></div></div>`;
+  function askSheet() {
+    const faqs = [['How do I use my Glow Points?', 'At checkout on bebeautiful.in, or at your partner store counter. Points go along with your payment: 1 point = ₹1 off on eligible products.'],
+      ['Which bills earn points?', 'Any bill with an HUL brand: Pears, Dove, Lakmé, Pond’s, Simple, Surf Excel, Red Label and more. Send the photo on WhatsApp within 30 days.'],
+      ['When is my next free box?', `At 250 points. You have ${inr(LA.pts)}, so ${Math.max(0, 250 - LA.pts)} to go.`],
+      ['Is Pond’s Hydra Miracle okay for oily skin?', 'Yes. It is a water gel, so it will not feel heavy. A pea-sized amount at night is enough.']];
+    return `<div class="gc-dim" data-la="ask"></div><div class="gc-sheet"><div class="gc-grab"></div><div class="gc-askh"><span class="gc-askb in"><small>ASK</small><b>BB</b></span><div><b>Ask BeBeautiful</b><small>Experts reply in about 40 minutes</small></div><span class="gc-x" data-la="ask">×</span></div>
+      ${faqs.map(([q, a], i) => `<div class="gc-faq ${LA.faq === i ? 'on' : ''}" data-la="faq:${i}"><b>${q}<i>${LA.faq === i ? '−' : '+'}</i></b>${LA.faq === i ? `<p>${a}</p>` : ''}</div>`).join('')}
+      <div class="gc-askin">Type your question…<span>${ic('send')}</span></div></div>`;
+  }
+  function articleArt(i) {
+    const bg = ['#f6d9d5', '#e7e3f5', '#fdf0d5', '#f9dfe8'][i];
+    let rain = '';
+    for (let k = 0; k < 22; k++) rain += `<line x1="${10 + k * 15}" y1="${(k * 37) % 90}" x2="${4 + k * 15}" y2="${(k * 37) % 90 + 14}" stroke="#fff" stroke-opacity=".6" stroke-width="1.5"/>`;
+    const art = [minisRow(170, 104, 1.05, 30), miniDove(250, 104, 1.3), miniLakme(250, 104, 1.3), miniPonds(250, 104, 1.3)][i];
+    return `<svg viewBox="0 0 320 110" aria-hidden="true"><rect width="320" height="110" fill="${bg}"/>${i === 0 ? rain : ''}<circle cx="60" cy="40" r="46" fill="#fff" opacity=".35"/>${art}
+      <text x="16" y="88" font-family="Georgia,serif" font-size="15" font-weight="700" fill="#4A1942">${['Monsoon reset', 'Frizz-free', 'Grey-day SPF', 'Diwali glow'][i]}</text></svg>`;
+  }
+  /* the Freestand side of each tab */
+  function clubPanel(c) {
+    const b = Math.min(c.b, 5);
+    const card = (icon, title, sub, kpis, body, foot) => `<div class="card la-panel"><div class="card-h">${ic(icon, '', 'style="color:var(--primary)"')}<div class="grow"><h3>${title}</h3><div class="sub">${sub}</div></div>${liveChip('Live')}</div>
+      <div class="cmp-kpis">${kpis.map(([v, l]) => `<div><b>${v}</b><span>${l}</span></div>`).join('')}</div>${body}${foot ? `<div class="run-strip">${foot}</div>` : ''}</div>`;
+    const tbl = (head, rows) => `<table class="tbl"><thead><tr>${head.map((h, i) => `<th class="${i ? 'r' : ''}">${h}</th>`).join('')}</tr></thead><tbody>${rows.map(r => `<tr>${r.map((v, i) => `<td class="${i ? 'r num' : ''}">${v}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
+    if (b === 0) {
+      const rows = [['receipt', 'Bill upload, any HUL brand', 'After every verified trial', '3,480 of 4,318 · 80.6%'], ['store', 'Full size at a partner store', 'Offer 7 days after the trial', '1,284 of 3,120 · 41.2%'], ['star', 'Review on Nykaa or Amazon', 'Day 10', '1,406 of 4,318 · 32.6%'], ['video', 'Post UGC', 'After the first bill', '248 posts · 1.9M views'], ['share', 'Refer a friend', 'Rated 4 or 5', '1,960 shares · 612 new claims'], ['sparkles', 'Try a new launch', 'Simple Vitamin C serum', '1,120 trials · 71% feedback']];
+      return card('route', 'Post-sampling avenues', 'Glow Club app · run on Freestand', [['3,112', 'App installs'], ['64%', 'Monthly active'], ['182', 'Avg points']],
+        `<div class="avn">${rows.map(([i, t, d, st], k) => `<div class="av-r ${k === 0 ? 'sel' : ''}"><span class="ai">${ic(i)}</span><div class="av-t"><b>${t}</b><span>${d}</span></div><span class="av-s">${st}</span></div>`).join('')}</div>`,
+        '<span>Repeat HUL purchase within 30 days <b>38%</b></span><span>vs <b>11%</b> for non-members</span>');
+    }
+    if (b === 1) return card('cart', 'Sampled to purchase', 'Buy taps from the Shop tab, by channel', [['6,840', 'Buy taps'], ['2,212', 'Orders'], ['32.3%', 'Tap to order']],
+      tbl(['Channel', 'Taps', 'Orders', 'Share'], [['Gupta General Store and partners', '1,946', '812', '36.7%'], ['Blinkit', '2,108', '604', '27.3%'], ['Nykaa', '1,392', '418', '18.9%'], ['Amazon', '904', '246', '11.1%'], ['BigBasket', '490', '132', '6.0%']]),
+      '<span>Top product <b>Pears Naturale 250 ml</b></span><span>Partner-store orders earn <b>+60 pts</b></span>');
+    if (b === 2) return card('gift', 'Rewards catalogue', 'Redemptions and points liability', [['1,904', 'Redemptions'], ['6.1 L', 'Points outstanding'], ['₹0.58', 'Cost per point']],
+      tbl(['Reward', 'Cost', 'Redeemed'], REWARDS.map(([n, , cost], i) => [n, `${inr(cost)} pts`, inr([812, 344, 402, 188, 96, 62][i])])),
+      '<span>Most redeemed <b>₹50 off at a partner store</b></span><span>Every redemption happens at a store or in a box</span>');
+    if (b === 3) return card('file', 'Content engagement', 'Articles in the Glow Club app', [['9,412', 'Reads'], ['2m 48s', 'Avg time'], ['14.6%', 'Shop taps']],
+      tbl(['Article', 'Reads', 'Shop taps'], [['Your monsoon skincare reset', '3,904', '612'], ['Frizz-free in 85% humidity', '2,618', '402'], ['SPF, even when it’s grey', '1,742', '218'], ['The 3-step Diwali glow', '1,148', '142']]),
+      '<span>Readers buy <b>1.8×</b> more often</span><span>Written by the BeBeautiful editorial team</span>');
+    if (b === 4) return card('users', 'Community', 'Moderated by Freestand on HUL’s behalf', [['1,286', 'Posts'], ['3,418', 'Poll votes'], ['94%', 'Questions answered']],
+      tbl(['Signal', 'Value'], [['Favourite mini (poll)', 'Pears body wash · 41%'], ['Top question theme', 'Oily skin in humidity'], ['Challenge entries', '248 #BeBeautifulBox posts'], ['Median expert reply', '42 minutes']]),
+      '<span>Every answer from a named BeBeautiful expert</span>');
+    return card('shield', 'Consent and data', 'DPDP ledger · run by Freestand for HUL', [['10,570', 'Consents held'], ['214', 'Opt-outs'], ['9', 'Erasures done']],
+      tbl(['Request', 'Count', 'Median time'], [['Export data', '31', '4 hrs'], ['Delete profile', '9', '26 hrs'], ['Change language', '1,208', 'Instant'], ['WhatsApp opt-out', '214', 'Instant']]),
+      '<span>Every consent stored with notice version and timestamp</span>');
   }
 
   /* ---------------- steps ---------------- */
@@ -3881,13 +4142,17 @@ function analyticsView(c) {
       head: { crumb: ['Launch', 'Campaigns'], title: 'UGC · #BeBeautifulBox', chips: [liveChip('Live'), chip('248 posts', 'outline', 'video')], right: `<span class="ph-meta">${ic('refresh')}Synced from Instagram every hour</span><button class="btn sm">${ic('download')}Download all</button>` },
       view: c => `<div class="lay-phone duo">${c.b ? ugcReel(c) : waPhone(c, thread(c), BB, '8:00', { sw: true })}<div class="side-col scene-col">${ugcWall(c)}</div></div>`
     },
-    { // 13 · Loyalty app: post-sampling avenues
-      nav: 'people', subject: 'priya', beats: 3, cdpDelay: 600,
-      cap: c => [{ t: 'The BeBeautiful Rewards app', d: 'Points, stamps and her next free box in one place, with the store she already knows.' },
-        { t: 'Post-sampling avenues', d: 'Seven ways to keep going after the trial: bills, full sizes, reviews, reels, referrals and store check-ins.' },
-        { t: 'Offers near her, and what to redeem', d: 'Partner-store offers on HUL brands, and a clear view of what her points unlock.' }][c.b],
-      head: { crumb: ['Consumers', 'People'], title: 'BeBeautiful Rewards app', chips: [liveChip('Live'), chip('Post-sampling', 'outline', 'route')], right: `<span class="ph-meta">${ic('smartphone')}Android · iOS · web</span><button class="btn sm">${ic('edit')}Edit avenues</button>` },
-      view: c => `<div class="lay-phone duo">${phoneFrame(laScreen(c), { time: '8:14', bg: '#fbf5ef', statusBg: '#4A1942', dark: true, gestDark: false, gestBg: '#fff' })}<div class="side-col scene-col">${avenuesPanel(c)}</div></div>`
+    { // 13 · Glow Club: the loyalty app
+      nav: c => (c.b === 5 ? 'identity' : 'people'), subject: 'priya', beats: 6, cdpDelay: 600,
+      cap: c => [
+        { t: 'Glow Club: HUL’s loyalty app', d: 'Points, tier, ways to earn and her sample history. Tap anything in the app: it works.' },
+        { t: 'Shop: find your favourites again', d: 'The products she sampled, with the partner store, Blinkit, Nykaa, Amazon and BigBasket one tap away.' },
+        { t: 'Rewards: beauty, skincare and haircare', d: 'Rewards to redeem, ways to earn and ways to redeem, Glam Squad style. Tap a reward, or ask BeBeautiful a question.' },
+        { t: 'Articles', d: 'BeBeautiful editorial inside the app, with points for reading and a link to shop the routine.' },
+        { t: 'Community', d: 'A weekly UGC challenge, a poll and expert-answered questions. Vote or like to see it respond.' },
+        { t: 'Profile and data controls', d: 'Name, contact, language, export and DPDP deletion, handled by Freestand on HUL’s behalf.' }][c.b],
+      head: c => ({ crumb: ['Consumers', 'People'], title: 'Glow Club app', chips: [liveChip('Live'), chip(['Home', 'Shop', 'Rewards', 'Articles', 'Community', 'Profile'][c.b], 'outline', 'smartphone')], right: `<span class="ph-meta">${ic('smartphone')}Android · iOS · web</span><button class="btn sm">${ic('edit')}Edit app</button>` }),
+      view: c => `<div class="lay-phone duo">${phoneFrame(laScreen(c), { time: '8:14', bg: '#f5f2f6', statusBg: '#3d1438', dark: true, gestDark: false, gestBg: '#fff' })}<div class="side-col scene-col">${clubPanel(c)}</div></div>`
     },
     { // 14 · Loyalty loop
       nav: 'people', subject: 'priya', cdpDelay: 1100,
